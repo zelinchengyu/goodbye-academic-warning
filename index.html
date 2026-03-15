@@ -63,7 +63,7 @@
   .cover { min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:60px 24px; background:linear-gradient(180deg,var(--bg) 0%,var(--bg-chapter) 100%); position:relative; }
   .cover-label { font-family:-apple-system,sans-serif; font-size:.75rem; letter-spacing:6px; color:var(--accent); margin-bottom:32px; font-weight:600; }
   .cover-title { font-size:2.8rem; font-weight:900; letter-spacing:8px; margin-bottom:16px; line-height:1.3; }
-  .cover-subtitle { font-size:1.15rem; color:var(--text-light); max-width:440px; line-height:1.8; margin-bottom:48px; }
+  .cover-subtitle { font-size:.95rem; color:var(--text-light); max-width:400px; line-height:1.8; margin-bottom:48px; }
   .cover-author { font-size:1rem; letter-spacing:4px; font-weight:600; }
   .cover-scroll-hint { position:absolute; bottom:40px; font-family:-apple-system,sans-serif; font-size:.7rem; color:var(--text-light); letter-spacing:2px; animation:bounce 2s infinite; }
   @keyframes bounce { 0%,100%{transform:translateY(0);} 50%{transform:translateY(8px);} }
@@ -77,7 +77,7 @@
   /* --- 段落 --- */
   p { margin-bottom:1.5em; text-align:justify; }
 
-  strong { color:var(--accent); font-weight:700; font-size:1.05em; }
+  strong { color:var(--accent); font-weight:700; }
 
   /* --- 金句 --- */
   .golden { display:block; margin:48px 0; padding:32px 40px; background:var(--gold-bg); border-left:4px solid var(--gold); font-size:1.15rem; font-weight:700; line-height:1.9; position:relative; }
@@ -140,17 +140,9 @@
     strong { color:#C0392B; }
     a.nav-dot { display:none; }
   }
-
-  /* --- 章节浮动提示 --- */
-  .chapter-indicator { position:fixed; bottom:24px; left:50%; transform:translateX(-50%); z-index:90; background:rgba(44,44,44,0.85); color:#fff; padding:8px 20px; border-radius:20px; font-size:.7rem; font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif; letter-spacing:1px; backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); pointer-events:none; opacity:0; transition:opacity .3s; white-space:nowrap; box-shadow:0 2px 12px rgba(0,0,0,0.15); }
-  .chapter-indicator.visible { opacity:1; }
-  @media print { .chapter-indicator { display:none !important; } }
 </style>
 </head>
 <body>
-
-<!-- 章节浮动提示 -->
-<div class="chapter-indicator" id="chapterIndicator"></div>
 
 <!-- 进度条 -->
 <div class="progress-bar" id="progressBar"></div>
@@ -2727,6 +2719,124 @@
 
   <div class="divider-line"></div>
 
+  <p>但我要告诉你，"去上课"只是最低标准。</p>
+
+  <p>我认识一个妹妹，叫清欢。211计算机，大三降级大二，11门必修挂科，差69个学分。学校建议她退学。</p>
+
+  <p>她跟大部分挂科生不一样。她听不懂课还坚持去上。</p>
+
+  <p>每节课都去。前几节跟老师互动，后面听不懂了也不走，一直坐到下课。</p>
+
+  <p>你知道她为什么去吗？她自己说："我只是为了拿平时分。"</p>
+
+  <p>她做到了大部分人做不到的事——听不懂还去上课，跟坐牢一样。</p>
+
+  <p>但她的平时分并不高。</p>
+
+  <p>为什么？</p>
+
+  <div class="golden"><strong>因为她去了，但老师不认识她。</strong></div>
+
+  <p>她每次打招呼就是"老师好"。一学期下来，老师连她叫什么都不知道。</p>
+
+  <p>一个学期教一千个学生的老师，怎么可能记住一个只说"老师好"的人？</p>
+
+  <div class="divider-line"></div>
+
+  <h3 class="section-title">规则一的升级版：让老师认识你</h3>
+
+  <p>"去上课"拿的是基础平时分。</p>
+
+  <div class="golden"><strong>让老师认识你，拿的是满分平时分。</strong></div>
+
+  <p>这两者之间的差距，可能就是挂科和过科的差距。</p>
+
+  <p>怎么让老师认识你？</p>
+
+  <div class="golden"><strong>第一步：自报姓名。</strong></div>
+
+  <p>别说"老师好"。说"老师好，我是计算机学院的清欢"。</p>
+
+  <p>你觉得这很尴尬？那我告诉你，我上大学的时候更尴尬。</p>
+
+  <p>我那时候上课不听讲，坐第一排看小说。对，你没看错——坐第一排，看小说，不听课。</p>
+
+  <p>但我天天去。而且我帮老师擦黑板。</p>
+
+  <p>有一次上课，后面一群人嘀嘀咕咕，吵得老师烦了。老师指着我说："你们看看人家林哥，虽然他不听课、玩手机，但人家不打扰别人。你们不能上就回宿舍。"</p>
+
+  <p>你看，老师点我名了。他不但认识我，他还拿我当正面教材。</p>
+
+  <p>我有没有认真学习？没有。</p>
+
+  <p>但老师认识我吗？认识。</p>
+
+  <p>这就是差别。</p>
+
+  <div class="golden"><strong>第二步：开学初送小东西。</strong></div>
+
+  <p>不是让你送礼。是蜜雪冰城、柠檬水、三四块钱的东西。</p>
+
+  <p>关键是时间——<strong>开学初送，不是考试前送。</strong></p>
+
+  <p>开学初送，没人觉得你有目的。考试前送，全世界都知道你想干嘛。</p>
+
+  <p>年轻老师送咖啡、柠檬水。前期别送含咖啡因的，有人喝了睡不着。就送纯牛乳、柠檬水这种谁都能喝的。</p>
+
+  <p>你不用知道老师喜欢什么。你就买你自己喜欢喝的，他都喜欢。</p>
+
+  <p>而且不要送贵的。贵了老师有压力。考试前最贵就是一个20块的小蛋糕，这是上限了。</p>
+
+  <div class="golden"><strong>第三步：判定标准——老师能叫出你的名字。</strong></div>
+
+  <p>怎么判断老师认识你了？</p>
+
+  <p>不是你觉得他应该认识了。是他见到你，第一时间没等你自我介绍，直接说："清欢，你来上课了。"</p>
+
+  <p>到了这一步，你就可以画个勾：这门课，搞定了。</p>
+
+  <p>10门课，一门一门来，搞定一门画一勾。</p>
+
+  <div class="golden"><strong>第四步：偶尔请假。</strong></div>
+
+  <p>你没看错。偶尔请一次假。</p>
+
+  <p>一学期18周，每周两次课就是36次。你请一次假，主动跟老师说，很诚恳地说："老师我家里有个小事，跟您请个假，真不好意思。"</p>
+
+  <p>你知道这个动作在干什么吗？</p>
+
+  <p>你在给老师一个"帮你"的机会。</p>
+
+  <p>你天天去、从不缺课，老师觉得你正常。但你请一次假，老师会觉得"这孩子平时都来的，突然请假肯定有事"，他会更记住你。</p>
+
+  <p>而且请假这个动作本身就是在建立关系——你把他当成一个需要通知的人，而不是一个讲台上的陌生人。</p>
+
+  <div class="divider-line"></div>
+
+  <p>你可能觉得这些太功利了。</p>
+
+  <p>但我跟你说一个真实的事。</p>
+
+  <p>我上大学的时候，我女朋友考完试出考场就哭了，觉得自己肯定挂了。</p>
+
+  <p>我哄不好她。</p>
+
+  <p>然后我给那门课的老师打了电话。因为我跟老师很熟，我有他手机号。</p>
+
+  <p>我开了扩音，让她听着。我跟老师说："老师，她觉得自己过不了了，哭了。"</p>
+
+  <p>老师说："哭啥？别哭了，不会挂的。"</p>
+
+  <p>你看，就这一句话。</p>
+
+  <div class="golden"><strong>大家都是人，大家都有感情。你都这么难了，我拉你一把怎么了？</strong></div>
+
+  <p>但前提是什么？前提是老师认识你。</p>
+
+  <p>老师不认识你，他想帮你，他连你的名字都找不到。</p>
+
+  <div class="divider-line"></div>
+
   <p>然后是作业。</p>
 
   <p>作业必须交。</p>
@@ -2801,6 +2911,20 @@
 
   <p>而且这条消息传递了几个信号：你知道自己考得不好（有自知之明）、你打算重修（有态度）、你在请教（尊重老师）。</p>
 
+  <p>但这只是文字版的"示弱"。如果你跟老师已经混熟了，你还有一个更直接的动作——<strong>考前去办公室。</strong></p>
+
+  <p>考试之前，带个小蛋糕去办公室找老师。</p>
+
+  <p>你就说："老师，您画的复习范围我都看了，我也跟AI学了不少，但有一些还是不太理解……"</p>
+
+  <p>你不需要真的问什么高深问题。你这个动作本身就是在告诉老师：我考前在努力。</p>
+
+  <p>老师看到一个天天来上课、考前还来办公室请教的学生，你说他判卷的时候会怎么对你？</p>
+
+  <p>55分的卷子，他看到名字一想"这不是清欢吗，天天来上课那个"，抬一抬手，60分。</p>
+
+  <p>这就是"让老师认识你"的最终回报。</p>
+
   <p>大部分老师看到这种消息，如果你的分数在55-59之间，他会考虑抬一抬手。</p>
 
   <div class="golden"><strong>但记住：文字有痕迹。不要在消息里写任何让老师为难的话。</strong></div>
@@ -2845,6 +2969,20 @@
 
   <p><strong>第三步：找往年试卷。</strong><br>
 学长学姐手里有。班群里有。网上可能也有。往年试卷是最好的复习资料，因为很多老师每年出的题都差不多。</p>
+
+  <div class="golden"><strong>第三步半：把老师画的范围喂给AI。</strong></div>
+
+  <p>这一步很多人不知道。</p>
+
+  <p>你把老师划的复习范围、课后习题、往年试卷，全部喂给Claude或者Kimi。然后你跟它说："我是零基础，啥也不会，你就把我当小学一年级水平，用三天时间把我教会。"</p>
+
+  <p>它会根据你的水平，一步一步教你。你做对了它夸你，做错了它帮你纠正，然后出下一道题。</p>
+
+  <p>相当于一个免费的一对一家教，而且24小时在线，不嫌你笨，不发脾气。</p>
+
+  <p>一个学期的课，用AI学，三个小时可能就搞完了。</p>
+
+  <p>你不需要补课。你不需要找学霸辅导。你只需要一台电脑或者一部手机。</p>
 
   <p><strong>第四步：卷子写满。</strong><br>
 这一点极其重要。</p>
@@ -3663,6 +3801,45 @@
 
   <div class="divider-line"></div>
 
+  <p>我再讲清欢的故事。</p>
+
+  <p>清欢是我在一次直播里连麦帮助的妹妹。211计算机，大三降级大二，11门挂科，学校建议退学。</p>
+
+  <p>她跟我说了一句话："我这个人最大的问题就是知难而退。"</p>
+
+  <p>她把这当缺点。</p>
+
+  <p>但我告诉她：<strong>知难而退的人才是聪明人。</strong></p>
+
+  <p>那些碰壁之后死磕到底的人，如果选错了方向，死磕到底也没结果。</p>
+
+  <p>而知难而退的人，在不断探索的过程中会接触多个方向。接触的方向越多，就越有可能找到自己真正擅长的东西。</p>
+
+  <p>你以为你是"什么都做不好"。但其实你是"还没找到那个做得好的东西"。</p>
+
+  <p>清欢的系统是什么？</p>
+
+  <p>她不需要"每天学8小时"。她需要一个完全不同的系统：</p>
+
+  <p>1. <strong>平时分系统</strong>：每门课让老师认识她（自报姓名+偶尔送饮品+偶尔请假），10门课一门一门画勾<br>
+2. <strong>考前系统</strong>：把老师画的范围喂给AI，让AI当一对一家教，三天突击一门课<br>
+3. <strong>底线系统</strong>：这学期不多选课，跟同年级一样就行，不再挂任何一门</p>
+
+  <p>你看，这个系统里没有"好好学习"。没有"每天去图书馆"。没有"下定决心"。</p>
+
+  <p>只有一个一个具体的、她能执行的动作。</p>
+
+  <p>直播结束的时候，她说了一句话：</p>
+
+  <div class="case-card">
+    <p>"我本来已经做好退学准备了。有希望就抓住。"<br>
+</p>
+  </div>
+
+  <div class="golden"><strong>她不是没有能力。她是之前没有系统。</strong></div>
+
+  <div class="divider-line"></div>
+
   <p>好。到这里，你手里有了三样东西：</p>
 
   <p>1. 规则（第11章）——大学过科到底靠什么。<br>
@@ -4332,35 +4509,6 @@ window.addEventListener('scroll', () => {
 });
 
 
-
-// ===== 章节浮动提示 =====
-const indicator = document.getElementById('chapterIndicator');
-let indicatorTimer = null;
-const chapterObs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      const label = e.target.querySelector('.chapter-label');
-      const title = e.target.querySelector('.chapter-title');
-      if (label && title) {
-        indicator.textContent = label.textContent + ' · ' + title.textContent;
-        indicator.classList.add('visible');
-        clearTimeout(indicatorTimer);
-        indicatorTimer = setTimeout(() => indicator.classList.remove('visible'), 2000);
-      }
-    }
-  });
-}, { rootMargin: '-30% 0px -60% 0px' });
-chapters.forEach(ch => chapterObs.observe(ch));
-
-// 滚动时也短暂显示
-let scrollIndicatorTimer = null;
-window.addEventListener('scroll', () => {
-  if (indicator.textContent) {
-    indicator.classList.add('visible');
-    clearTimeout(scrollIndicatorTimer);
-    scrollIndicatorTimer = setTimeout(() => indicator.classList.remove('visible'), 1500);
-  }
-}, { passive: true });
 </script>
 
 </body>
