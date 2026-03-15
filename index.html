@@ -59,14 +59,8 @@
   .nav-controls { display:flex; gap:6px; align-items:center; }
   .btn-icon { width:34px; height:34px; border-radius:50%; border:1px solid var(--divider); background:transparent; color:var(--text-light); cursor:pointer; font-size:.9rem; display:flex; align-items:center; justify-content:center; transition:all .2s; }
   .btn-icon:hover { background:var(--accent); color:#fff; border-color:var(--accent); }
-  .btn-text { padding:6px 14px; border-radius:20px; border:1px solid var(--accent); background:transparent; color:var(--accent); cursor:pointer; font-size:.75rem; font-weight:600; letter-spacing:1px; transition:all .2s; font-family:-apple-system,"Helvetica Neue","PingFang SC",sans-serif; }
-  .btn-text:hover { background:var(--accent); color:#fff; }
 
-  /* --- 编辑模式提示 --- */
-  .edit-banner { display:none; position:fixed; bottom:20px; left:50%; transform:translateX(-50%); z-index:150; background:#2C3E50; color:#fff; padding:10px 28px; border-radius:30px; font-size:.8rem; font-family:-apple-system,sans-serif; box-shadow:0 4px 20px rgba(0,0,0,.2); letter-spacing:1px; }
-  .edit-banner.show { display:flex; align-items:center; gap:12px; }
-  .edit-banner button { background:#C0392B; color:#fff; border:none; padding:6px 16px; border-radius:16px; cursor:pointer; font-size:.75rem; }
-
+  
   /* --- 封面 --- */
   .cover { min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:60px 24px; background:linear-gradient(180deg,var(--bg) 0%,var(--bg-chapter) 100%); position:relative; }
   .cover-label { font-family:-apple-system,sans-serif; font-size:.75rem; letter-spacing:6px; color:var(--accent); margin-bottom:32px; font-weight:600; }
@@ -120,10 +114,7 @@
   .chapter-break-title { font-size:1.6rem; font-weight:800; line-height:1.5; margin-bottom:16px; }
   .chapter-break-quote { font-size:.85rem; color:var(--text-light); font-style:italic; line-height:1.8; }
 
-  /* --- 编辑高亮 --- */
-  [contenteditable]:focus { outline:2px dashed var(--accent); outline-offset:4px; border-radius:4px; background:rgba(192,57,43,0.03); }
-  [contenteditable].edited { background:rgba(184,134,11,0.06); }
-
+  
   /* --- 响应式 --- */
   @media (max-width:600px) {
     html { font-size:16px; }
@@ -150,7 +141,6 @@
     body { font-size:14px; line-height:1.8; background:#fff; color:#000; }
     .golden { border-left:3px solid #B8860B; page-break-inside:avoid; }
     .case-card { page-break-inside:avoid; }
-    [contenteditable] { outline:none !important; }
     .chapter-title::after { background:#C0392B; }
     strong { color:#C0392B; }
     a.nav-dot { display:none; }
@@ -190,18 +180,10 @@
     <div class="nav-controls">
       <button class="btn-icon" id="btnFont" title="字号">A</button>
       <button class="btn-icon" id="btnTheme" title="夜间模式">☽</button>
-      <button class="btn-text" id="btnEdit">编辑</button>
-      <button class="btn-text" id="btnPdf">导出PDF</button>
     </div>
   </div>
 </nav>
 
-<!-- 编辑提示 -->
-<div class="edit-banner" id="editBanner">
-  <span>编辑模式已开启 · 点击任意文字即可修改</span>
-  <button id="btnSaveEdit">保存修改</button>
-  <button id="btnExitEdit" style="background:#6B6B6B;">退出编辑</button>
-</div>
 
 <!-- 封面 -->
 <section class="cover">
@@ -217,410 +199,410 @@
 <!-- ===== 前 言: 致那个觉得大学像"监狱"的你 ===== -->
 <article class="chapter" id="preface" data-filename="前言_致那个觉得大学像监狱的你.md">
   <div class="chapter-label">前 言</div>
-  <h2 class="chapter-title" contenteditable="true">致那个觉得大学像"监狱"的你</h2>
-  <p contenteditable="true">如果你现在正躲在床帘里，<br>
+  <h2 class="chapter-title">致那个觉得大学像"监狱"的你</h2>
+  <p>如果你现在正躲在床帘里，<br>
 看着辅导员发来的学业警告通知，<br>
 想骂人、想摔手机、甚至想"去他妈的，老子不读了"——</p>
 
-  <p contenteditable="true">兄弟，先别关。</p>
+  <p>兄弟，先别关。</p>
 
-  <p contenteditable="true">我是泽林，你叫我林哥就行。</p>
+  <p>我是泽林，你叫我林哥就行。</p>
 
-  <p contenteditable="true">我2022年8月入职高校，到现在三年多。<br>
+  <p>我2022年8月入职高校，到现在三年多。<br>
 我们学校每年640个毕业生里，大概有10%拿不到毕业证、或者被降级。<br>
 也就是说，每年都有64个人站在悬崖边上。</p>
 
-  <p contenteditable="true">三年多下来，我经手过200多个挂科案例。</p>
+  <p>三年多下来，我经手过200多个挂科案例。</p>
 
-  <p contenteditable="true">但说实话，200多个案例里，真正走到我心里的，只有十几个。</p>
+  <p>但说实话，200多个案例里，真正走到我心里的，只有十几个。</p>
 
-  <p contenteditable="true">为什么？</p>
+  <p>为什么？</p>
 
-  <p contenteditable="true">因为大部分人，只是把我当成"办事的辅导员"。<br>
+  <p>因为大部分人，只是把我当成"办事的辅导员"。<br>
 他们来找我，是为了走流程、求情、要个机会。</p>
 
-  <p contenteditable="true">但那十几个兄弟不一样。</p>
+  <p>但那十几个兄弟不一样。</p>
 
-  <p contenteditable="true">他们当初坐在我对面时，眼睛里是绝望、是恶心、是"去你妈的"。<br>
+  <p>他们当初坐在我对面时，眼睛里是绝望、是恶心、是"去你妈的"。<br>
 他们痛恨这个大学，痛恨这个环境。</p>
 
-  <p contenteditable="true">我带过的兄弟里：</p>
+  <p>我带过的兄弟里：</p>
 
   <ul class="story-list">
-    <li contenteditable="true">有大二就选择休学、去社会上挨了毒打又跑回来读书的阿盛</li>
-    <li contenteditable="true">有挂科整整38门，最后硬是把烂摊子收拾干净、拿着双证昂首离开的堂弟</li>
+    <li>有大二就选择休学、去社会上挨了毒打又跑回来读书的阿盛</li>
+    <li>有挂科整整38门，最后硬是把烂摊子收拾干净、拿着双证昂首离开的堂弟</li>
   </ul>
 
-  <p contenteditable="true">堂弟曾跟我说：<br>
+  <p>堂弟曾跟我说：<br>
 "林哥，大学对我来说就是个监狱。<br>
 每一次点名，每一次坐在教室里听那些'没用'的课，<br>
 对我来说都像坐牢。"</p>
 
-  <p contenteditable="true">我知道你也是。</p>
+  <p>我知道你也是。</p>
 
-  <p contenteditable="true">你恶心那些"没用"的课，<br>
+  <p>你恶心那些"没用"的课，<br>
 你恶心家长天天打电话逼你考研、入党、拿奖学金，<br>
 你恶心学校非要逼你签到、刷网课、为了0.5个平时分去交作业。</p>
 
-  <p contenteditable="true">兄弟，你的恶心是对的。<br>
+  <p>兄弟，你的恶心是对的。<br>
 你的痛苦，说明你还没麻木。</p>
 
-  <p contenteditable="true">但是，林哥今天写这本书，不是为了陪你一起骂街。</p>
+  <p>但是，林哥今天写这本书，不是为了陪你一起骂街。</p>
 
-  <p contenteditable="true">也不是为了跟你讲道理，告诉你"挂科有多可怕"、"你应该珍惜学业"。</p>
+  <p>也不是为了跟你讲道理，告诉你"挂科有多可怕"、"你应该珍惜学业"。</p>
 
-  <p contenteditable="true">如果你指望我在这本书里教你"好好学习"，那我恐怕要让你失望了。</p>
+  <p>如果你指望我在这本书里教你"好好学习"，那我恐怕要让你失望了。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">我写这本书，是为了帮你看清一件事：</p>
+  <p>我写这本书，是为了帮你看清一件事：</p>
 
-  <div class="golden" contenteditable="true"><strong>你掉进了一个陷阱。</strong></div>
+  <div class="golden"><strong>你掉进了一个陷阱。</strong></div>
 
-  <p contenteditable="true">你以为你是"自己选择"摆烂的。<br>
+  <p>你以为你是"自己选择"摆烂的。<br>
 你以为你是"自己不想学"。<br>
 你以为你是"懒"、"废"、"没有意志力"。</p>
 
-  <p contenteditable="true">不是的。</p>
+  <p>不是的。</p>
 
-  <p contenteditable="true">你是掉进了一个精心设计的循环里——逃避、挂科、羞耻、更逃避——然后你以为这就是你。</p>
+  <p>你是掉进了一个精心设计的循环里——逃避、挂科、羞耻、更逃避——然后你以为这就是你。</p>
 
-  <p contenteditable="true">这本书要做的，就是帮你看清这个循环到底是怎么运作的。</p>
+  <p>这本书要做的，就是帮你看清这个循环到底是怎么运作的。</p>
 
-  <p contenteditable="true">当你看清了，你就不会再骂自己了。<br>
+  <p>当你看清了，你就不会再骂自己了。<br>
 当你看清了，你也不需要"下定决心好好学习"了。<br>
 当你看清了，改变会自然发生。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">这本书分五个部分：</p>
+  <p>这本书分五个部分：</p>
 
-  <p contenteditable="true"><strong>Part 1：你掉进了一个陷阱。</strong><br>
+  <p><strong>Part 1：你掉进了一个陷阱。</strong><br>
 先让你看到你到底在哪，你是怎么一步步掉进来的。</p>
 
-  <p contenteditable="true"><strong>Part 2：你以为的"好处"全是假的。</strong><br>
+  <p><strong>Part 2：你以为的"好处"全是假的。</strong><br>
 打游戏能缓解压力？"无所谓"能保护你？逃避让你自由？全是假的。</p>
 
-  <p contenteditable="true"><strong>Part 3：那些"正确"的方法为什么不管用。</strong><br>
+  <p><strong>Part 3：那些"正确"的方法为什么不管用。</strong><br>
 "好好学习"、断网、断经济、"我改"——这些方法不是不够狠，是方向就错了。</p>
 
-  <p contenteditable="true"><strong>Part 4：你可以选择成为谁。</strong><br>
+  <p><strong>Part 4：你可以选择成为谁。</strong><br>
 当你看清了陷阱、看清了规则，你会发现你不需要变成另一个人。你只需要做一个选择。</p>
 
-  <p contenteditable="true"><strong>Part 5：从今天开始。</strong><br>
+  <p><strong>Part 5：从今天开始。</strong><br>
 不是鸡血，不是宏伟计划。是一套你明天就能用的系统。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">堂弟挂了38门都能拿证走人，<br>
+  <p>堂弟挂了38门都能拿证走人，<br>
 阿盛休学一年也能绝地翻盘。</p>
 
-  <p contenteditable="true">你手里这点挂科单，算个球？</p>
+  <p>你手里这点挂科单，算个球？</p>
 
-  <p contenteditable="true">别急着自我放弃。<br>
+  <p>别急着自我放弃。<br>
 把这本书看完。</p>
 
-  <p contenteditable="true">不是因为它能教你"好好学习"。<br>
+  <p>不是因为它能教你"好好学习"。<br>
 是因为看完之后，你会第一次看清楚，你到底掉进了什么。</p>
 
-  <p contenteditable="true">看清了，你自己就知道该怎么走了。</p>
+  <p>看清了，你自己就知道该怎么走了。</p>
 </article>
 
 <!-- ===== 序 章: 两个人的战场 ===== -->
 <article class="chapter" id="prologue" data-filename="序章_两个人的战场.md">
   <div class="chapter-label">序 章</div>
-  <h2 class="chapter-title" contenteditable="true">两个人的战场</h2>
-  <p contenteditable="true">堂弟挂了38门课。</p>
+  <h2 class="chapter-title">两个人的战场</h2>
+  <p>堂弟挂了38门课。</p>
 
-  <p contenteditable="true">你挂了几门？</p>
+  <p>你挂了几门？</p>
 
-  <p contenteditable="true">5门？10门？15门？</p>
+  <p>5门？10门？15门？</p>
 
-  <p contenteditable="true">不管你挂了几门，我想先告诉你：堂弟最后拿到了毕业证和学位证，双证齐全，去了四川找了份工作。</p>
+  <p>不管你挂了几门，我想先告诉你：堂弟最后拿到了毕业证和学位证，双证齐全，去了四川找了份工作。</p>
 
-  <p contenteditable="true">38门都能走出来。</p>
+  <p>38门都能走出来。</p>
 
-  <p contenteditable="true">你那几门，算个屁。</p>
+  <p>你那几门，算个屁。</p>
 
-  <p contenteditable="true">但我今天不是来给你灌鸡汤的。我不是要跟你说"堂弟都行你也行"、"加油努力你可以的"。</p>
+  <p>但我今天不是来给你灌鸡汤的。我不是要跟你说"堂弟都行你也行"、"加油努力你可以的"。</p>
 
-  <p contenteditable="true">那种话你听了一百遍了，有用吗？</p>
+  <p>那种话你听了一百遍了，有用吗？</p>
 
-  <p contenteditable="true">没用。</p>
+  <p>没用。</p>
 
-  <p contenteditable="true">我要给你讲的是另一件事：堂弟是怎么掉进去的，又是怎么走出来的。</p>
+  <p>我要给你讲的是另一件事：堂弟是怎么掉进去的，又是怎么走出来的。</p>
 
-  <p contenteditable="true">不是靠努力。<br>
+  <p>不是靠努力。<br>
 不是靠意志力。<br>
 不是靠他妈天天盯着。</p>
 
-  <p contenteditable="true">他是看清了一个东西。</p>
+  <p>他是看清了一个东西。</p>
 
-  <p contenteditable="true">这个东西，后面我会一章一章地讲。现在先听故事。</p>
-
-  <div class="divider-line"></div>
-
-  <h3 class="section-title" contenteditable="true">堂弟的故事</h3>
-
-  <p contenteditable="true">堂弟的完整经历，我会在后面的章节里一点点拆开来讲。但在这里，我先给你看全貌。</p>
-
-  <p contenteditable="true">我是怎么找到他的、他是怎么一步步掉进去的，下一章会详细说。这里我直接跳到后半段——我跟他的关系是怎么建立的、怎么崩的、又怎么修回来的。</p>
-
-  <p contenteditable="true">因为这段经历，是我后来帮200多个学生的底层逻辑。</p>
+  <p>这个东西，后面我会一章一章地讲。现在先听故事。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">我找到堂弟之后，没有说教，没有批评。</p>
+  <h3 class="section-title">堂弟的故事</h3>
 
-  <p contenteditable="true">我不问他"你今天去上课了吗"，不问他"你打算什么时候毕业"，不问他"你以后想干什么"。</p>
+  <p>堂弟的完整经历，我会在后面的章节里一点点拆开来讲。但在这里，我先给你看全貌。</p>
 
-  <p contenteditable="true">我只问他："饿不饿？渴不渴？"</p>
+  <p>我是怎么找到他的、他是怎么一步步掉进去的，下一章会详细说。这里我直接跳到后半段——我跟他的关系是怎么建立的、怎么崩的、又怎么修回来的。</p>
 
-  <p contenteditable="true">让他帮我去取个快递，拿杯喝的，然后请他吃个炒菜，喝点小酒。</p>
-
-  <p contenteditable="true">他慢慢开始跟我说话了。</p>
-
-  <p contenteditable="true">他告诉我他的策略：所有考试都去，但交白卷。交完白卷，获得补考机会。补考只看卷面成绩，不看平时分，只要考60分就能过。</p>
-
-  <p contenteditable="true">"这样我就不用去坐牢了。"他说。</p>
-
-  <p contenteditable="true">你看，他不是没脑子。他是在一个他极度痛苦的系统里，找到了一条阻力最小的路。</p>
+  <p>因为这段经历，是我后来帮200多个学生的底层逻辑。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">但我们的关系，在他大六那年彻底崩了。</p>
+  <p>我找到堂弟之后，没有说教，没有批评。</p>
 
-  <p contenteditable="true">他妈找到我，哭着求我："林老师，只有你能劝动他。求你了。"</p>
+  <p>我不问他"你今天去上课了吗"，不问他"你打算什么时候毕业"，不问他"你以后想干什么"。</p>
 
-  <p contenteditable="true">她要带堂弟去天津看病。</p>
+  <p>我只问他："饿不饿？渴不渴？"</p>
 
-  <p contenteditable="true">不是普通的医院。是精神病院，强制住院。</p>
+  <p>让他帮我去取个快递，拿杯喝的，然后请他吃个炒菜，喝点小酒。</p>
 
-  <p contenteditable="true">我犹豫了很久。</p>
+  <p>他慢慢开始跟我说话了。</p>
 
-  <p contenteditable="true">我跟他爸妈说得很清楚："你要让我骗堂弟跟你们一起出去，去精神病院的话，回来之后我跟堂弟的关系也会掰。他不会跟我再说任何一句话了。你们要做好这个准备。"</p>
+  <p>他告诉我他的策略：所有考试都去，但交白卷。交完白卷，获得补考机会。补考只看卷面成绩，不看平时分，只要考60分就能过。</p>
 
-  <p contenteditable="true">他妈点了点头。</p>
+  <p>"这样我就不用去坐牢了。"他说。</p>
 
-  <p contenteditable="true">我骗了他。</p>
-
-  <p contenteditable="true">他跟我去了天津，被强制住院半年。</p>
-
-  <p contenteditable="true">回来之后，他第一次见到我，只说了一句话：</p>
-
-  <p contenteditable="true">"你他妈明知道我没病，你他妈还要听我爸妈的，把我骗过去。妈的，你不是我大哥了。"</p>
-
-  <p contenteditable="true">然后转身就走。</p>
+  <p>你看，他不是没脑子。他是在一个他极度痛苦的系统里，找到了一条阻力最小的路。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">我知道，我失去他了。</p>
+  <p>但我们的关系，在他大六那年彻底崩了。</p>
 
-  <p contenteditable="true">但我也知道，他除了我，没有别人可以说话。</p>
+  <p>他妈找到我，哭着求我："林老师，只有你能劝动他。求你了。"</p>
 
-  <p contenteditable="true">他妈又一次带着他来找我。堂弟坐在我对面，一句话不说。</p>
+  <p>她要带堂弟去天津看病。</p>
 
-  <p contenteditable="true">我也不说话。</p>
+  <p>不是普通的医院。是精神病院，强制住院。</p>
 
-  <p contenteditable="true">他不说，我就不说。比谁更有耐心。</p>
+  <p>我犹豫了很久。</p>
 
-  <p contenteditable="true">两个小时。</p>
+  <p>我跟他爸妈说得很清楚："你要让我骗堂弟跟你们一起出去，去精神病院的话，回来之后我跟堂弟的关系也会掰。他不会跟我再说任何一句话了。你们要做好这个准备。"</p>
 
-  <p contenteditable="true">整整两个小时，我们一句话没说。</p>
+  <p>他妈点了点头。</p>
 
-  <p contenteditable="true">他妈急了："你们倒是说话啊！"</p>
+  <p>我骗了他。</p>
 
-  <p contenteditable="true">我摆摆手："没事，您先回去。"</p>
+  <p>他跟我去了天津，被强制住院半年。</p>
 
-  <p contenteditable="true">她走了。办公室里只剩下我和堂弟。</p>
+  <p>回来之后，他第一次见到我，只说了一句话：</p>
 
-  <p contenteditable="true">又过了半小时。</p>
+  <p>"你他妈明知道我没病，你他妈还要听我爸妈的，把我骗过去。妈的，你不是我大哥了。"</p>
 
-  <p contenteditable="true">我终于开口："饿不饿？"</p>
-
-  <p contenteditable="true">他看了我一眼，没说话。</p>
-
-  <p contenteditable="true">我站起来："走，我带你去吃口饭。"</p>
-
-  <p contenteditable="true">他跟着我出门了。</p>
-
-  <p contenteditable="true">全程没有说话。我只是吃东西，他也只是吃东西。</p>
-
-  <p contenteditable="true">吃完饭，我说："帮我去把那个快递取过来。"</p>
-
-  <p contenteditable="true">他去了。</p>
-
-  <p contenteditable="true">取回来之后，我说："谢了。"</p>
-
-  <p contenteditable="true">他点了点头，走了。</p>
+  <p>然后转身就走。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">就这样，一次又一次。</p>
+  <p>我知道，我失去他了。</p>
 
-  <p contenteditable="true">沉默的、不说话的、只有动作的陪伴，慢慢修复了我们之间的信任。</p>
+  <p>但我也知道，他除了我，没有别人可以说话。</p>
 
-  <p contenteditable="true">他又开始跟我说话了。不多，但至少他不再把我当成敌人。</p>
+  <p>他妈又一次带着他来找我。堂弟坐在我对面，一句话不说。</p>
+
+  <p>我也不说话。</p>
+
+  <p>他不说，我就不说。比谁更有耐心。</p>
+
+  <p>两个小时。</p>
+
+  <p>整整两个小时，我们一句话没说。</p>
+
+  <p>他妈急了："你们倒是说话啊！"</p>
+
+  <p>我摆摆手："没事，您先回去。"</p>
+
+  <p>她走了。办公室里只剩下我和堂弟。</p>
+
+  <p>又过了半小时。</p>
+
+  <p>我终于开口："饿不饿？"</p>
+
+  <p>他看了我一眼，没说话。</p>
+
+  <p>我站起来："走，我带你去吃口饭。"</p>
+
+  <p>他跟着我出门了。</p>
+
+  <p>全程没有说话。我只是吃东西，他也只是吃东西。</p>
+
+  <p>吃完饭，我说："帮我去把那个快递取过来。"</p>
+
+  <p>他去了。</p>
+
+  <p>取回来之后，我说："谢了。"</p>
+
+  <p>他点了点头，走了。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">大七那年，堂弟找到我。</p>
+  <p>就这样，一次又一次。</p>
 
-  <p contenteditable="true">"林哥，我就差两三门课了。但我的绩点只有1.8，学校要求2.0才能拿学位证。我想拿双证，怎么办？"</p>
+  <p>沉默的、不说话的、只有动作的陪伴，慢慢修复了我们之间的信任。</p>
 
-  <p contenteditable="true">你听到了吗？</p>
+  <p>他又开始跟我说话了。不多，但至少他不再把我当成敌人。</p>
 
-  <div class="golden" contenteditable="true"><strong>"我想拿双证。"</strong></div>
+  <div class="divider-line"></div>
 
-  <p contenteditable="true">这个说了好几年"无所谓"的人。当毕业证真的触手可及的时候，他突然在乎了。</p>
+  <p>大七那年，堂弟找到我。</p>
 
-  <p contenteditable="true">他不是不在乎。<br>
+  <p>"林哥，我就差两三门课了。但我的绩点只有1.8，学校要求2.0才能拿学位证。我想拿双证，怎么办？"</p>
+
+  <p>你听到了吗？</p>
+
+  <div class="golden"><strong>"我想拿双证。"</strong></div>
+
+  <p>这个说了好几年"无所谓"的人。当毕业证真的触手可及的时候，他突然在乎了。</p>
+
+  <p>他不是不在乎。<br>
 他从来都在乎。<br>
 他只是不敢在乎。</p>
 
-  <p contenteditable="true">因为在乎就得行动。行动就可能失败。失败了，他连"无所谓"这块最后的盾牌都没了。</p>
+  <p>因为在乎就得行动。行动就可能失败。失败了，他连"无所谓"这块最后的盾牌都没了。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">后来的事很快。</p>
+  <p>后来的事很快。</p>
 
-  <p contenteditable="true">我厚着脸皮，用QQ加那些我根本不认识的任课老师，跟他们说堂弟的情况。学院的书记也帮着协调。</p>
+  <p>我厚着脸皮，用QQ加那些我根本不认识的任课老师，跟他们说堂弟的情况。学院的书记也帮着协调。</p>
 
-  <p contenteditable="true">堂弟一门一门地补考，一门一门地过。</p>
+  <p>堂弟一门一门地补考，一门一门地过。</p>
 
-  <p contenteditable="true">毕业审核那天，我比他还紧张。</p>
+  <p>毕业审核那天，我比他还紧张。</p>
 
-  <p contenteditable="true">我刷新系统，看到他的状态：<strong>已通过</strong>。</p>
+  <p>我刷新系统，看到他的状态：<strong>已通过</strong>。</p>
 
-  <p contenteditable="true">毕业证，有了。</p>
+  <p>毕业证，有了。</p>
 
-  <p contenteditable="true">然后我看到第二行：</p>
+  <p>然后我看到第二行：</p>
 
-  <div class="golden" contenteditable="true"><strong>学位证：已通过。</strong></div>
+  <div class="golden"><strong>学位证：已通过。</strong></div>
 
-  <p contenteditable="true">绩点2.1。</p>
+  <p>绩点2.1。</p>
 
-  <p contenteditable="true">他最后一学期补考过的那几门课，成绩算进了绩点，把1.8拉到了2.1。</p>
+  <p>他最后一学期补考过的那几门课，成绩算进了绩点，把1.8拉到了2.1。</p>
 
-  <p contenteditable="true">我打电话给他："兄弟，你拿双证了！"</p>
+  <p>我打电话给他："兄弟，你拿双证了！"</p>
 
-  <p contenteditable="true">电话那头沉默了几秒。</p>
+  <p>电话那头沉默了几秒。</p>
 
-  <p contenteditable="true">然后他哭了。</p>
-
-  <div class="divider-line"></div>
-
-  <p contenteditable="true">一个月后，他去了四川。</p>
-
-  <p contenteditable="true">走之前跟我说了一句话，我到现在都记得：</p>
-
-  <p contenteditable="true">"林哥，我以前一直觉得自己是个废物，是个在这个世界上多余的人。但你让我明白了，<strong>我不是废物，我只是被困住了。</strong>"</p>
+  <p>然后他哭了。</p>
 
   <div class="divider-line"></div>
 
-  <h3 class="section-title" contenteditable="true">林哥的故事</h3>
+  <p>一个月后，他去了四川。</p>
 
-  <p contenteditable="true">说到这里，我必须坦白一件事。</p>
+  <p>走之前跟我说了一句话，我到现在都记得：</p>
 
-  <div class="golden" contenteditable="true"><strong>我自己，也曾经掉进过同一个陷阱。</strong></div>
-
-  <p contenteditable="true">大一那年，我挂了5门课。</p>
-
-  <p contenteditable="true">那时候《绝地求生》刚出来半年，我和我兄弟小鲁在网吧里平均每天打16个小时。半年，Steam游戏时长突破了3000小时。</p>
-
-  <p contenteditable="true">我的脖子因为长时间低头看屏幕，落下了毛病，到现在都没好利索。</p>
-
-  <p contenteditable="true">大年三十，别人在家吃年夜饭，我在网吧通宵。</p>
-
-  <p contenteditable="true">每次朋友叫我出去打麻将，我都忽悠他们去上网。</p>
-
-  <p contenteditable="true">我不喜欢用笔记本在宿舍打，因为打得不爽。我喜欢连坐，我喜欢在那个全是烟味的网吧里，24小时不睡觉。</p>
-
-  <p contenteditable="true">那时候的我，就是个标准的废物。</p>
-
-  <p contenteditable="true">跟堂弟一样。</p>
+  <p>"林哥，我以前一直觉得自己是个废物，是个在这个世界上多余的人。但你让我明白了，<strong>我不是废物，我只是被困住了。</strong>"</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">改变发生在大二的某个凌晨。</p>
+  <h3 class="section-title">林哥的故事</h3>
 
-  <p contenteditable="true">我在网吧打了一整夜游戏，凌晨5点走出来，外面下着雪。</p>
+  <p>说到这里，我必须坦白一件事。</p>
 
-  <p contenteditable="true">我点了一根烟，站在雪地里。</p>
+  <div class="golden"><strong>我自己，也曾经掉进过同一个陷阱。</strong></div>
 
-  <p contenteditable="true">那一刻，我突然感觉到一种强烈的空虚。</p>
+  <p>大一那年，我挂了5门课。</p>
 
-  <div class="golden" contenteditable="true"><strong>我他妈在干什么？</strong></div>
+  <p>那时候《绝地求生》刚出来半年，我和我兄弟小鲁在网吧里平均每天打16个小时。半年，Steam游戏时长突破了3000小时。</p>
 
-  <p contenteditable="true">但注意，这种空虚不是第一次。</p>
+  <p>我的脖子因为长时间低头看屏幕，落下了毛病，到现在都没好利索。</p>
 
-  <p contenteditable="true">你有没有过这种感觉？打了一整天游戏，关掉电脑的那一瞬间，不是满足，是空虚。是"我今天又什么都没干"的那种空虚。</p>
+  <p>大年三十，别人在家吃年夜饭，我在网吧通宵。</p>
 
-  <p contenteditable="true">这种空虚，每个沉迷游戏的人都有。</p>
+  <p>每次朋友叫我出去打麻将，我都忽悠他们去上网。</p>
 
-  <p contenteditable="true">但大部分人的做法是什么？打开电脑，继续玩，用新一轮的游戏去覆盖这个空虚。</p>
+  <p>我不喜欢用笔记本在宿舍打，因为打得不爽。我喜欢连坐，我喜欢在那个全是烟味的网吧里，24小时不睡觉。</p>
 
-  <p contenteditable="true">无节制地打游戏，缓解的不是空虚。它制造空虚，然后再假装缓解它。</p>
+  <p>那时候的我，就是个标准的废物。</p>
 
-  <p contenteditable="true">这就是陷阱。</p>
-
-  <p contenteditable="true">我当时不懂这些。但我运气好，我碰到了一本书。</p>
+  <p>跟堂弟一样。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">我回到宿舍，搜"如何戒烟"。然后看到了一本书，一口气看完了。</p>
+  <p>改变发生在大二的某个凌晨。</p>
 
-  <p contenteditable="true">看完之后，我把手里的半包烟扔进了垃圾桶。</p>
+  <p>我在网吧打了一整夜游戏，凌晨5点走出来，外面下着雪。</p>
 
-  <p contenteditable="true">从那天起，我再也没抽过一根烟。</p>
+  <p>我点了一根烟，站在雪地里。</p>
 
-  <p contenteditable="true">那本书没有恐吓我，没有给我看烂掉的肺的照片，没有叫我"下定决心"。</p>
+  <p>那一刻，我突然感觉到一种强烈的空虚。</p>
 
-  <p contenteditable="true">它只做了一件事：<strong>让我看清了我到底在干什么。</strong></p>
+  <div class="golden"><strong>我他妈在干什么？</strong></div>
 
-  <p contenteditable="true">当我看清了"我不是在享受抽烟，我是在被抽烟困住"的时候，不抽就自然发生了。</p>
+  <p>但注意，这种空虚不是第一次。</p>
 
-  <p contenteditable="true">不需要意志力。不需要下决心。不需要任何人逼我。</p>
+  <p>你有没有过这种感觉？打了一整天游戏，关掉电脑的那一瞬间，不是满足，是空虚。是"我今天又什么都没干"的那种空虚。</p>
 
-  <p contenteditable="true">我只是看清了。然后，我就自由了。</p>
+  <p>这种空虚，每个沉迷游戏的人都有。</p>
 
-  <div class="divider-line"></div>
+  <p>但大部分人的做法是什么？打开电脑，继续玩，用新一轮的游戏去覆盖这个空虚。</p>
 
-  <p contenteditable="true">后来，我用同样的方式离开了游戏。</p>
+  <p>无节制地打游戏，缓解的不是空虚。它制造空虚，然后再假装缓解它。</p>
 
-  <p contenteditable="true">我没有卸载游戏，没有砸掉电脑，没有发誓"我再也不玩了"。</p>
+  <p>这就是陷阱。</p>
 
-  <p contenteditable="true">我只是有一天意识到：</p>
-
-  <div class="golden" contenteditable="true"><strong>我不是在"玩"游戏，我是在被游戏困住。</strong></div>
-
-  <p contenteditable="true">看清了，就走出来了。</p>
+  <p>我当时不懂这些。但我运气好，我碰到了一本书。</p>
 
   <div class="divider-line"></div>
 
-  <h3 class="section-title" contenteditable="true">为什么要讲这两个故事</h3>
+  <p>我回到宿舍，搜"如何戒烟"。然后看到了一本书，一口气看完了。</p>
 
-  <p contenteditable="true">堂弟和我，两个人，两种困境。</p>
+  <p>看完之后，我把手里的半包烟扔进了垃圾桶。</p>
 
-  <p contenteditable="true">但我们掉进的是同一个陷阱。</p>
+  <p>从那天起，我再也没抽过一根烟。</p>
 
-  <p contenteditable="true">堂弟觉得自己是"废物"，所以他逃避所有人。<br>
+  <p>那本书没有恐吓我，没有给我看烂掉的肺的照片，没有叫我"下定决心"。</p>
+
+  <p>它只做了一件事：<strong>让我看清了我到底在干什么。</strong></p>
+
+  <p>当我看清了"我不是在享受抽烟，我是在被抽烟困住"的时候，不抽就自然发生了。</p>
+
+  <p>不需要意志力。不需要下决心。不需要任何人逼我。</p>
+
+  <p>我只是看清了。然后，我就自由了。</p>
+
+  <div class="divider-line"></div>
+
+  <p>后来，我用同样的方式离开了游戏。</p>
+
+  <p>我没有卸载游戏，没有砸掉电脑，没有发誓"我再也不玩了"。</p>
+
+  <p>我只是有一天意识到：</p>
+
+  <div class="golden"><strong>我不是在"玩"游戏，我是在被游戏困住。</strong></div>
+
+  <p>看清了，就走出来了。</p>
+
+  <div class="divider-line"></div>
+
+  <h3 class="section-title">为什么要讲这两个故事</h3>
+
+  <p>堂弟和我，两个人，两种困境。</p>
+
+  <p>但我们掉进的是同一个陷阱。</p>
+
+  <p>堂弟觉得自己是"废物"，所以他逃避所有人。<br>
 我觉得自己是"网瘾少年"，所以我沉迷游戏无法自拔。</p>
 
-  <p contenteditable="true">但真相是：</p>
+  <p>但真相是：</p>
 
-  <div class="golden" contenteditable="true"><strong>我们都不是废物。我们只是被困住了。</strong></div>
+  <div class="golden"><strong>我们都不是废物。我们只是被困住了。</strong></div>
 
-  <p contenteditable="true">堂弟走出来，不是靠"好好学习"，是靠看清了大学系统的真实规则。<br>
+  <p>堂弟走出来，不是靠"好好学习"，是靠看清了大学系统的真实规则。<br>
 我走出来，不是靠"下定决心"，是靠看清了困住我的东西。</p>
 
-  <div class="golden" contenteditable="true"><strong>看清，是改变的起点。</strong></div>
+  <div class="golden"><strong>看清，是改变的起点。</strong></div>
 
-  <p contenteditable="true">这本书要做的，就是帮你看清。</p>
+  <p>这本书要做的，就是帮你看清。</p>
 
-  <p contenteditable="true">从下一章开始，我们一步一步来。</p>
+  <p>从下一章开始，我们一步一步来。</p>
 
-  <p contenteditable="true">先看清你到底掉进了什么。</p>
+  <p>先看清你到底掉进了什么。</p>
 </article>
 
 <!-- ===== Part 1 · 你掉进了一个陷阱 过渡页 ===== -->
@@ -635,117 +617,117 @@
 <!-- ===== 第一章: 你挂科不是因为你蠢 ===== -->
 <article class="chapter" id="ch-2" data-filename="第01章_你挂科不是因为你蠢.md">
   <div class="chapter-label">Part 1 · 你掉进了一个陷阱 · 第一章</div>
-  <h2 class="chapter-title" contenteditable="true">你挂科不是因为你蠢</h2>
-  <p contenteditable="true">2022年8月，我刚入职，接手辅导员的工作，一个人带300多个学生。</p>
+  <h2 class="chapter-title">你挂科不是因为你蠢</h2>
+  <p>2022年8月，我刚入职，接手辅导员的工作，一个人带300多个学生。</p>
 
-  <p contenteditable="true">刚上班嘛，肯定要先看学生资料。<br>
+  <p>刚上班嘛，肯定要先看学生资料。<br>
 我打开系统，开始查学生的成绩。<br>
 然后我就看到了一个名字：</p>
 
-  <p contenteditable="true">堂弟，18级入学，现在已经大五了。</p>
+  <p>堂弟，18级入学，现在已经大五了。</p>
 
-  <p contenteditable="true">我看了一眼他的成绩单。</p>
+  <p>我看了一眼他的成绩单。</p>
 
-  <p contenteditable="true">我操，大哥，你他妈有点太猛了吧？</p>
+  <p>我操，大哥，你他妈有点太猛了吧？</p>
 
-  <p contenteditable="true">挂科30门。<br>
+  <p>挂科30门。<br>
 而且更离谱的是：新学期从来没有选课。</p>
 
-  <p contenteditable="true">也就是说，这一学期他属于一个幽灵状态，所有人都没见过他。</p>
+  <p>也就是说，这一学期他属于一个幽灵状态，所有人都没见过他。</p>
 
-  <p contenteditable="true">我去问班长，班长说不认识，也没他联系方式。我去系统上查他的手机号，空号。我去查他爸妈的资料，系统上从来没有登记过。我去加他QQ，不通过。</p>
+  <p>我去问班长，班长说不认识，也没他联系方式。我去系统上查他的手机号，空号。我去查他爸妈的资料，系统上从来没有登记过。我去加他QQ，不通过。</p>
 
-  <p contenteditable="true">我当时想，这大哥在干嘛呢？能不能毕业了？</p>
+  <p>我当时想，这大哥在干嘛呢？能不能毕业了？</p>
 
-  <p contenteditable="true">后来我去翻历史档案，因为他是办理了走读，档案里有他具体的住宿地址。我看到那个地址，心想，行，那我就过去看看。</p>
+  <p>后来我去翻历史档案，因为他是办理了走读，档案里有他具体的住宿地址。我看到那个地址，心想，行，那我就过去看看。</p>
 
-  <p contenteditable="true">林哥当时是把自己当成一个小侦探，你懂吧。<br>
+  <p>林哥当时是把自己当成一个小侦探，你懂吧。<br>
 抱着玩的心思，骑个电动车就去了。</p>
 
-  <p contenteditable="true">当时我还没有意识到，我即将接触我人生当中非常重要的一个小弟。</p>
+  <p>当时我还没有意识到，我即将接触我人生当中非常重要的一个小弟。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">我找到那个地址，驱车过去。</p>
+  <p>我找到那个地址，驱车过去。</p>
 
-  <p contenteditable="true">那是一个800块钱一个月的商铺，夹在送外卖的窝子和炸鸡汉堡店之间。</p>
+  <p>那是一个800块钱一个月的商铺，夹在送外卖的窝子和炸鸡汉堡店之间。</p>
 
-  <p contenteditable="true">我举着手机录视频，推开门，一股霉味扑面而来。</p>
+  <p>我举着手机录视频，推开门，一股霉味扑面而来。</p>
 
-  <p contenteditable="true">我还以为没人呢。</p>
+  <p>我还以为没人呢。</p>
 
-  <p contenteditable="true">但里面有人。<br>
+  <p>但里面有人。<br>
 他就在里面。<br>
 也不说话。</p>
 
-  <p contenteditable="true">我操，那种状态还挺吓人的。</p>
+  <p>我操，那种状态还挺吓人的。</p>
 
-  <p contenteditable="true">地上全都是快递，买的都是临期饮料和临期食品。<br>
+  <p>地上全都是快递，买的都是临期饮料和临期食品。<br>
 但这些快递他都不拆，你懂吗？<br>
 就是他买了囤着，但是他不拆。</p>
 
-  <p contenteditable="true">我操，就绝了。</p>
+  <p>我操，就绝了。</p>
 
-  <p contenteditable="true">我把他从那个屋子里叫出来，在门口聊天。我跟他介绍了一下我自己，说我是新来的辅导员，你可以叫我林哥。他说，好，知道了。</p>
+  <p>我把他从那个屋子里叫出来，在门口聊天。我跟他介绍了一下我自己，说我是新来的辅导员，你可以叫我林哥。他说，好，知道了。</p>
 
-  <p contenteditable="true">我就问他为啥没选课，家里知不知道他这个情况。<br>
+  <p>我就问他为啥没选课，家里知不知道他这个情况。<br>
 我问来问去，那个时候我没觉得他有啥毛病，就是正常问嘛。因为我也没说批评他考不考试什么之类的，我觉得考试学习都是他的事儿，跟我没关系。<br>
 但我得为他的安全着想，我说这环境能行吗？这环境连个厕所都没有。</p>
 
-  <p contenteditable="true">他说他爸妈知道，还是他妈过来陪他一起租的房子。</p>
+  <p>他说他爸妈知道，还是他妈过来陪他一起租的房子。</p>
 
-  <p contenteditable="true">我操，当时就觉得很amazing。</p>
+  <p>我操，当时就觉得很amazing。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">兄弟，我为什么要给你讲这个故事？</p>
+  <p>兄弟，我为什么要给你讲这个故事？</p>
 
-  <p contenteditable="true">不是为了感动你，也不是为了吓你。</p>
+  <p>不是为了感动你，也不是为了吓你。</p>
 
-  <p contenteditable="true">我是要告诉你一件事：</p>
+  <p>我是要告诉你一件事：</p>
 
-  <div class="golden" contenteditable="true"><strong>堂弟不是一觉醒来就挂了30门课的。</strong></div>
+  <div class="golden"><strong>堂弟不是一觉醒来就挂了30门课的。</strong></div>
 
-  <p contenteditable="true">没有人会在大一入学的时候跟自己说："好，我的大学目标是挂30门课，住进一个800块的破商铺，买一堆快递不拆，活成一个幽灵。"</p>
+  <p>没有人会在大一入学的时候跟自己说："好，我的大学目标是挂30门课，住进一个800块的破商铺，买一堆快递不拆，活成一个幽灵。"</p>
 
-  <p contenteditable="true">不会的。</p>
+  <p>不会的。</p>
 
-  <p contenteditable="true">堂弟也曾经是个正常的大一新生。<br>
+  <p>堂弟也曾经是个正常的大一新生。<br>
 也拎着行李箱走进校门，也领了军训服，也在食堂排过队。</p>
 
-  <p contenteditable="true">那他是怎么一步步走到那个800块的商铺里的？</p>
+  <p>那他是怎么一步步走到那个800块的商铺里的？</p>
 
-  <p contenteditable="true">我后来跟他聊了很多次，慢慢拼出了完整的路径。<br>
+  <p>我后来跟他聊了很多次，慢慢拼出了完整的路径。<br>
 说出来你可能觉得很熟悉，因为这条路，你可能正在走。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">一开始，他只是有几节课没去。</p>
+  <p>一开始，他只是有几节课没去。</p>
 
-  <p contenteditable="true">原因很简单，听不懂。<br>
+  <p>原因很简单，听不懂。<br>
 坐在教室里，老师讲的东西跟天书一样，他完全跟不上。</p>
 
-  <p contenteditable="true">你有过这种感觉吗？<br>
+  <p>你有过这种感觉吗？<br>
 坐在那里，周围的人都在记笔记，你连老师在讲什么都不知道。<br>
 那种感觉不是无聊，是羞耻。<br>
 是你觉得"全世界就我一个人是白痴"的那种羞耻。</p>
 
-  <p contenteditable="true">所以他选择不去了。<br>
+  <p>所以他选择不去了。<br>
 不去上课，就不用面对那种感觉。</p>
 
-  <p contenteditable="true">这是第一步。<br>
+  <p>这是第一步。<br>
 很小的一步。<br>
 就像你第一次逃课一样，没什么大不了的，对吧？</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">你可能觉得堂弟是个特例。</p>
+  <p>你可能觉得堂弟是个特例。</p>
 
-  <p contenteditable="true">不是。</p>
+  <p>不是。</p>
 
-  <p contenteditable="true">我再给你讲一个人。</p>
+  <p>我再给你讲一个人。</p>
 
-  <div class="case-card" contenteditable="true">
+  <div class="case-card">
     <p>有个男孩，高中的时候是真猛。他用了三个月，从年级100名冲到前30名。三个月。他妈跟我说这事儿的时候，语气里都带着骄傲。<br>
 <br>
 所以他进大学的时候，全家人都觉得：这孩子没问题，大学肯定稳了。<br>
@@ -770,19 +752,19 @@
 </p>
   </div>
 
-  <p contenteditable="true">你听懂了吗？</p>
+  <p>你听懂了吗？</p>
 
-  <div class="golden" contenteditable="true"><strong>他用"不学"来保护"我很行"的幻觉。</strong></div>
+  <div class="golden"><strong>他用"不学"来保护"我很行"的幻觉。</strong></div>
 
-  <p contenteditable="true">这就是陷阱最狠的地方。<br>
+  <p>这就是陷阱最狠的地方。<br>
 它不是让你觉得自己不行。<br>
 它是让你用一种看似合理的方式，一步步放弃行动，但同时保留自我感觉。</p>
 
-  <p contenteditable="true">那他爸妈知道吗？</p>
+  <p>那他爸妈知道吗？</p>
 
-  <p contenteditable="true">不知道。</p>
+  <p>不知道。</p>
 
-  <div class="case-card" contenteditable="true">
+  <div class="case-card">
     <p>他不敢回家说"我高数挂了"。为什么？因为全家人对他的期待还停在"保研、考研、出国"。爸妈还在说"宝贝你这么优秀，大学肯定没问题"。<br>
 <br>
 他怎么开口说"我挂科了"？<br>
@@ -793,43 +775,43 @@
 </p>
   </div>
 
-  <p contenteditable="true">堂弟是听不懂，所以不去上课。<br>
+  <p>堂弟是听不懂，所以不去上课。<br>
 这个男孩是不敢学，因为学了还挂，就没借口了。</p>
 
-  <p contenteditable="true">路径不一样，终点一样。</p>
+  <p>路径不一样，终点一样。</p>
 
-  <p contenteditable="true">都掉进了同一个陷阱。</p>
+  <p>都掉进了同一个陷阱。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">然后，因为不去上课，平时分没了。<br>
+  <p>然后，因为不去上课，平时分没了。<br>
 平时分没了，期末怎么考都过不了。<br>
 考不过，就挂科了。</p>
 
-  <p contenteditable="true">挂了几门之后，他开始害怕看成绩单。<br>
+  <p>挂了几门之后，他开始害怕看成绩单。<br>
 害怕看到那些红色的数字。<br>
 害怕打开教务系统。</p>
 
-  <p contenteditable="true">所以他连教务系统都不登了。</p>
+  <p>所以他连教务系统都不登了。</p>
 
-  <p contenteditable="true">不登教务系统，就不知道自己到底挂了多少门。<br>
+  <p>不登教务系统，就不知道自己到底挂了多少门。<br>
 不知道挂了多少门，就可以假装一切还好。</p>
 
-  <p contenteditable="true">这是第二步。</p>
+  <p>这是第二步。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">再后来，辅导员开始找他谈话。<br>
+  <p>再后来，辅导员开始找他谈话。<br>
 家长开始打电话。<br>
 班长开始问他怎么了。</p>
 
-  <p contenteditable="true">每一个关心他的人，都让他更痛苦。</p>
+  <p>每一个关心他的人，都让他更痛苦。</p>
 
-  <p contenteditable="true">因为每一次被关心，都在提醒他：你出问题了。</p>
+  <p>因为每一次被关心，都在提醒他：你出问题了。</p>
 
-  <p contenteditable="true">不只是堂弟这样。</p>
+  <p>不只是堂弟这样。</p>
 
-  <div class="case-card" contenteditable="true">
+  <div class="case-card">
     <p>我遇到过一个985院校的男孩。<br>
 <br>
 他妈跟我说，这孩子现在觉得宿舍不安全，辅导员是假的，学校不是帮他的地方，是监控他的地方。<br>
@@ -851,124 +833,124 @@
 </p>
   </div>
 
-  <p contenteditable="true">他不是不想好。<br>
+  <p>他不是不想好。<br>
 他是觉得整个世界都在证明他不行。<br>
 连他最亲的人说的话，听起来都像是在说"你怎么这么差劲"。</p>
 
-  <p contenteditable="true">所以他开始躲。<br>
+  <p>所以他开始躲。<br>
 不接电话，不回消息，不去宿舍。<br>
 换了手机号，搬到了校外。<br>
 最后搬进了那个800块的商铺。</p>
 
-  <p contenteditable="true">这是第三步。</p>
+  <p>这是第三步。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">你看到了吗？</p>
+  <p>你看到了吗？</p>
 
-  <p contenteditable="true">从"有几节课没去"到"住进800块的破商铺"，堂弟走了四年。</p>
+  <p>从"有几节课没去"到"住进800块的破商铺"，堂弟走了四年。</p>
 
-  <div class="golden" contenteditable="true"><strong>这四年里，他没有做过任何一个"大决定"。</strong></div>
+  <div class="golden"><strong>这四年里，他没有做过任何一个"大决定"。</strong></div>
 
-  <p contenteditable="true">他没有在某一天坐下来，深思熟虑之后说："好，我决定放弃学业，住进商铺，活成幽灵。"</p>
+  <p>他没有在某一天坐下来，深思熟虑之后说："好，我决定放弃学业，住进商铺，活成幽灵。"</p>
 
-  <p contenteditable="true">没有。</p>
+  <p>没有。</p>
 
-  <p contenteditable="true">他只是在每一个小小的瞬间，选择了那个不那么痛苦的选项：</p>
+  <p>他只是在每一个小小的瞬间，选择了那个不那么痛苦的选项：</p>
 
-  <div class="loop-chain" contenteditable="true">听不懂 → 不去上课（这样就不用面对羞耻）<br>
+  <div class="loop-chain">听不懂 → 不去上课（这样就不用面对羞耻）<br>
 挂科了 → 不看成绩（这样就不用面对现实）<br>
 被关心 → 躲起来（这样就不用面对别人的眼神）</div>
 
-  <p contenteditable="true">每一步都很小。<br>
+  <p>每一步都很小。<br>
 每一步都很合理。<br>
 每一步都是在逃避痛苦。</p>
 
-  <div class="golden" contenteditable="true"><strong>但每走一步，他就陷得更深一点。</strong></div>
+  <div class="golden"><strong>但每走一步，他就陷得更深一点。</strong></div>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">兄弟，这就是我要告诉你的第一件事：</p>
+  <p>兄弟，这就是我要告诉你的第一件事：</p>
 
-  <div class="golden" contenteditable="true"><strong>你掉进了一个陷阱。</strong></div>
+  <div class="golden"><strong>你掉进了一个陷阱。</strong></div>
 
-  <p contenteditable="true">这个陷阱设计得很精妙。<br>
+  <p>这个陷阱设计得很精妙。<br>
 它不是一个坑，让你"噗通"一下掉进去。<br>
 它是一个斜坡，非常缓，缓到你根本感觉不到自己在往下滑。</p>
 
-  <p contenteditable="true">但你没有发现，这些"暂时"加在一起，就变成了"永远"。</p>
+  <p>但你没有发现，这些"暂时"加在一起，就变成了"永远"。</p>
 
-  <p contenteditable="true">堂弟"暂时"不去上课，"暂时"了四年。<br>
+  <p>堂弟"暂时"不去上课，"暂时"了四年。<br>
 堂弟"暂时"不看成绩，"暂时"到挂了30门才被我找到。</p>
 
-  <p contenteditable="true"><strong>没有人计划挂科30门。</strong><br>
+  <p><strong>没有人计划挂科30门。</strong><br>
 <strong>就像没有人计划欠一屁股债。</strong></p>
 
-  <p contenteditable="true">每个欠债的人，最开始都只是借了一小笔。<br>
+  <p>每个欠债的人，最开始都只是借了一小笔。<br>
 每个挂科的人，最开始都只是翘了一次课。</p>
 
-  <p contenteditable="true">但一笔变成两笔，两笔变成十笔。<br>
+  <p>但一笔变成两笔，两笔变成十笔。<br>
 一次变成一周，一周变成一学期。</p>
 
-  <p contenteditable="true">这就是陷阱。<br>
+  <p>这就是陷阱。<br>
 你不是"选择"摆烂的。<br>
 你是掉进去的。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">我跟你说这些，不是在帮你找借口。</p>
+  <p>我跟你说这些，不是在帮你找借口。</p>
 
-  <p contenteditable="true">"哦，原来是陷阱啊，那就不是我的错了。"</p>
+  <p>"哦，原来是陷阱啊，那就不是我的错了。"</p>
 
-  <p contenteditable="true">不是这个意思。</p>
+  <p>不是这个意思。</p>
 
-  <p contenteditable="true">我是要你先看清楚你到底在哪。</p>
+  <p>我是要你先看清楚你到底在哪。</p>
 
-  <p contenteditable="true">你现在之所以痛苦，不是因为你蠢，不是因为你懒，不是因为你"没有意志力"。</p>
+  <p>你现在之所以痛苦，不是因为你蠢，不是因为你懒，不是因为你"没有意志力"。</p>
 
-  <p contenteditable="true">你痛苦，是因为你被困在一个循环里：</p>
+  <p>你痛苦，是因为你被困在一个循环里：</p>
 
-  <div class="golden" contenteditable="true"><strong>逃避 → 挂科 → 羞耻 → 更逃避 → 更多挂科 → 更深的羞耻 → 更彻底的逃避</strong></div>
+  <div class="golden"><strong>逃避 → 挂科 → 羞耻 → 更逃避 → 更多挂科 → 更深的羞耻 → 更彻底的逃避</strong></div>
 
-  <p contenteditable="true">这个循环一旦转起来，靠"意志力"是停不下来的。</p>
+  <p>这个循环一旦转起来，靠"意志力"是停不下来的。</p>
 
-  <p contenteditable="true">你有没有试过？<br>
+  <p>你有没有试过？<br>
 你有没有在某天晚上躺在床上，下定决心"明天开始好好学习"？<br>
 然后第二天闹钟响了，你关掉闹钟，继续睡？<br>
 然后醒来之后，比昨天更讨厌自己？</p>
 
-  <p contenteditable="true">你有没有在收到学业警告的那天，发誓"我一定要改"？<br>
+  <p>你有没有在收到学业警告的那天，发誓"我一定要改"？<br>
 然后第三天，你又坐在电脑前打游戏了？<br>
 然后打完之后，比之前更焦虑？</p>
 
-  <p contenteditable="true">这不是你意志力差。<br>
+  <p>这不是你意志力差。<br>
 这是陷阱在运作。</p>
 
-  <p contenteditable="true">你每次"下定决心"然后"失败"，都在强化一个信念：<br>
+  <p>你每次"下定决心"然后"失败"，都在强化一个信念：<br>
 <strong>我果然不行。</strong></p>
 
-  <p contenteditable="true">而"我果然不行"这个信念，又会把你推向更深的逃避。</p>
+  <p>而"我果然不行"这个信念，又会把你推向更深的逃避。</p>
 
-  <p contenteditable="true">这就是为什么你越努力越失败。<br>
+  <p>这就是为什么你越努力越失败。<br>
 不是因为你不够努力。<br>
 是因为你在用错误的方式对抗一个你还没看清的陷阱。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">那羞耻感呢？</p>
+  <p>那羞耻感呢？</p>
 
-  <p contenteditable="true">羞耻感是这个陷阱的锁。</p>
+  <p>羞耻感是这个陷阱的锁。</p>
 
-  <p contenteditable="true">陷阱把你困住，羞耻感让你不敢求救。</p>
+  <p>陷阱把你困住，羞耻感让你不敢求救。</p>
 
-  <p contenteditable="true">你不敢跟家长说实话。<br>
+  <p>你不敢跟家长说实话。<br>
 你不敢找老师谈。<br>
 你不敢跟朋友聊这件事。<br>
 你甚至不敢在百度上搜"挂科了怎么办"，因为你觉得输入这几个字都丢人。</p>
 
-  <p contenteditable="true">我带过一个双非院校的男孩，大二，走读。他的做法更绝：</p>
+  <p>我带过一个双非院校的男孩，大二，走读。他的做法更绝：</p>
 
-  <div class="case-card" contenteditable="true">
+  <div class="case-card">
     <p>他挂了四门课。他爸问他到底挂了几门。<br>
 <br>
 他说：一门。<br>
@@ -988,207 +970,207 @@
 </p>
   </div>
 
-  <p contenteditable="true">撒谎不是因为他坏。<br>
+  <p>撒谎不是因为他坏。<br>
 撒谎是因为在他的世界里，真话是危险的。</p>
 
-  <p contenteditable="true">你看，陷阱又多了一层。</p>
+  <p>你看，陷阱又多了一层。</p>
 
-  <div class="loop-chain" contenteditable="true">挂科 → 羞耻 → 不敢说 → 撒谎 → 谎越来越大 → 更不敢说 → 更深的羞耻</div>
+  <div class="loop-chain">挂科 → 羞耻 → 不敢说 → 撒谎 → 谎越来越大 → 更不敢说 → 更深的羞耻</div>
 
-  <div class="golden" contenteditable="true"><strong>撒谎不是品质问题。撒谎是陷阱的保护壳。</strong></div>
+  <div class="golden"><strong>撒谎不是品质问题。撒谎是陷阱的保护壳。</strong></div>
 
-  <p contenteditable="true">当一个孩子在家里说真话会被惩罚，哪怕惩罚只是焦虑和唠叨，他就会本能地选择假话。不是他想骗你。是他觉得真话活不下去。</p>
+  <p>当一个孩子在家里说真话会被惩罚，哪怕惩罚只是焦虑和唠叨，他就会本能地选择假话。不是他想骗你。是他觉得真话活不下去。</p>
 
-  <p contenteditable="true">羞耻感是怎么来的？</p>
+  <p>羞耻感是怎么来的？</p>
 
-  <p contenteditable="true">是你高中班主任告诉你"学习不好就是废物"。<br>
+  <p>是你高中班主任告诉你"学习不好就是废物"。<br>
 是你爸妈从小说"你看看别人家的孩子"。<br>
 是你同学朋友圈里晒的奖学金和保研通知。</p>
 
-  <p contenteditable="true">但这些标准谁定的？</p>
+  <p>但这些标准谁定的？</p>
 
-  <p contenteditable="true">谁说考第一名就是成功？<br>
+  <p>谁说考第一名就是成功？<br>
 谁说挂科就是废物？</p>
 
-  <p contenteditable="true">堂弟用7年毕业，拿着双证去了四川找了份工作。<br>
+  <p>堂弟用7年毕业，拿着双证去了四川找了份工作。<br>
 他现在过得挺好。</p>
 
-  <p contenteditable="true">那个高中第一名，现在在干嘛？你知道吗？<br>
+  <p>那个高中第一名，现在在干嘛？你知道吗？<br>
 你不知道，因为你根本不关心他。<br>
 你只关心别人怎么看你。</p>
 
-  <div class="golden" contenteditable="true"><strong>羞耻感的本质，是你活在别人的期待里。</strong></div>
+  <div class="golden"><strong>羞耻感的本质，是你活在别人的期待里。</strong></div>
 
-  <p contenteditable="true">而活在别人的期待里，恰恰是陷阱设计的一部分。</p>
+  <p>而活在别人的期待里，恰恰是陷阱设计的一部分。</p>
 
-  <p contenteditable="true">因为当你觉得"挂科=废物"的时候，你就不敢面对挂科。<br>
+  <p>因为当你觉得"挂科=废物"的时候，你就不敢面对挂科。<br>
 不敢面对，就会逃避。<br>
 逃避，就会挂更多。<br>
 挂更多，就更觉得自己是废物。</p>
 
-  <p contenteditable="true">看到了吗？<br>
+  <p>看到了吗？<br>
 羞耻感不是挂科的结果，羞耻感是陷阱的一部分。<br>
 <strong>挂科不是世界末日，羞耻感才是。</strong></p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">我再说一个事。</p>
+  <p>我再说一个事。</p>
 
-  <p contenteditable="true">堂弟后来的故事很长，我会在后面的章节慢慢讲。<br>
+  <p>堂弟后来的故事很长，我会在后面的章节慢慢讲。<br>
 但有一件事我想提前告诉你。</p>
 
-  <p contenteditable="true">7年。<br>
+  <p>7年。<br>
 挂了38门课。<br>
 连课都不去。<br>
 他妈在旁边陪着，看着他进教学楼，以为他在上课。<br>
 他从前门进，后门就走了。</p>
 
-  <p contenteditable="true">但最后，他硬生生地把这个大学读完了。<br>
+  <p>但最后，他硬生生地把这个大学读完了。<br>
 毕业证，学位证，双证齐全。</p>
 
-  <p contenteditable="true">他是怎么做到的？<br>
+  <p>他是怎么做到的？<br>
 不是靠"好好学习"。<br>
 不是靠"下定决心"。<br>
 不是靠他妈天天盯着。</p>
 
-  <p contenteditable="true">他是看清了这个陷阱。</p>
+  <p>他是看清了这个陷阱。</p>
 
-  <p contenteditable="true">当他终于明白"我不是废物，我只是被困住了"的时候，一切就开始变了。</p>
+  <p>当他终于明白"我不是废物，我只是被困住了"的时候，一切就开始变了。</p>
 
-  <p contenteditable="true">他不再跟自己较劲了。<br>
+  <p>他不再跟自己较劲了。<br>
 不再逼自己"好好学习"了。<br>
 不再假装"无所谓"了。</p>
 
-  <p contenteditable="true">他只是看清了大学这个系统的真实规则，然后用最小的代价，把证拿到手了。</p>
+  <p>他只是看清了大学这个系统的真实规则，然后用最小的代价，把证拿到手了。</p>
 
-  <p contenteditable="true">这个过程，我们后面会一步步讲。</p>
+  <p>这个过程，我们后面会一步步讲。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">但在那之前，你需要先完成一件事：</p>
+  <p>但在那之前，你需要先完成一件事：</p>
 
-  <div class="golden" contenteditable="true"><strong>承认你掉进了一个陷阱。</strong></div>
+  <div class="golden"><strong>承认你掉进了一个陷阱。</strong></div>
 
-  <p contenteditable="true">不是承认你蠢。<br>
+  <p>不是承认你蠢。<br>
 不是承认你懒。<br>
 不是承认你是废物。</p>
 
-  <p contenteditable="true">是承认：你掉进了一个精心设计的循环里，这个循环让你越陷越深，而你之前根本不知道它的存在。</p>
+  <p>是承认：你掉进了一个精心设计的循环里，这个循环让你越陷越深，而你之前根本不知道它的存在。</p>
 
-  <p contenteditable="true">堂弟走之前跟我说了一句话，我到现在都记得：</p>
+  <p>堂弟走之前跟我说了一句话，我到现在都记得：</p>
 
-  <p contenteditable="true">"林哥，我以前一直觉得自己是个废物，是个在这个世界上多余的人。但你让我明白了，<strong>我不是废物，我只是被困住了。</strong>"</p>
+  <p>"林哥，我以前一直觉得自己是个废物，是个在这个世界上多余的人。但你让我明白了，<strong>我不是废物，我只是被困住了。</strong>"</p>
 
-  <p contenteditable="true">兄弟，你也一样。</p>
+  <p>兄弟，你也一样。</p>
 
-  <p contenteditable="true">你不是废物。<br>
+  <p>你不是废物。<br>
 你不是蠢。<br>
 你不是"没有意志力"。</p>
 
-  <div class="golden" contenteditable="true"><strong>你只是掉进了一个陷阱，而且没有人告诉过你这个陷阱的存在。</strong></div>
+  <div class="golden"><strong>你只是掉进了一个陷阱，而且没有人告诉过你这个陷阱的存在。</strong></div>
 
-  <p contenteditable="true">现在，你知道了。</p>
+  <p>现在，你知道了。</p>
 
-  <p contenteditable="true">下一章，我要告诉你：这个陷阱到底是怎么运作的。<br>
+  <p>下一章，我要告诉你：这个陷阱到底是怎么运作的。<br>
 当你彻底看清它的运作方式，它就困不住你了。</p>
 </article>
 
 <!-- ===== 第二章: 这个陷阱是怎么运作的 ===== -->
 <article class="chapter" id="ch-3" data-filename="第02章_这个陷阱是怎么运作的.md">
   <div class="chapter-label">Part 1 · 你掉进了一个陷阱 · 第二章</div>
-  <h2 class="chapter-title" contenteditable="true">这个陷阱是怎么运作的</h2>
-  <p contenteditable="true">上一章我告诉你，你掉进了一个陷阱。</p>
+  <h2 class="chapter-title">这个陷阱是怎么运作的</h2>
+  <p>上一章我告诉你，你掉进了一个陷阱。</p>
 
-  <p contenteditable="true">这一章，我要把这个陷阱拆开来给你看。</p>
+  <p>这一章，我要把这个陷阱拆开来给你看。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">先问你一个问题：</p>
+  <p>先问你一个问题：</p>
 
-  <p contenteditable="true">你为什么打游戏？</p>
+  <p>你为什么打游戏？</p>
 
-  <p contenteditable="true">你可能会说：因为好玩。因为解压。因为没事干。</p>
+  <p>你可能会说：因为好玩。因为解压。因为没事干。</p>
 
-  <p contenteditable="true">我先说清楚一件事：<strong>林哥不反对打游戏。</strong></p>
+  <p>我先说清楚一件事：<strong>林哥不反对打游戏。</strong></p>
 
-  <p contenteditable="true">大学里谁不打游戏？游戏本身没问题。跟兄弟开黑、探索新世界、释放一下，这些都是大学生活的一部分。</p>
+  <p>大学里谁不打游戏？游戏本身没问题。跟兄弟开黑、探索新世界、释放一下，这些都是大学生活的一部分。</p>
 
-  <p contenteditable="true">我反对的是另一种打法：<strong>无节制地打。</strong></p>
+  <p>我反对的是另一种打法：<strong>无节制地打。</strong></p>
 
-  <p contenteditable="true">从早打到晚，从白天打到凌晨，打完觉得空虚，空虚了继续打。到最后你分不清游戏里的世界和现实的世界，哪个才是你真正在过的日子。</p>
+  <p>从早打到晚，从白天打到凌晨，打完觉得空虚，空虚了继续打。到最后你分不清游戏里的世界和现实的世界，哪个才是你真正在过的日子。</p>
 
-  <p contenteditable="true">如果你打游戏是开心的，打完之后觉得"今天挺爽"，那你不需要看这一章。</p>
+  <p>如果你打游戏是开心的，打完之后觉得"今天挺爽"，那你不需要看这一章。</p>
 
-  <p contenteditable="true">但如果你打完游戏之后的感觉是这样的——</p>
+  <p>但如果你打完游戏之后的感觉是这样的——</p>
 
-  <div class="golden" contenteditable="true"><strong>你打完游戏之后，是什么感觉？</strong></div>
+  <div class="golden"><strong>你打完游戏之后，是什么感觉？</strong></div>
 
-  <p contenteditable="true">空虚。</p>
+  <p>空虚。</p>
 
-  <p contenteditable="true">是"我今天又什么都没干"的空虚。<br>
+  <p>是"我今天又什么都没干"的空虚。<br>
 是"明天还有一堆烂摊子"的焦虑。<br>
 是"我怎么又玩了一整天"的自责。</p>
 
-  <p contenteditable="true">你有没有发现一个很诡异的事情：</p>
+  <p>你有没有发现一个很诡异的事情：</p>
 
-  <div class="golden" contenteditable="true"><strong>你打游戏是为了缓解焦虑，但打完之后你更焦虑了。</strong></div>
+  <div class="golden"><strong>你打游戏是为了缓解焦虑，但打完之后你更焦虑了。</strong></div>
 
-  <p contenteditable="true">这是怎么回事？</p>
+  <p>这是怎么回事？</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">我给你打个比方。</p>
+  <p>我给你打个比方。</p>
 
-  <p contenteditable="true">你穿了一双很紧的鞋，脚疼。然后你把鞋脱了，脚不疼了。你觉得"好爽啊"。</p>
+  <p>你穿了一双很紧的鞋，脚疼。然后你把鞋脱了，脚不疼了。你觉得"好爽啊"。</p>
 
-  <p contenteditable="true">但这个"爽"是真的爽吗？不是。是从"疼"回到"正常"。<br>
+  <p>但这个"爽"是真的爽吗？不是。是从"疼"回到"正常"。<br>
 你并没有比穿鞋之前更舒服，你只是回到了起点。</p>
 
-  <div class="golden" contenteditable="true"><strong>游戏就是那双紧鞋。</strong></div>
+  <div class="golden"><strong>游戏就是那双紧鞋。</strong></div>
 
-  <p contenteditable="true">不是游戏帮你解压了。是你的生活本身就充满了压力，游戏只是暂时帮你忘记了这些压力。</p>
+  <p>不是游戏帮你解压了。是你的生活本身就充满了压力，游戏只是暂时帮你忘记了这些压力。</p>
 
-  <p contenteditable="true">游戏结束的那一秒，所有压力原封不动地回来了。而且多了一笔利息——你又浪费了一天。</p>
-
-  <div class="divider-line"></div>
-
-  <p contenteditable="true">兄弟，这就是陷阱最核心的运作方式。</p>
-
-  <p contenteditable="true">你现在的状态是什么？</p>
-
-  <p contenteditable="true">挂科了。成绩单很难看。家长可能已经知道了。辅导员可能已经找你谈话了。你还有一堆课没选、一堆作业没交、一堆补考没报名。</p>
-
-  <p contenteditable="true">你的身体里住着一个巨大的焦虑。</p>
-
-  <p contenteditable="true">这个焦虑让你坐立不安，让你不想面对任何跟学校有关的事情。</p>
-
-  <p contenteditable="true">然后你打开电脑，开了一把游戏。</p>
-
-  <p contenteditable="true">游戏开始了。你的注意力被抓住了。你暂时忘记了挂科、忘记了成绩单、忘记了辅导员。</p>
-
-  <p contenteditable="true">你觉得"舒服了"。</p>
-
-  <p contenteditable="true">但游戏结束了。你关掉电脑。</p>
-
-  <p contenteditable="true">焦虑回来了。而且比之前更强。</p>
-
-  <p contenteditable="true">因为你不仅还是那个挂科的你，你还多浪费了一天时间。</p>
-
-  <p contenteditable="true">所以你更焦虑了。更焦虑了怎么办？</p>
-
-  <p contenteditable="true">再开一把。</p>
-
-  <div class="golden" contenteditable="true"><strong>游戏没有帮你缓解焦虑。游戏只是暂时帮你忘记焦虑。而"忘记"是有利息的，每忘一次，焦虑就滚大一圈。</strong></div>
-
-  <p contenteditable="true">这就是陷阱的运作方式。</p>
+  <p>游戏结束的那一秒，所有压力原封不动地回来了。而且多了一笔利息——你又浪费了一天。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">我带过一个985院校的男孩，大三，挂了11门课，已经降了两级。</p>
+  <p>兄弟，这就是陷阱最核心的运作方式。</p>
 
-  <p contenteditable="true">他妈跟我说他天天泡网吧。寒假回家也是，从早到晚，打游戏。</p>
+  <p>你现在的状态是什么？</p>
 
-  <div class="case-card" contenteditable="true">
+  <p>挂科了。成绩单很难看。家长可能已经知道了。辅导员可能已经找你谈话了。你还有一堆课没选、一堆作业没交、一堆补考没报名。</p>
+
+  <p>你的身体里住着一个巨大的焦虑。</p>
+
+  <p>这个焦虑让你坐立不安，让你不想面对任何跟学校有关的事情。</p>
+
+  <p>然后你打开电脑，开了一把游戏。</p>
+
+  <p>游戏开始了。你的注意力被抓住了。你暂时忘记了挂科、忘记了成绩单、忘记了辅导员。</p>
+
+  <p>你觉得"舒服了"。</p>
+
+  <p>但游戏结束了。你关掉电脑。</p>
+
+  <p>焦虑回来了。而且比之前更强。</p>
+
+  <p>因为你不仅还是那个挂科的你，你还多浪费了一天时间。</p>
+
+  <p>所以你更焦虑了。更焦虑了怎么办？</p>
+
+  <p>再开一把。</p>
+
+  <div class="golden"><strong>游戏没有帮你缓解焦虑。游戏只是暂时帮你忘记焦虑。而"忘记"是有利息的，每忘一次，焦虑就滚大一圈。</strong></div>
+
+  <p>这就是陷阱的运作方式。</p>
+
+  <div class="divider-line"></div>
+
+  <p>我带过一个985院校的男孩，大三，挂了11门课，已经降了两级。</p>
+
+  <p>他妈跟我说他天天泡网吧。寒假回家也是，从早到晚，打游戏。</p>
+
+  <div class="case-card">
     <p>我跟他妈说：你知道他为什么宁可在网吧里待着吗？<br>
 <br>
 因为在网吧里，没有人对他有期待。没有人问他成绩。没有人让他交材料。<br>
@@ -1199,255 +1181,255 @@
 </p>
   </div>
 
-  <p contenteditable="true">你听到了吗？</p>
+  <p>你听到了吗？</p>
 
-  <p contenteditable="true">他不是"沉迷游戏"。他是在逃命。</p>
+  <p>他不是"沉迷游戏"。他是在逃命。</p>
 
-  <p contenteditable="true">他的生活里到处都是压力：妈妈的监督、学校的警告、挂科的数字、降级的通知。</p>
+  <p>他的生活里到处都是压力：妈妈的监督、学校的警告、挂科的数字、降级的通知。</p>
 
-  <p contenteditable="true">每一个"关心"他的人，都在给他加压。</p>
+  <p>每一个"关心"他的人，都在给他加压。</p>
 
-  <p contenteditable="true">网吧是唯一一个没人给他加压的地方。</p>
+  <p>网吧是唯一一个没人给他加压的地方。</p>
 
-  <p contenteditable="true">游戏是唯一一个不提醒他"你是个废物"的东西。</p>
+  <p>游戏是唯一一个不提醒他"你是个废物"的东西。</p>
 
-  <p contenteditable="true">所以他一头扎进去了。</p>
+  <p>所以他一头扎进去了。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">但问题是：网吧能帮他解决任何一门挂科吗？</p>
+  <p>但问题是：网吧能帮他解决任何一门挂科吗？</p>
 
-  <p contenteditable="true">不能。</p>
+  <p>不能。</p>
 
-  <p contenteditable="true">游戏能帮他过任何一门补考吗？</p>
+  <p>游戏能帮他过任何一门补考吗？</p>
 
-  <p contenteditable="true">不能。</p>
+  <p>不能。</p>
 
-  <p contenteditable="true">他在网吧待得越久，挂的科越多。挂的科越多，回到现实越痛苦。越痛苦，就越想回网吧。</p>
+  <p>他在网吧待得越久，挂的科越多。挂的科越多，回到现实越痛苦。越痛苦，就越想回网吧。</p>
 
-  <div class="case-card" contenteditable="true">
+  <div class="case-card">
     <p>如果他一直把自己当成一个被控制的受害者，他就会不断用你们最在意的东西去毁自己。甚至把自己的未来当玩具，摔在地上。<br>
 </p>
   </div>
 
-  <p contenteditable="true">这不是沉迷。<br>
+  <p>这不是沉迷。<br>
 这不是网瘾。<br>
 这不是"意志力差"。</p>
 
-  <div class="golden" contenteditable="true"><strong>这是陷阱在运作。</strong></div>
+  <div class="golden"><strong>这是陷阱在运作。</strong></div>
 
-  <p contenteditable="true">它的运作方式很简单：</p>
+  <p>它的运作方式很简单：</p>
 
-  <div class="loop-chain" contenteditable="true">制造不适（焦虑/羞耻/空虚）→ 提供临时缓解（游戏/手机/睡觉）→ 缓解消失，不适加倍 → 需要更多缓解 → 不适再加倍</div>
+  <div class="loop-chain">制造不适（焦虑/羞耻/空虚）→ 提供临时缓解（游戏/手机/睡觉）→ 缓解消失，不适加倍 → 需要更多缓解 → 不适再加倍</div>
 
-  <p contenteditable="true">你管这个叫"摆烂"。</p>
+  <p>你管这个叫"摆烂"。</p>
 
-  <p contenteditable="true">其实它有个更准确的名字：<strong>上瘾循环。</strong></p>
+  <p>其实它有个更准确的名字：<strong>上瘾循环。</strong></p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">再说黑白颠倒。</p>
+  <p>再说黑白颠倒。</p>
 
-  <p contenteditable="true">你是不是经常凌晨三四点还没睡？</p>
+  <p>你是不是经常凌晨三四点还没睡？</p>
 
-  <p contenteditable="true">白天起不来，晚上睡不着。家长觉得你"作息不规律"，觉得你"废了"。</p>
+  <p>白天起不来，晚上睡不着。家长觉得你"作息不规律"，觉得你"废了"。</p>
 
-  <p contenteditable="true">但真相是什么？</p>
+  <p>但真相是什么？</p>
 
-  <div class="case-card" contenteditable="true">
+  <div class="case-card">
     <p>我跟一个家长说：你儿子黑白颠倒，怎么了？无所谓。他每天能睡10个小时那就行了。他在休息。你不能说他黑白颠倒就是废了。你早上6点逼他起来，你才是在折磨他。<br>
 </p>
   </div>
 
-  <p contenteditable="true">黑白颠倒不是病。<br>
+  <p>黑白颠倒不是病。<br>
 黑白颠倒是陷阱的症状。</p>
 
-  <p contenteditable="true">你为什么凌晨不睡？</p>
+  <p>你为什么凌晨不睡？</p>
 
-  <p contenteditable="true">因为白天太痛苦了。</p>
+  <p>因为白天太痛苦了。</p>
 
-  <p contenteditable="true">白天有课要上、有消息要回、有成绩单要面对、有家长要应付。</p>
+  <p>白天有课要上、有消息要回、有成绩单要面对、有家长要应付。</p>
 
-  <p contenteditable="true">但凌晨没有。</p>
+  <p>但凌晨没有。</p>
 
-  <p contenteditable="true">凌晨三点，没有人找你。没有人问你"你今天去上课了吗"。没有辅导员发消息。没有爸妈打电话。</p>
+  <p>凌晨三点，没有人找你。没有人问你"你今天去上课了吗"。没有辅导员发消息。没有爸妈打电话。</p>
 
-  <div class="golden" contenteditable="true"><strong>凌晨三点，是你一天里唯一属于自己的时间。</strong></div>
+  <div class="golden"><strong>凌晨三点，是你一天里唯一属于自己的时间。</strong></div>
 
-  <p contenteditable="true">所以你舍不得睡。你刷手机、看视频、打游戏，你拼命延长这段"没有人烦我"的时间。</p>
+  <p>所以你舍不得睡。你刷手机、看视频、打游戏，你拼命延长这段"没有人烦我"的时间。</p>
 
-  <p contenteditable="true">然后天亮了。你终于睡了。</p>
+  <p>然后天亮了。你终于睡了。</p>
 
-  <p contenteditable="true">白天的课你自然没去。没去就没去吧，反正你也没指望。</p>
+  <p>白天的课你自然没去。没去就没去吧，反正你也没指望。</p>
 
-  <p contenteditable="true">到了晚上，你又精神了。因为属于你的时间又来了。</p>
+  <p>到了晚上，你又精神了。因为属于你的时间又来了。</p>
 
-  <p contenteditable="true">就这样，你的作息翻转了。</p>
+  <p>就这样，你的作息翻转了。</p>
 
-  <div class="golden" contenteditable="true"><strong>这不是你"管不住自己"。这是你在用唯一能用的方式，从痛苦里偷一点喘息的空间。</strong></div>
+  <div class="golden"><strong>这不是你"管不住自己"。这是你在用唯一能用的方式，从痛苦里偷一点喘息的空间。</strong></div>
 
-  <p contenteditable="true">但跟打游戏一样，这个喘息是有利息的。</p>
+  <p>但跟打游戏一样，这个喘息是有利息的。</p>
 
-  <p contenteditable="true">你白天不去上课，就少了平时分。少了平时分，期末就更难过。更难过就更焦虑。更焦虑就更不想面对白天。不想面对白天，就继续凌晨不睡。</p>
+  <p>你白天不去上课，就少了平时分。少了平时分，期末就更难过。更难过就更焦虑。更焦虑就更不想面对白天。不想面对白天，就继续凌晨不睡。</p>
 
-  <p contenteditable="true">陷阱，又转了一圈。</p>
+  <p>陷阱，又转了一圈。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">还有一个东西叫"睡觉"。</p>
+  <p>还有一个东西叫"睡觉"。</p>
 
-  <p contenteditable="true">你有没有过这种状态：什么都不想干，就是想睡觉。不是因为困，是因为不想醒着。</p>
+  <p>你有没有过这种状态：什么都不想干，就是想睡觉。不是因为困，是因为不想醒着。</p>
 
-  <p contenteditable="true">醒着就要面对。<br>
+  <p>醒着就要面对。<br>
 醒着就要想事情。<br>
 醒着就要回消息、看手机、面对那些让你焦虑的东西。</p>
 
-  <p contenteditable="true">睡着了，什么都没有。</p>
+  <p>睡着了，什么都没有。</p>
 
-  <p contenteditable="true">所以你睡。一天睡12个小时、14个小时、16个小时。</p>
+  <p>所以你睡。一天睡12个小时、14个小时、16个小时。</p>
 
-  <p contenteditable="true">家长觉得你是"抑郁了"。</p>
+  <p>家长觉得你是"抑郁了"。</p>
 
-  <p contenteditable="true">不一定。</p>
+  <p>不一定。</p>
 
-  <div class="case-card" contenteditable="true">
+  <div class="case-card">
     <p>我跟一个家长说过：他不是觉得活着没意思。他是觉得像现在这样活没意思。<br>
 </p>
   </div>
 
-  <p contenteditable="true">这两句话差别很大。</p>
+  <p>这两句话差别很大。</p>
 
-  <p contenteditable="true">"活着没意思"是抑郁。<br>
+  <p>"活着没意思"是抑郁。<br>
 "像现在这样活没意思"是被困住了。</p>
 
-  <p contenteditable="true">他不是不想活。他是不想这么活。</p>
+  <p>他不是不想活。他是不想这么活。</p>
 
-  <p contenteditable="true">但他又看不到别的活法。</p>
+  <p>但他又看不到别的活法。</p>
 
-  <p contenteditable="true">所以他用睡觉把自己关机。</p>
+  <p>所以他用睡觉把自己关机。</p>
 
-  <div class="golden" contenteditable="true"><strong>睡觉、游戏、刷手机、黑白颠倒——这些不是你的问题，这些是陷阱的症状。</strong></div>
+  <div class="golden"><strong>睡觉、游戏、刷手机、黑白颠倒——这些不是你的问题，这些是陷阱的症状。</strong></div>
 
-  <p contenteditable="true">就像咳嗽不是病，咳嗽是感冒的症状。</p>
+  <p>就像咳嗽不是病，咳嗽是感冒的症状。</p>
 
-  <p contenteditable="true">你不需要治咳嗽。你需要治感冒。</p>
+  <p>你不需要治咳嗽。你需要治感冒。</p>
 
-  <p contenteditable="true">你不需要"戒掉游戏"。你不需要"调整作息"。你不需要"少玩手机"。</p>
+  <p>你不需要"戒掉游戏"。你不需要"调整作息"。你不需要"少玩手机"。</p>
 
-  <p contenteditable="true">你需要看清的是：<strong>你为什么需要这些东西？</strong></p>
+  <p>你需要看清的是：<strong>你为什么需要这些东西？</strong></p>
 
-  <p contenteditable="true">答案是：因为你被困在陷阱里，这些东西是你唯一能找到的临时止痛药。</p>
+  <p>答案是：因为你被困在陷阱里，这些东西是你唯一能找到的临时止痛药。</p>
 
-  <p contenteditable="true">但止痛药不治病。止痛药只是让你暂时不痛。药效过了，更痛。</p>
+  <p>但止痛药不治病。止痛药只是让你暂时不痛。药效过了，更痛。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">现在你知道这个陷阱是怎么运作的了：</p>
+  <p>现在你知道这个陷阱是怎么运作的了：</p>
 
-  <p contenteditable="true"><strong>第一步：制造痛苦。</strong><br>
+  <p><strong>第一步：制造痛苦。</strong><br>
 挂科、羞耻、家长的失望、辅导员的谈话、同学的眼神。</p>
 
-  <p contenteditable="true"><strong>第二步：提供"止痛药"。</strong><br>
+  <p><strong>第二步：提供"止痛药"。</strong><br>
 游戏、手机、睡觉、"无所谓"、黑白颠倒。</p>
 
-  <p contenteditable="true"><strong>第三步：止痛药的副作用制造更多痛苦。</strong><br>
+  <p><strong>第三步：止痛药的副作用制造更多痛苦。</strong><br>
 浪费时间→更多挂科→更深的羞耻→更强的逃避需求。</p>
 
-  <p contenteditable="true"><strong>第四步：需要更多的止痛药。</strong><br>
+  <p><strong>第四步：需要更多的止痛药。</strong><br>
 从偶尔打游戏→天天打游戏→通宵打游戏→搬进网吧。</p>
 
-  <p contenteditable="true"><strong>第五步：你开始相信"我就是这样的人"。</strong><br>
+  <p><strong>第五步：你开始相信"我就是这样的人"。</strong><br>
 我就是个废物。我就是管不住自己。我就是学渣。</p>
 
-  <p contenteditable="true">这第五步，是陷阱最毒的地方。</p>
+  <p>这第五步，是陷阱最毒的地方。</p>
 
-  <p contenteditable="true">因为一旦你相信"我就是这样的人"，你就不会再去寻找出路了。</p>
+  <p>因为一旦你相信"我就是这样的人"，你就不会再去寻找出路了。</p>
 
-  <p contenteditable="true">你不是"这样的人"。<br>
+  <p>你不是"这样的人"。<br>
 你是被困住的人。</p>
 
-  <p contenteditable="true">这个区别，下一章继续讲。</p>
+  <p>这个区别，下一章继续讲。</p>
 </article>
 
 <!-- ===== 第三章: 谁给你洗的脑？ ===== -->
 <article class="chapter" id="ch-4" data-filename="第03章_谁给你洗的脑.md">
   <div class="chapter-label">Part 1 · 你掉进了一个陷阱 · 第三章</div>
-  <h2 class="chapter-title" contenteditable="true">谁给你洗的脑？</h2>
-  <p contenteditable="true">前两章我告诉你两件事：</p>
+  <h2 class="chapter-title">谁给你洗的脑？</h2>
+  <p>前两章我告诉你两件事：</p>
 
-  <p contenteditable="true">第一，你掉进了一个陷阱。<br>
+  <p>第一，你掉进了一个陷阱。<br>
 第二，这个陷阱靠"制造痛苦→提供止痛药→制造更多痛苦"来运作。</p>
 
-  <p contenteditable="true">但还有一个问题我没回答：</p>
+  <p>但还有一个问题我没回答：</p>
 
-  <div class="golden" contenteditable="true"><strong>这个陷阱是谁设的？</strong></div>
+  <div class="golden"><strong>这个陷阱是谁设的？</strong></div>
 
-  <p contenteditable="true">你可能觉得是你自己。是你自己选择不去上课，是你自己选择打游戏，是你自己选择逃避。</p>
+  <p>你可能觉得是你自己。是你自己选择不去上课，是你自己选择打游戏，是你自己选择逃避。</p>
 
-  <p contenteditable="true">不全是。</p>
+  <p>不全是。</p>
 
-  <p contenteditable="true">在你"选择"逃避之前，有人已经帮你铺好了路。</p>
+  <p>在你"选择"逃避之前，有人已经帮你铺好了路。</p>
 
-  <p contenteditable="true">他们不是故意的。<br>
+  <p>他们不是故意的。<br>
 他们甚至觉得自己是在帮你。<br>
 但他们做的事情，客观上让你更容易掉进这个陷阱。</p>
 
-  <p contenteditable="true">我管这个叫"洗脑"。</p>
+  <p>我管这个叫"洗脑"。</p>
 
-  <p contenteditable="true">这个词听起来很重，但你听完就知道了。</p>
+  <p>这个词听起来很重，但你听完就知道了。</p>
 
   <div class="divider-line"></div>
 
-  <h3 class="section-title" contenteditable="true">第一层洗脑：社会和学校</h3>
+  <h3 class="section-title">第一层洗脑：社会和学校</h3>
 
-  <p contenteditable="true">从你上小学的第一天起，你就被塞进了一个评价系统。</p>
+  <p>从你上小学的第一天起，你就被塞进了一个评价系统。</p>
 
-  <p contenteditable="true">这个系统只有一个标准：<strong>分数。</strong></p>
+  <p>这个系统只有一个标准：<strong>分数。</strong></p>
 
-  <p contenteditable="true">考高分=好学生。考低分=差学生。</p>
+  <p>考高分=好学生。考低分=差学生。</p>
 
-  <p contenteditable="true">老师表扬的是成绩好的。家长会上被点名的是成绩差的。排名贴在墙上，你的位置就是你的价值。</p>
+  <p>老师表扬的是成绩好的。家长会上被点名的是成绩差的。排名贴在墙上，你的位置就是你的价值。</p>
 
-  <p contenteditable="true">没有人告诉你：学习成绩只能说明你考试考得怎么样，说明不了你这个人怎么样。</p>
+  <p>没有人告诉你：学习成绩只能说明你考试考得怎么样，说明不了你这个人怎么样。</p>
 
-  <p contenteditable="true">没有人告诉你：这个世界上有很多种能力，考试只测了其中一种。</p>
+  <p>没有人告诉你：这个世界上有很多种能力，考试只测了其中一种。</p>
 
-  <p contenteditable="true">没有人告诉你：你的价值不是由一张成绩单决定的。</p>
+  <p>没有人告诉你：你的价值不是由一张成绩单决定的。</p>
 
-  <p contenteditable="true">从来没有人告诉你这些。</p>
+  <p>从来没有人告诉你这些。</p>
 
-  <p contenteditable="true">相反，你被反复告知的是：</p>
+  <p>相反，你被反复告知的是：</p>
 
-  <p contenteditable="true">"你看看别人家的孩子。"<br>
+  <p>"你看看别人家的孩子。"<br>
 "考不上好大学，这辈子就完了。"<br>
 "学习好的才有出息。"</p>
 
-  <p contenteditable="true">这些话你从小听到大。听了十几年。</p>
+  <p>这些话你从小听到大。听了十几年。</p>
 
-  <p contenteditable="true">十几年的重复，足以让任何一个人相信一件事：</p>
+  <p>十几年的重复，足以让任何一个人相信一件事：</p>
 
-  <div class="golden" contenteditable="true"><strong>我的存在感=我的成绩。</strong></div>
+  <div class="golden"><strong>我的存在感=我的成绩。</strong></div>
 
-  <p contenteditable="true">所以当你到了大学，挂科了，你的第一反应不是"这门课没过"，而是"我这个人完了"。</p>
+  <p>所以当你到了大学，挂科了，你的第一反应不是"这门课没过"，而是"我这个人完了"。</p>
 
-  <p contenteditable="true">你把"挂科"和"我是废物"画了等号。</p>
+  <p>你把"挂科"和"我是废物"画了等号。</p>
 
-  <p contenteditable="true">这个等号不是你画的。<br>
+  <p>这个等号不是你画的。<br>
 是这个社会、这个学校、这个教育系统，用十几年时间帮你画的。</p>
 
   <div class="divider-line"></div>
 
-  <h3 class="section-title" contenteditable="true">第二层洗脑：家庭</h3>
+  <h3 class="section-title">第二层洗脑：家庭</h3>
 
-  <p contenteditable="true">这一层更深，也更难看清。</p>
+  <p>这一层更深，也更难看清。</p>
 
-  <p contenteditable="true">因为家长是爱你的。这一点我从来不怀疑。</p>
+  <p>因为家长是爱你的。这一点我从来不怀疑。</p>
 
-  <p contenteditable="true">但爱和正确之间，隔着一条太平洋。</p>
+  <p>但爱和正确之间，隔着一条太平洋。</p>
 
-  <p contenteditable="true">我跟你讲一个真实的案例。</p>
+  <p>我跟你讲一个真实的案例。</p>
 
-  <div class="case-card" contenteditable="true">
+  <div class="case-card">
     <p>有一个男孩，985院校，大三，降了两级。<br>
 <br>
 我跟他妈聊了很久，慢慢拼出了一条时间线。<br>
@@ -1470,152 +1452,152 @@
 </p>
   </div>
 
-  <p contenteditable="true">这就是第二层洗脑的核心：</p>
+  <p>这就是第二层洗脑的核心：</p>
 
-  <div class="golden" contenteditable="true"><strong>你从小就被训练成"听话"，但没有人训练你"自己选"。</strong></div>
+  <div class="golden"><strong>你从小就被训练成"听话"，但没有人训练你"自己选"。</strong></div>
 
-  <p contenteditable="true">你被训练成等待指令。<br>
+  <p>你被训练成等待指令。<br>
 等爸妈说"报这个学校"，你就报。<br>
 等老师说"这门课这么学"，你就学。<br>
 等辅导员说"你该怎么做"，你就做。</p>
 
-  <p contenteditable="true">但到了大学，突然没有人给你指令了。</p>
+  <p>但到了大学，突然没有人给你指令了。</p>
 
-  <p contenteditable="true">大学不会逼你上课。不会逼你交作业。不会逼你选课。</p>
+  <p>大学不会逼你上课。不会逼你交作业。不会逼你选课。</p>
 
-  <p contenteditable="true">你第一次拥有了完全的自由。</p>
+  <p>你第一次拥有了完全的自由。</p>
 
-  <p contenteditable="true">但你不知道怎么用这个自由。</p>
+  <p>但你不知道怎么用这个自由。</p>
 
-  <p contenteditable="true">因为你从来没有练习过"自己做决定"。</p>
+  <p>因为你从来没有练习过"自己做决定"。</p>
 
-  <p contenteditable="true">你就像一个被关在笼子里18年的鸟，突然被放出来了。你不是飞走了，你是蹲在笼子门口，不知道该往哪飞。</p>
+  <p>你就像一个被关在笼子里18年的鸟，突然被放出来了。你不是飞走了，你是蹲在笼子门口，不知道该往哪飞。</p>
 
-  <p contenteditable="true">然后你蹲着蹲着，就开始打游戏了。<br>
+  <p>然后你蹲着蹲着，就开始打游戏了。<br>
 蹲着蹲着，就开始翘课了。<br>
 蹲着蹲着，就掉进了陷阱。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">再说一个很多家长都在做的事：<strong>用焦虑代替关心。</strong></p>
+  <p>再说一个很多家长都在做的事：<strong>用焦虑代替关心。</strong></p>
 
-  <p contenteditable="true">你有没有接到过这种电话？</p>
+  <p>你有没有接到过这种电话？</p>
 
-  <p contenteditable="true">"你今天上课了吗？"<br>
+  <p>"你今天上课了吗？"<br>
 "你成绩怎么样？"<br>
 "你有没有好好学习？"<br>
 "你别天天打游戏了行不行？"</p>
 
-  <p contenteditable="true">每一句话，都是在问你"你有没有问题"。</p>
+  <p>每一句话，都是在问你"你有没有问题"。</p>
 
-  <p contenteditable="true">没有一句话是在问你"你今天开不开心"。</p>
+  <p>没有一句话是在问你"你今天开不开心"。</p>
 
-  <p contenteditable="true">家长不是不爱你。家长是太焦虑了。</p>
+  <p>家长不是不爱你。家长是太焦虑了。</p>
 
-  <p contenteditable="true">他们的焦虑来自哪里？来自第一层洗脑。</p>
+  <p>他们的焦虑来自哪里？来自第一层洗脑。</p>
 
-  <p contenteditable="true">他们也被这个社会洗过脑：孩子成绩好=我教育成功。孩子成绩差=我是失败的父母。</p>
+  <p>他们也被这个社会洗过脑：孩子成绩好=我教育成功。孩子成绩差=我是失败的父母。</p>
 
-  <p contenteditable="true">所以他们一听到你挂科，第一反应不是关心你，是恐惧。</p>
+  <p>所以他们一听到你挂科，第一反应不是关心你，是恐惧。</p>
 
-  <p contenteditable="true">恐惧变成追问，追问变成唠叨，唠叨变成争吵。</p>
+  <p>恐惧变成追问，追问变成唠叨，唠叨变成争吵。</p>
 
-  <p contenteditable="true">然后你学会了一件事：<strong>跟家里说实话=吵架。</strong></p>
+  <p>然后你学会了一件事：<strong>跟家里说实话=吵架。</strong></p>
 
-  <p contenteditable="true">所以你不说了。你骗。你藏。你"无所谓"。</p>
+  <p>所以你不说了。你骗。你藏。你"无所谓"。</p>
 
-  <p contenteditable="true">你看，第一章那个四门说成一门的男孩，他为什么撒谎？</p>
+  <p>你看，第一章那个四门说成一门的男孩，他为什么撒谎？</p>
 
-  <p contenteditable="true">不是因为他坏。是因为家庭环境训练出来的。</p>
+  <p>不是因为他坏。是因为家庭环境训练出来的。</p>
 
-  <p contenteditable="true">在那个家里，真话=惩罚。</p>
+  <p>在那个家里，真话=惩罚。</p>
 
   <div class="divider-line"></div>
 
-  <h3 class="section-title" contenteditable="true">第三层洗脑：你自己</h3>
+  <h3 class="section-title">第三层洗脑：你自己</h3>
 
-  <p contenteditable="true">这一层最毒。</p>
+  <p>这一层最毒。</p>
 
-  <p contenteditable="true">因为前两层洗脑的结果，最终都会变成你对自己的定义。</p>
+  <p>因为前两层洗脑的结果，最终都会变成你对自己的定义。</p>
 
-  <p contenteditable="true">社会告诉你"成绩差=废物"。<br>
+  <p>社会告诉你"成绩差=废物"。<br>
 家庭告诉你"你怎么搞成这样"。</p>
 
-  <p contenteditable="true">听了够多遍之后，你开始自己跟自己说：</p>
+  <p>听了够多遍之后，你开始自己跟自己说：</p>
 
-  <p contenteditable="true">"我就是个废物。"<br>
+  <p>"我就是个废物。"<br>
 "我就是不行。"<br>
 "我就不是学习的料。"</p>
 
-  <p contenteditable="true">这些话不是别人说的。<br>
+  <p>这些话不是别人说的。<br>
 是你自己说的。<br>
 而且你说得比任何人都狠。</p>
 
-  <p contenteditable="true">你有没有在深夜里骂过自己？</p>
+  <p>你有没有在深夜里骂过自己？</p>
 
-  <p contenteditable="true">"你他妈连个大学都读不好，你还能干什么？"<br>
+  <p>"你他妈连个大学都读不好，你还能干什么？"<br>
 "别人都能过，就你不行，你是不是脑子有问题？"<br>
 "你就这样吧，反正你也改不了。"</p>
 
-  <p contenteditable="true">这些话，你爸妈都不一定说得出来。但你自己说得出来。</p>
+  <p>这些话，你爸妈都不一定说得出来。但你自己说得出来。</p>
 
-  <div class="golden" contenteditable="true"><strong>你成了自己最狠的批评者。</strong></div>
+  <div class="golden"><strong>你成了自己最狠的批评者。</strong></div>
 
-  <p contenteditable="true">这就是第三层洗脑：你把外界的标准内化了，变成了自己的声音。</p>
+  <p>这就是第三层洗脑：你把外界的标准内化了，变成了自己的声音。</p>
 
-  <p contenteditable="true">现在不需要别人告诉你"你是废物"了。<br>
+  <p>现在不需要别人告诉你"你是废物"了。<br>
 你自己就会告诉自己。</p>
 
-  <p contenteditable="true">而且你深信不疑。</p>
+  <p>而且你深信不疑。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">三层洗脑叠在一起，就是你走不出来的根本原因。</p>
+  <p>三层洗脑叠在一起，就是你走不出来的根本原因。</p>
 
-  <p contenteditable="true">第一层（社会/学校）给你定了标准：成绩=价值。<br>
+  <p>第一层（社会/学校）给你定了标准：成绩=价值。<br>
 第二层（家庭）让你失去了自我选择的能力。<br>
 第三层（你自己）让你相信"我就是这样的人"。</p>
 
-  <p contenteditable="true">陷阱困住你的身体。<br>
+  <p>陷阱困住你的身体。<br>
 洗脑困住你的脑子。</p>
 
-  <div class="golden" contenteditable="true"><strong>你不是天生的"学渣"。你是被训练成的。</strong></div>
+  <div class="golden"><strong>你不是天生的"学渣"。你是被训练成的。</strong></div>
 
-  <p contenteditable="true">从小学到高中，十二年。<br>
+  <p>从小学到高中，十二年。<br>
 每一天，每一堂课，每一张成绩单，每一次排名，每一句"你看看别人家的孩子"。</p>
 
-  <p contenteditable="true">十二年的洗脑，你指望自己到了大学突然就能"想开了"？</p>
+  <p>十二年的洗脑，你指望自己到了大学突然就能"想开了"？</p>
 
-  <p contenteditable="true">想不开才正常。<br>
+  <p>想不开才正常。<br>
 被困住才正常。</p>
 
-  <p contenteditable="true">不正常的是这个系统。<br>
+  <p>不正常的是这个系统。<br>
 不正常的是这套评价标准。<br>
 不正常的是所有人都觉得"考试=人生"。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">但这里有一个好消息。</p>
+  <p>但这里有一个好消息。</p>
 
-  <p contenteditable="true">洗脑是可以被解除的。</p>
+  <p>洗脑是可以被解除的。</p>
 
-  <p contenteditable="true">怎么解除？</p>
+  <p>怎么解除？</p>
 
-  <p contenteditable="true">不是靠"好好学习"证明自己。那是在洗脑的框架里打转。</p>
+  <p>不是靠"好好学习"证明自己。那是在洗脑的框架里打转。</p>
 
-  <p contenteditable="true">不是靠"无所谓"假装不在乎。那是被洗脑之后的自我保护。</p>
+  <p>不是靠"无所谓"假装不在乎。那是被洗脑之后的自我保护。</p>
 
-  <p contenteditable="true">是靠<strong>看清楚这些标准是谁定的、为什么定的、对你有没有意义。</strong></p>
+  <p>是靠<strong>看清楚这些标准是谁定的、为什么定的、对你有没有意义。</strong></p>
 
-  <p contenteditable="true">当你看清了"成绩≠价值"的时候，挂科就不再是世界末日了。<br>
+  <p>当你看清了"成绩≠价值"的时候，挂科就不再是世界末日了。<br>
 当你看清了"家长的焦虑不是你的责任"的时候，你就不用再撒谎了。<br>
 当你看清了"'我是废物'这句话不是事实，是洗脑"的时候，你就不会再骂自己了。</p>
 
-  <p contenteditable="true">看清，是解除洗脑的唯一方式。</p>
+  <p>看清，是解除洗脑的唯一方式。</p>
 
-  <p contenteditable="true">你正在看清。</p>
+  <p>你正在看清。</p>
 
-  <p contenteditable="true">下一章开始，我们一个一个拆：你以为的那些"好处"，全是假的。</p>
+  <p>下一章开始，我们一个一个拆：你以为的那些"好处"，全是假的。</p>
 </article>
 
 <!-- ===== Part 2 · 你以为的好处全是假的 过渡页 ===== -->
@@ -1630,225 +1612,225 @@
 <!-- ===== 第四章: 打游戏能缓解压力？ ===== -->
 <article class="chapter" id="ch-5" data-filename="第04章_打游戏能缓解压力.md">
   <div class="chapter-label">Part 2 · 你以为的好处全是假的 · 第四章</div>
-  <h2 class="chapter-title" contenteditable="true">打游戏能缓解压力？</h2>
-  <p contenteditable="true">我在第二章说过：游戏是陷阱提供的"止痛药"。</p>
+  <h2 class="chapter-title">打游戏能缓解压力？</h2>
+  <p>我在第二章说过：游戏是陷阱提供的"止痛药"。</p>
 
-  <p contenteditable="true">这一章，我要把这个止痛药拆开给你看，让你看看里面装的到底是什么。</p>
+  <p>这一章，我要把这个止痛药拆开给你看，让你看看里面装的到底是什么。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">先说清楚一件事。</p>
+  <p>先说清楚一件事。</p>
 
-  <p contenteditable="true">我不反对打游戏。</p>
+  <p>我不反对打游戏。</p>
 
-  <p contenteditable="true">大学生打游戏，太正常了。跟兄弟开黑、探索一个新世界、竞技对抗的快感——这些东西本身没有问题。</p>
+  <p>大学生打游戏，太正常了。跟兄弟开黑、探索一个新世界、竞技对抗的快感——这些东西本身没有问题。</p>
 
-  <p contenteditable="true">我自己大学的时候，绝地求生打了3000小时。我知道那种三杀之后肾上腺素飙升的感觉，我知道那种队友配合完美吃鸡的爽感。</p>
+  <p>我自己大学的时候，绝地求生打了3000小时。我知道那种三杀之后肾上腺素飙升的感觉，我知道那种队友配合完美吃鸡的爽感。</p>
 
-  <p contenteditable="true">这些是真的快乐。</p>
+  <p>这些是真的快乐。</p>
 
-  <div class="golden" contenteditable="true"><strong>但你现在打游戏的时候，有这种快乐吗？</strong></div>
+  <div class="golden"><strong>但你现在打游戏的时候，有这种快乐吗？</strong></div>
 
-  <p contenteditable="true">你仔细想想。</p>
+  <p>你仔细想想。</p>
 
-  <p contenteditable="true">你现在打游戏，是不是更多的时候是这样的：</p>
+  <p>你现在打游戏，是不是更多的时候是这样的：</p>
 
-  <p contenteditable="true">打开游戏，不是因为想玩，是因为不知道干什么。<br>
+  <p>打开游戏，不是因为想玩，是因为不知道干什么。<br>
 开了一把，打得一般。又开了一把，还是一般。<br>
 打了三四个小时，关掉电脑。<br>
 然后盯着天花板，什么感觉都没有。</p>
 
-  <p contenteditable="true">不是爽。不是开心。<br>
+  <p>不是爽。不是开心。<br>
 是麻木。</p>
 
-  <p contenteditable="true">你有没有发现：<strong>你已经很久没有在游戏里感到真正的快乐了？</strong></p>
+  <p>你有没有发现：<strong>你已经很久没有在游戏里感到真正的快乐了？</strong></p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">我给你讲一个场景。</p>
+  <p>我给你讲一个场景。</p>
 
-  <p contenteditable="true">一个男孩，大二，宿舍里的状态他妈是这么描述的：</p>
+  <p>一个男孩，大二，宿舍里的状态他妈是这么描述的：</p>
 
-  <div class="case-card" contenteditable="true">
+  <div class="case-card">
     <p>他在寝室里待着，觉得自己很无聊，觉得没什么事可做。但他又不去学习。玩一下游戏，看一下视频，再看一下美剧。整个状态就是……不对。<br>
 </p>
   </div>
 
-  <p contenteditable="true">你听出来了吗？</p>
+  <p>你听出来了吗？</p>
 
-  <p contenteditable="true">他不是"沉迷游戏"。他是在三件事之间轮换：游戏、视频、美剧。</p>
+  <p>他不是"沉迷游戏"。他是在三件事之间轮换：游戏、视频、美剧。</p>
 
-  <p contenteditable="true">哪个都不是因为喜欢，而是因为"反正也没别的事干"。</p>
+  <p>哪个都不是因为喜欢，而是因为"反正也没别的事干"。</p>
 
-  <p contenteditable="true">游戏不是他的热爱。游戏只是他填充空虚的工具之一。<br>
+  <p>游戏不是他的热爱。游戏只是他填充空虚的工具之一。<br>
 跟刷短视频、看美剧一样，都是"让时间过去"的方式。</p>
 
-  <div class="golden" contenteditable="true"><strong>当打游戏变成了"让时间过去"，它就已经不是娱乐了。它是麻醉剂。</strong></div>
+  <div class="golden"><strong>当打游戏变成了"让时间过去"，它就已经不是娱乐了。它是麻醉剂。</strong></div>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">你可能会说：那我打游戏的时候确实不焦虑啊，至少打的时候我是放松的。</p>
+  <p>你可能会说：那我打游戏的时候确实不焦虑啊，至少打的时候我是放松的。</p>
 
-  <p contenteditable="true">好，那我问你：</p>
+  <p>好，那我问你：</p>
 
-  <p contenteditable="true">你上一次打完游戏之后，主动说"今天打得真爽"是什么时候？</p>
+  <p>你上一次打完游戏之后，主动说"今天打得真爽"是什么时候？</p>
 
-  <p contenteditable="true">你上一次在游戏里认识了新朋友、学到了新东西是什么时候？</p>
+  <p>你上一次在游戏里认识了新朋友、学到了新东西是什么时候？</p>
 
-  <p contenteditable="true">你上一次因为游戏而开心了一整天是什么时候？</p>
+  <p>你上一次因为游戏而开心了一整天是什么时候？</p>
 
-  <p contenteditable="true">如果你想不起来，那说明游戏已经不是在给你快乐了。</p>
+  <p>如果你想不起来，那说明游戏已经不是在给你快乐了。</p>
 
-  <p contenteditable="true">它在给你的是"不痛苦"。</p>
+  <p>它在给你的是"不痛苦"。</p>
 
-  <p contenteditable="true">"不痛苦"和"快乐"是两个完全不同的东西。</p>
+  <p>"不痛苦"和"快乐"是两个完全不同的东西。</p>
 
-  <p contenteditable="true">你饿了三天，吃了一碗泡面。你觉得"好吃"。但那不是好吃，那是饿。随便什么东西塞进嘴里你都觉得好吃。</p>
+  <p>你饿了三天，吃了一碗泡面。你觉得"好吃"。但那不是好吃，那是饿。随便什么东西塞进嘴里你都觉得好吃。</p>
 
-  <p contenteditable="true">你焦虑了一整天，打了一把游戏。你觉得"放松了"。但那不是放松，那是逃避。随便什么能分散注意力的东西你都觉得放松。</p>
+  <p>你焦虑了一整天，打了一把游戏。你觉得"放松了"。但那不是放松，那是逃避。随便什么能分散注意力的东西你都觉得放松。</p>
 
-  <div class="golden" contenteditable="true"><strong>游戏没有给你压力，但游戏也没有帮你缓解压力。</strong></div>
+  <div class="golden"><strong>游戏没有给你压力，但游戏也没有帮你缓解压力。</strong></div>
 
-  <div class="golden" contenteditable="true"><strong>它只是帮你按了一下暂停键。</strong></div>
+  <div class="golden"><strong>它只是帮你按了一下暂停键。</strong></div>
 
-  <p contenteditable="true">而暂停键有一个问题：你一松手，所有东西都会继续播放。而且你错过的那些剧情不会消失，只会堆积。</p>
-
-  <div class="divider-line"></div>
-
-  <p contenteditable="true">再说一个事。</p>
-
-  <p contenteditable="true">你有没有注意到：你跟朋友一起打的时候，和你一个人打的时候，感觉完全不一样？</p>
-
-  <p contenteditable="true">跟朋友一起开黑，有说有笑，赢了一起嗨，输了一起骂。打完之后你可能还会聊一会儿天，说说今天的操作。</p>
-
-  <p contenteditable="true">这种时候的游戏，是社交。是连接。是真正的快乐。</p>
-
-  <p contenteditable="true">但一个人打的时候呢？</p>
-
-  <p contenteditable="true">一个人躲在宿舍里，耳机一戴，跟世界断开连接。打完了也没人聊，关掉游戏就是沉默。</p>
-
-  <p contenteditable="true">这种时候的游戏，不是快乐。是隔离。</p>
-
-  <p contenteditable="true">你不是在享受游戏。你是在用游戏把自己跟世界隔开。</p>
-
-  <p contenteditable="true">因为外面的世界太痛苦了。有挂科，有成绩单，有辅导员，有爸妈。</p>
-
-  <p contenteditable="true">游戏的世界里没有这些。</p>
-
-  <p contenteditable="true">但游戏的世界也没有出路。</p>
+  <p>而暂停键有一个问题：你一松手，所有东西都会继续播放。而且你错过的那些剧情不会消失，只会堆积。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">很多家长跟我说："林哥，我家孩子就是游戏上瘾，能不能帮他戒掉？"</p>
+  <p>再说一个事。</p>
 
-  <p contenteditable="true">我说：你搞错了。</p>
+  <p>你有没有注意到：你跟朋友一起打的时候，和你一个人打的时候，感觉完全不一样？</p>
 
-  <div class="golden" contenteditable="true"><strong>你孩子的问题不是"游戏上瘾"。你孩子的问题是"现实太痛苦"。</strong></div>
+  <p>跟朋友一起开黑，有说有笑，赢了一起嗨，输了一起骂。打完之后你可能还会聊一会儿天，说说今天的操作。</p>
 
-  <p contenteditable="true">游戏只是症状。<br>
+  <p>这种时候的游戏，是社交。是连接。是真正的快乐。</p>
+
+  <p>但一个人打的时候呢？</p>
+
+  <p>一个人躲在宿舍里，耳机一戴，跟世界断开连接。打完了也没人聊，关掉游戏就是沉默。</p>
+
+  <p>这种时候的游戏，不是快乐。是隔离。</p>
+
+  <p>你不是在享受游戏。你是在用游戏把自己跟世界隔开。</p>
+
+  <p>因为外面的世界太痛苦了。有挂科，有成绩单，有辅导员，有爸妈。</p>
+
+  <p>游戏的世界里没有这些。</p>
+
+  <p>但游戏的世界也没有出路。</p>
+
+  <div class="divider-line"></div>
+
+  <p>很多家长跟我说："林哥，我家孩子就是游戏上瘾，能不能帮他戒掉？"</p>
+
+  <p>我说：你搞错了。</p>
+
+  <div class="golden"><strong>你孩子的问题不是"游戏上瘾"。你孩子的问题是"现实太痛苦"。</strong></div>
+
+  <p>游戏只是症状。<br>
 现实的痛苦才是病因。</p>
 
-  <p contenteditable="true">你把游戏戒了，他就会去找别的"止痛药"——刷手机、看小说、睡觉、发呆。</p>
+  <p>你把游戏戒了，他就会去找别的"止痛药"——刷手机、看小说、睡觉、发呆。</p>
 
-  <p contenteditable="true">你把所有止痛药都拿走了，他就只剩下痛苦了。</p>
+  <p>你把所有止痛药都拿走了，他就只剩下痛苦了。</p>
 
-  <p contenteditable="true">然后你觉得"好了，他没有逃避了，他应该会去学习了"。</p>
+  <p>然后你觉得"好了，他没有逃避了，他应该会去学习了"。</p>
 
-  <p contenteditable="true">不会。</p>
+  <p>不会。</p>
 
-  <p contenteditable="true">他只会更痛苦。更痛苦的人不会去学习。更痛苦的人会崩溃。</p>
+  <p>他只会更痛苦。更痛苦的人不会去学习。更痛苦的人会崩溃。</p>
 
-  <div class="golden" contenteditable="true"><strong>解决游戏问题的方式，不是戒游戏。是解决那个让他需要游戏的痛苦。</strong></div>
+  <div class="golden"><strong>解决游戏问题的方式，不是戒游戏。是解决那个让他需要游戏的痛苦。</strong></div>
 
-  <p contenteditable="true">这个逻辑很反直觉，但这就是真相。</p>
+  <p>这个逻辑很反直觉，但这就是真相。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">所以回到最开始的问题：打游戏能缓解压力吗？</p>
+  <p>所以回到最开始的问题：打游戏能缓解压力吗？</p>
 
-  <p contenteditable="true">答案是：<strong>不能。</strong></p>
+  <p>答案是：<strong>不能。</strong></p>
 
-  <p contenteditable="true">游戏能帮你暂时忘记压力。但忘记不是缓解。</p>
+  <p>游戏能帮你暂时忘记压力。但忘记不是缓解。</p>
 
-  <p contenteditable="true">缓解是：压力变小了。<br>
+  <p>缓解是：压力变小了。<br>
 忘记是：压力还在，你假装看不见。</p>
 
-  <p contenteditable="true">打完游戏，压力原封不动。<br>
+  <p>打完游戏，压力原封不动。<br>
 而且多了一笔利息：你又浪费了一天。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">那什么能真正缓解压力？</p>
+  <p>那什么能真正缓解压力？</p>
 
-  <p contenteditable="true">这个问题我先不回答。</p>
+  <p>这个问题我先不回答。</p>
 
-  <p contenteditable="true">因为现在还不是给答案的时候。</p>
+  <p>因为现在还不是给答案的时候。</p>
 
-  <p contenteditable="true">你要先把所有"假的好处"都看清楚。</p>
+  <p>你要先把所有"假的好处"都看清楚。</p>
 
-  <p contenteditable="true">打游戏能缓解压力——假的。<br>
+  <p>打游戏能缓解压力——假的。<br>
 "无所谓"能保护你——假的。<br>
 逃避让你自由——假的。</p>
 
-  <p contenteditable="true">一个一个来。</p>
+  <p>一个一个来。</p>
 
-  <p contenteditable="true">下一章，我们拆"无所谓"。</p>
+  <p>下一章，我们拆"无所谓"。</p>
 </article>
 
 <!-- ===== 第五章: "无所谓"能保护你？ ===== -->
 <article class="chapter" id="ch-6" data-filename="第05章_无所谓能保护你.md">
   <div class="chapter-label">Part 2 · 你以为的好处全是假的 · 第五章</div>
-  <h2 class="chapter-title" contenteditable="true">"无所谓"能保护你？</h2>
-  <p contenteditable="true">当别人问你"挂科了怎么办"，你说"无所谓，反正大学也没用"。</p>
+  <h2 class="chapter-title">"无所谓"能保护你？</h2>
+  <p>当别人问你"挂科了怎么办"，你说"无所谓，反正大学也没用"。</p>
 
-  <p contenteditable="true">当你爸妈问你"成绩怎么样"，你说"无所谓，我本来就不想读了"。</p>
+  <p>当你爸妈问你"成绩怎么样"，你说"无所谓，我本来就不想读了"。</p>
 
-  <p contenteditable="true">当辅导员找你谈话，你说"无所谓，降级就降级吧"。</p>
+  <p>当辅导员找你谈话，你说"无所谓，降级就降级吧"。</p>
 
-  <p contenteditable="true">你说了太多遍"无所谓"。说得多了，你自己都快信了。</p>
+  <p>你说了太多遍"无所谓"。说得多了，你自己都快信了。</p>
 
-  <p contenteditable="true">但你真的不在乎吗？</p>
+  <p>但你真的不在乎吗？</p>
 
-  <div class="golden" contenteditable="true"><strong>我告诉你，你他妈在乎得要命。</strong></div>
+  <div class="golden"><strong>我告诉你，你他妈在乎得要命。</strong></div>
 
-  <p contenteditable="true">你每天晚上躺在床上，你在想什么？</p>
+  <p>你每天晚上躺在床上，你在想什么？</p>
 
-  <p contenteditable="true">你在想"我完了，我拿不到毕业证了"。<br>
+  <p>你在想"我完了，我拿不到毕业证了"。<br>
 你在想"我爸妈要是知道了，会不会骂死我"。<br>
 你在想"我以后怎么办，我是不是废物"。</p>
 
-  <p contenteditable="true">你在乎。<br>
+  <p>你在乎。<br>
 你只是不敢说你在乎。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">"无所谓"是什么？</p>
+  <p>"无所谓"是什么？</p>
 
-  <p contenteditable="true">"无所谓"是一面盾牌。</p>
+  <p>"无所谓"是一面盾牌。</p>
 
-  <p contenteditable="true">你举着它，挡在你和世界之间。</p>
+  <p>你举着它，挡在你和世界之间。</p>
 
-  <p contenteditable="true">有人问你成绩，你举起盾牌："无所谓。"<br>
+  <p>有人问你成绩，你举起盾牌："无所谓。"<br>
 有人说你该努力了，你举起盾牌："无所谓。"<br>
 有人说你会毕不了业，你举起盾牌："无所谓。"</p>
 
-  <p contenteditable="true">盾牌确实能挡东西。</p>
+  <p>盾牌确实能挡东西。</p>
 
-  <p contenteditable="true">但问题是：它挡住的不只是痛苦。它把一切都挡住了。</p>
+  <p>但问题是：它挡住的不只是痛苦。它把一切都挡住了。</p>
 
-  <p contenteditable="true">你说"无所谓"挡住了爸妈的追问。但你也挡住了他们的关心。<br>
+  <p>你说"无所谓"挡住了爸妈的追问。但你也挡住了他们的关心。<br>
 你说"无所谓"挡住了辅导员的谈话。但你也挡住了他给你的信息。<br>
 你说"无所谓"挡住了自己内心的恐惧。但你也挡住了自己改变的可能。</p>
 
-  <div class="golden" contenteditable="true"><strong>"无所谓"不是铠甲。"无所谓"是牢笼。</strong></div>
+  <div class="golden"><strong>"无所谓"不是铠甲。"无所谓"是牢笼。</strong></div>
 
-  <p contenteditable="true">你以为你在保护自己。其实你把自己关了起来。</p>
+  <p>你以为你在保护自己。其实你把自己关了起来。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">我给你讲一个人。</p>
+  <p>我给你讲一个人。</p>
 
-  <div class="case-card" contenteditable="true">
+  <div class="case-card">
     <p>有个男孩，双非院校，大二，挂了11门课。<br>
 <br>
 他高中的时候很猛。有一次从年级100名冲到前30名，用了3个月。<br>
@@ -1867,333 +1849,333 @@
 </p>
   </div>
 
-  <p contenteditable="true">"无所谓"的背后是什么？</p>
+  <p>"无所谓"的背后是什么？</p>
 
-  <p contenteditable="true">是恐惧。</p>
+  <p>是恐惧。</p>
 
-  <p contenteditable="true">他怕的不是挂科。他怕的是：<strong>如果我努力了还是失败，那我就真的没有退路了。</strong></p>
+  <p>他怕的不是挂科。他怕的是：<strong>如果我努力了还是失败，那我就真的没有退路了。</strong></p>
 
-  <p contenteditable="true">只要他不努力，他就永远可以跟自己说："我不是不行，我只是没学。"</p>
+  <p>只要他不努力，他就永远可以跟自己说："我不是不行，我只是没学。"</p>
 
-  <p contenteditable="true">"无所谓"给了他这个退路。</p>
+  <p>"无所谓"给了他这个退路。</p>
 
-  <p contenteditable="true">但这个退路是假的。</p>
+  <p>但这个退路是假的。</p>
 
-  <p contenteditable="true">因为不管他说多少遍"无所谓"，挂科的数字不会消失。学业警告不会消失。时间不会停。</p>
+  <p>因为不管他说多少遍"无所谓"，挂科的数字不会消失。学业警告不会消失。时间不会停。</p>
 
-  <p contenteditable="true">他以为自己在保护自己。其实他在慢性自杀。</p>
+  <p>他以为自己在保护自己。其实他在慢性自杀。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">我见过太多说"无所谓"的人。</p>
+  <p>我见过太多说"无所谓"的人。</p>
 
-  <p contenteditable="true">他们的"无所谓"有四层：</p>
+  <p>他们的"无所谓"有四层：</p>
 
-  <p contenteditable="true"><strong>第一层：嘴上说"无所谓"。</strong><br>
+  <p><strong>第一层：嘴上说"无所谓"。</strong><br>
 "反正大学也没用。""反正我本来就不想读。""反正毕业了也找不到好工作。"</p>
 
-  <p contenteditable="true"><strong>第二层：行为上做"无所谓"。</strong><br>
+  <p><strong>第二层：行为上做"无所谓"。</strong><br>
 不去上课。不交作业。不看成绩单。不接辅导员电话。</p>
 
-  <p contenteditable="true"><strong>第三层：真的开始相信"无所谓"。</strong><br>
+  <p><strong>第三层：真的开始相信"无所谓"。</strong><br>
 "我真的不在乎了。""我已经看开了。""学历不重要，能力才重要。"</p>
 
-  <p contenteditable="true"><strong>第四层：但身体很诚实。</strong><br>
+  <p><strong>第四层：但身体很诚实。</strong><br>
 凌晨三点睡不着。看到成绩单手抖。听到"退学"两个字心跳加速。</p>
 
-  <p contenteditable="true">你在哪一层？</p>
+  <p>你在哪一层？</p>
 
-  <p contenteditable="true">如果你在第一层或第二层，你知道自己在假装。<br>
+  <p>如果你在第一层或第二层，你知道自己在假装。<br>
 如果你到了第三层，你已经快要骗过自己了。<br>
 但不管你在哪一层，第四层的反应骗不了人。</p>
 
-  <div class="golden" contenteditable="true"><strong>你的身体知道你在乎。你的嘴骗得了别人，骗不了你自己的心跳。</strong></div>
+  <div class="golden"><strong>你的身体知道你在乎。你的嘴骗得了别人，骗不了你自己的心跳。</strong></div>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">还记得堂弟吗？</p>
+  <p>还记得堂弟吗？</p>
 
-  <p contenteditable="true">他说了好几年"无所谓"。</p>
+  <p>他说了好几年"无所谓"。</p>
 
-  <p contenteditable="true">"无所谓，毕业证有什么用。"<br>
+  <p>"无所谓，毕业证有什么用。"<br>
 "无所谓，降级就降级。"<br>
 "无所谓，我不在乎。"</p>
 
-  <p contenteditable="true">但到了大七那年，他还差两三门课就能毕业了。</p>
+  <p>但到了大七那年，他还差两三门课就能毕业了。</p>
 
-  <p contenteditable="true">他来找我，说了一句话：</p>
+  <p>他来找我，说了一句话：</p>
 
-  <div class="golden" contenteditable="true"><strong>"林哥，我想拿双证。"</strong></div>
+  <div class="golden"><strong>"林哥，我想拿双证。"</strong></div>
 
-  <p contenteditable="true">你听到了吗？</p>
+  <p>你听到了吗？</p>
 
-  <p contenteditable="true">这个说了好几年"无所谓"的人。当毕业证真的触手可及的时候，他突然在乎了。</p>
+  <p>这个说了好几年"无所谓"的人。当毕业证真的触手可及的时候，他突然在乎了。</p>
 
-  <p contenteditable="true">他不是"突然"在乎的。</p>
+  <p>他不是"突然"在乎的。</p>
 
-  <div class="golden" contenteditable="true"><strong>他一直在乎。从头到尾都在乎。</strong></div>
+  <div class="golden"><strong>他一直在乎。从头到尾都在乎。</strong></div>
 
-  <p contenteditable="true">他只是不敢在乎。因为在乎就得行动。行动就可能失败。失败了，他连"无所谓"这块最后的盾牌都没了。</p>
-
-  <div class="divider-line"></div>
-
-  <p contenteditable="true">所以，"无所谓"到底是什么？</p>
-
-  <div class="golden" contenteditable="true"><strong>"无所谓"的真相是：因为怕说了也得不到，因为没看到希望，差得太远了。</strong></div>
-
-  <p contenteditable="true">你不是不在乎毕业证。你是觉得自己拿不到。</p>
-
-  <p contenteditable="true">你不是不在乎成绩。你是觉得改变不了。</p>
-
-  <p contenteditable="true">你不是不在乎未来。你是看不到未来。</p>
-
-  <div class="golden" contenteditable="true"><strong>当一个人觉得"我做不到"的时候，他就会告诉自己"我不想要"。</strong></div>
-
-  <p contenteditable="true">这是人类最常用的自我保护机制。</p>
-
-  <p contenteditable="true">得不到的东西，就说它不好。够不着的葡萄，就说它酸。</p>
-
-  <p contenteditable="true">但葡萄甜不甜，你心里清楚。</p>
+  <p>他只是不敢在乎。因为在乎就得行动。行动就可能失败。失败了，他连"无所谓"这块最后的盾牌都没了。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">那你要怎么办？</p>
+  <p>所以，"无所谓"到底是什么？</p>
 
-  <p contenteditable="true">现在我不会告诉你"放下盾牌，勇敢面对"。</p>
+  <div class="golden"><strong>"无所谓"的真相是：因为怕说了也得不到，因为没看到希望，差得太远了。</strong></div>
 
-  <p contenteditable="true">那是废话。你要是能放下早放下了。</p>
+  <p>你不是不在乎毕业证。你是觉得自己拿不到。</p>
 
-  <p contenteditable="true">我只想让你看清一件事：</p>
+  <p>你不是不在乎成绩。你是觉得改变不了。</p>
 
-  <div class="golden" contenteditable="true"><strong>"无所谓"不是你的盟友。"无所谓"是陷阱的一部分。</strong></div>
+  <p>你不是不在乎未来。你是看不到未来。</p>
 
-  <p contenteditable="true">陷阱让你痛苦。<br>
+  <div class="golden"><strong>当一个人觉得"我做不到"的时候，他就会告诉自己"我不想要"。</strong></div>
+
+  <p>这是人类最常用的自我保护机制。</p>
+
+  <p>得不到的东西，就说它不好。够不着的葡萄，就说它酸。</p>
+
+  <p>但葡萄甜不甜，你心里清楚。</p>
+
+  <div class="divider-line"></div>
+
+  <p>那你要怎么办？</p>
+
+  <p>现在我不会告诉你"放下盾牌，勇敢面对"。</p>
+
+  <p>那是废话。你要是能放下早放下了。</p>
+
+  <p>我只想让你看清一件事：</p>
+
+  <div class="golden"><strong>"无所谓"不是你的盟友。"无所谓"是陷阱的一部分。</strong></div>
+
+  <p>陷阱让你痛苦。<br>
 痛苦让你逃避。<br>
 逃避让你说"无所谓"。<br>
 "无所谓"让你不去行动。<br>
 不行动让你更痛苦。<br>
 更痛苦让你更需要"无所谓"。</p>
 
-  <p contenteditable="true">又是一个循环。</p>
+  <p>又是一个循环。</p>
 
-  <p contenteditable="true">你说"无所谓"不是因为你不在乎。<br>
+  <p>你说"无所谓"不是因为你不在乎。<br>
 你说"无所谓"是因为你太在乎了，在乎到不敢面对。</p>
 
-  <p contenteditable="true">当你看清了"无所谓"不是铠甲而是牢笼的时候，你就离走出来又近了一步。</p>
+  <p>当你看清了"无所谓"不是铠甲而是牢笼的时候，你就离走出来又近了一步。</p>
 
-  <p contenteditable="true">下一章，我们拆另一个假的"好处"：逃避。</p>
+  <p>下一章，我们拆另一个假的"好处"：逃避。</p>
 </article>
 
 <!-- ===== 第六章: 逃避让你自由？ ===== -->
 <article class="chapter" id="ch-7" data-filename="第06章_逃避让你自由.md">
   <div class="chapter-label">Part 2 · 你以为的好处全是假的 · 第六章</div>
-  <h2 class="chapter-title" contenteditable="true">逃避让你自由？</h2>
-  <p contenteditable="true">你不去上课。<br>
+  <h2 class="chapter-title">逃避让你自由？</h2>
+  <p>你不去上课。<br>
 你不看成绩单。<br>
 你不接辅导员的电话。<br>
 你不跟家长聊学校的事。</p>
 
-  <p contenteditable="true">你觉得自己很轻松。</p>
+  <p>你觉得自己很轻松。</p>
 
-  <p contenteditable="true">没有课要上，没有作业要交，没有成绩要面对。</p>
+  <p>没有课要上，没有作业要交，没有成绩要面对。</p>
 
-  <p contenteditable="true">你觉得你摆脱了束缚。你自由了。</p>
+  <p>你觉得你摆脱了束缚。你自由了。</p>
 
-  <div class="golden" contenteditable="true"><strong>真的吗？</strong></div>
+  <div class="golden"><strong>真的吗？</strong></div>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">我问你几个问题：</p>
+  <p>我问你几个问题：</p>
 
-  <p contenteditable="true">如果你真的自由了，你为什么凌晨三点还睡不着？</p>
+  <p>如果你真的自由了，你为什么凌晨三点还睡不着？</p>
 
-  <p contenteditable="true">如果你真的不在乎了，你为什么看到"学业警告"四个字心跳会加速？</p>
+  <p>如果你真的不在乎了，你为什么看到"学业警告"四个字心跳会加速？</p>
 
-  <p contenteditable="true">如果你真的轻松了，你为什么一想到下学期还要选课就想吐？</p>
+  <p>如果你真的轻松了，你为什么一想到下学期还要选课就想吐？</p>
 
-  <p contenteditable="true">你说你"不管了"。<br>
+  <p>你说你"不管了"。<br>
 但你的身体告诉你：你管得比谁都多。</p>
 
-  <div class="golden" contenteditable="true"><strong>你不是不在乎。你是假装不在乎。</strong></div>
+  <div class="golden"><strong>你不是不在乎。你是假装不在乎。</strong></div>
 
-  <p contenteditable="true">而假装，比在乎还累。</p>
+  <p>而假装，比在乎还累。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">逃避给你的不是自由。</p>
+  <p>逃避给你的不是自由。</p>
 
-  <p contenteditable="true">逃避给你的是一个更小的牢房。</p>
+  <p>逃避给你的是一个更小的牢房。</p>
 
-  <p contenteditable="true">我解释一下。</p>
+  <p>我解释一下。</p>
 
-  <p contenteditable="true">你不去上课。好，这样你就不用面对教室里的尴尬了。<br>
+  <p>你不去上课。好，这样你就不用面对教室里的尴尬了。<br>
 但你也不能去食堂了——万一碰到同学怎么办？<br>
 你也不能去图书馆了——万一碰到辅导员怎么办？<br>
 你甚至不想出宿舍门——万一有人问你"最近怎么样"怎么办？</p>
 
-  <p contenteditable="true">你逃避了一件事，就需要逃避更多的事。</p>
+  <p>你逃避了一件事，就需要逃避更多的事。</p>
 
-  <p contenteditable="true">因为每一次面对，都可能暴露你"不去上课"的事实。</p>
+  <p>因为每一次面对，都可能暴露你"不去上课"的事实。</p>
 
-  <p contenteditable="true">所以你的活动范围越来越小。</p>
+  <p>所以你的活动范围越来越小。</p>
 
-  <p contenteditable="true">从校园缩小到宿舍。<br>
+  <p>从校园缩小到宿舍。<br>
 从宿舍缩小到床上。<br>
 从床上缩小到床帘里。</p>
 
-  <p contenteditable="true">堂弟的活动范围缩小到了那个800块的商铺里。</p>
+  <p>堂弟的活动范围缩小到了那个800块的商铺里。</p>
 
-  <div class="golden" contenteditable="true"><strong>你以为你在扩大自由，其实你在缩小世界。</strong></div>
+  <div class="golden"><strong>你以为你在扩大自由，其实你在缩小世界。</strong></div>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">还有一个东西你可能没注意到。</p>
+  <p>还有一个东西你可能没注意到。</p>
 
-  <p contenteditable="true">逃避是会上瘾的。</p>
+  <p>逃避是会上瘾的。</p>
 
-  <p contenteditable="true">第一次翘课，你心里还有点虚。<br>
+  <p>第一次翘课，你心里还有点虚。<br>
 第二次翘课，虚的感觉淡了一点。<br>
 第三次，第四次，第十次……你已经不觉得有什么了。</p>
 
-  <p contenteditable="true">这不是你"看开了"。<br>
+  <p>这不是你"看开了"。<br>
 这是你的阈值提高了。</p>
 
-  <p contenteditable="true">就像第一次说谎的时候，心跳加速，脸红。<br>
+  <p>就像第一次说谎的时候，心跳加速，脸红。<br>
 说了十次之后，面不改色。</p>
 
-  <p contenteditable="true">不是你变勇敢了。<br>
+  <p>不是你变勇敢了。<br>
 是你麻木了。</p>
 
-  <div class="golden" contenteditable="true"><strong>麻木不是自由。麻木是陷阱最喜欢的状态。</strong></div>
+  <div class="golden"><strong>麻木不是自由。麻木是陷阱最喜欢的状态。</strong></div>
 
-  <p contenteditable="true">因为一个麻木的人不会反抗。<br>
+  <p>因为一个麻木的人不会反抗。<br>
 一个麻木的人不会求救。<br>
 一个麻木的人会安安静静地待在陷阱里，直到被退学通知打醒——如果还来得及的话。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">你有没有想过一个问题：</p>
+  <p>你有没有想过一个问题：</p>
 
-  <div class="golden" contenteditable="true"><strong>逃避到底帮你避开了什么？</strong></div>
+  <div class="golden"><strong>逃避到底帮你避开了什么？</strong></div>
 
-  <p contenteditable="true">你逃避的是上课。但你避开了挂科吗？没有，你挂了更多。</p>
+  <p>你逃避的是上课。但你避开了挂科吗？没有，你挂了更多。</p>
 
-  <p contenteditable="true">你逃避的是面对成绩。但你避开了学业警告吗？没有，它照样来了。</p>
+  <p>你逃避的是面对成绩。但你避开了学业警告吗？没有，它照样来了。</p>
 
-  <p contenteditable="true">你逃避的是家长的追问。但你避开了他们的失望吗？没有，他们更失望了。</p>
+  <p>你逃避的是家长的追问。但你避开了他们的失望吗？没有，他们更失望了。</p>
 
-  <div class="golden" contenteditable="true"><strong>你什么都没有避开。你只是把"面对"这件事推迟了。</strong></div>
+  <div class="golden"><strong>你什么都没有避开。你只是把"面对"这件事推迟了。</strong></div>
 
-  <p contenteditable="true">而推迟是有利息的。</p>
+  <p>而推迟是有利息的。</p>
 
-  <p contenteditable="true">现在面对，是面对5门挂科。<br>
+  <p>现在面对，是面对5门挂科。<br>
 推迟一学期，是面对10门挂科。<br>
 再推迟一年，是面对降级通知。<br>
 再推迟一年，是面对退学警告。</p>
 
-  <div class="golden" contenteditable="true"><strong>你每推迟一天，要面对的东西就多一份。</strong></div>
+  <div class="golden"><strong>你每推迟一天，要面对的东西就多一份。</strong></div>
 
-  <p contenteditable="true">逃避不是在帮你。逃避是在给你挖一个更大的坑。</p>
+  <p>逃避不是在帮你。逃避是在给你挖一个更大的坑。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">你可能会说：道理我都懂，但我就是做不到面对啊。</p>
+  <p>你可能会说：道理我都懂，但我就是做不到面对啊。</p>
 
-  <p contenteditable="true">我知道。</p>
+  <p>我知道。</p>
 
-  <p contenteditable="true">你做不到不是因为你懒。<br>
+  <p>你做不到不是因为你懒。<br>
 你做不到是因为你害怕。</p>
 
-  <p contenteditable="true">你害怕的不是上课、不是考试、不是成绩。</p>
+  <p>你害怕的不是上课、不是考试、不是成绩。</p>
 
-  <div class="golden" contenteditable="true"><strong>你害怕的是：面对之后，发现自己真的不行。</strong></div>
+  <div class="golden"><strong>你害怕的是：面对之后，发现自己真的不行。</strong></div>
 
-  <p contenteditable="true">只要你不面对，你就永远可以告诉自己"我只是没去做而已，我要是做了肯定行"。</p>
+  <p>只要你不面对，你就永远可以告诉自己"我只是没去做而已，我要是做了肯定行"。</p>
 
-  <p contenteditable="true">这跟第五章那个男孩一模一样：用"不学"来保护"我很行"的幻觉。</p>
+  <p>这跟第五章那个男孩一模一样：用"不学"来保护"我很行"的幻觉。</p>
 
-  <div class="golden" contenteditable="true"><strong>逃避保护的不是你，是你的幻觉。</strong></div>
+  <div class="golden"><strong>逃避保护的不是你，是你的幻觉。</strong></div>
 
-  <p contenteditable="true">而幻觉迟早会碎。</p>
+  <p>而幻觉迟早会碎。</p>
 
-  <p contenteditable="true">与其等它自己碎，不如现在就看清它。</p>
+  <p>与其等它自己碎，不如现在就看清它。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">所以，逃避让你自由吗？</p>
+  <p>所以，逃避让你自由吗？</p>
 
-  <div class="golden" contenteditable="true"><strong>不。逃避让你的世界越来越小，让你的问题越来越大，让你离自由越来越远。</strong></div>
+  <div class="golden"><strong>不。逃避让你的世界越来越小，让你的问题越来越大，让你离自由越来越远。</strong></div>
 
-  <p contenteditable="true">真正的自由不是"不管了"。<br>
+  <p>真正的自由不是"不管了"。<br>
 真正的自由是"我看清了这个系统的规则，我知道怎么用最小的代价走出去"。</p>
 
-  <p contenteditable="true">这个自由，后面会讲。</p>
+  <p>这个自由，后面会讲。</p>
 
-  <p contenteditable="true">现在，你只需要看清一件事：</p>
+  <p>现在，你只需要看清一件事：</p>
 
-  <div class="golden" contenteditable="true"><strong>你以为你放弃了什么，其实你什么都没放弃。因为你本来就没有在享受任何东西。</strong></div>
+  <div class="golden"><strong>你以为你放弃了什么，其实你什么都没放弃。因为你本来就没有在享受任何东西。</strong></div>
 
-  <p contenteditable="true">你没有在享受"不上课"。你在焦虑。<br>
+  <p>你没有在享受"不上课"。你在焦虑。<br>
 你没有在享受"打游戏"。你在麻木。<br>
 你没有在享受"无所谓"。你在假装。</p>
 
-  <p contenteditable="true">你没有放弃学业。你只是被困在了陷阱里。</p>
+  <p>你没有放弃学业。你只是被困在了陷阱里。</p>
 
-  <p contenteditable="true">下一章，我们拆最后一个假的"好处"。</p>
+  <p>下一章，我们拆最后一个假的"好处"。</p>
 </article>
 
 <!-- ===== 第七章: 你真的不想要毕业证吗？ ===== -->
 <article class="chapter" id="ch-8" data-filename="第07章_你真的不想要毕业证吗.md">
   <div class="chapter-label">Part 2 · 你以为的好处全是假的 · 第七章</div>
-  <h2 class="chapter-title" contenteditable="true">你真的不想要毕业证吗？</h2>
-  <p contenteditable="true">这是Part 2的最后一章。</p>
+  <h2 class="chapter-title">你真的不想要毕业证吗？</h2>
+  <p>这是Part 2的最后一章。</p>
 
-  <p contenteditable="true">前面三章我拆了三个"假的好处"：</p>
+  <p>前面三章我拆了三个"假的好处"：</p>
 
   <ul class="story-list">
-    <li contenteditable="true">打游戏能缓解压力——假的。</li>
-    <li contenteditable="true">"无所谓"能保护你——假的。</li>
-    <li contenteditable="true">逃避让你自由——假的。</li>
+    <li>打游戏能缓解压力——假的。</li>
+    <li>"无所谓"能保护你——假的。</li>
+    <li>逃避让你自由——假的。</li>
   </ul>
 
-  <p contenteditable="true">这一章，我要问你一个最直接的问题：</p>
+  <p>这一章，我要问你一个最直接的问题：</p>
 
-  <div class="golden" contenteditable="true"><strong>你真的不想要毕业证吗？</strong></div>
+  <div class="golden"><strong>你真的不想要毕业证吗？</strong></div>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">你可能会说：</p>
+  <p>你可能会说：</p>
 
-  <p contenteditable="true">"毕业证有什么用？出来还不是打工。"<br>
+  <p>"毕业证有什么用？出来还不是打工。"<br>
 "现在本科一抓一大把，有没有都一样。"<br>
 "我本来就不想读大学，是我爸妈逼我来的。"</p>
 
-  <p contenteditable="true">好。</p>
+  <p>好。</p>
 
-  <p contenteditable="true">那我反过来问你：</p>
+  <p>那我反过来问你：</p>
 
-  <p contenteditable="true">如果现在有人跟你说"明天你就毕业了，毕业证、学位证都给你，你什么都不用做"，你要不要？</p>
+  <p>如果现在有人跟你说"明天你就毕业了，毕业证、学位证都给你，你什么都不用做"，你要不要？</p>
 
-  <p contenteditable="true">你要。</p>
+  <p>你要。</p>
 
-  <div class="golden" contenteditable="true"><strong>你当然要。</strong></div>
+  <div class="golden"><strong>你当然要。</strong></div>
 
-  <p contenteditable="true">你不是不想要毕业证。你是觉得你拿不到。</p>
+  <p>你不是不想要毕业证。你是觉得你拿不到。</p>
 
-  <p contenteditable="true">当一个东西你觉得自己拿不到的时候，你就会告诉自己"我不想要"。</p>
+  <p>当一个东西你觉得自己拿不到的时候，你就会告诉自己"我不想要"。</p>
 
-  <p contenteditable="true">这跟"无所谓"是一个道理。</p>
+  <p>这跟"无所谓"是一个道理。</p>
 
-  <p contenteditable="true">够不着的葡萄，说它酸。<br>
+  <p>够不着的葡萄，说它酸。<br>
 拿不到的证，说它没用。</p>
 
-  <p contenteditable="true">但你心里清楚。</p>
+  <p>但你心里清楚。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">我给你讲一个人。</p>
+  <p>我给你讲一个人。</p>
 
-  <div class="case-card" contenteditable="true">
+  <div class="case-card">
     <p>有个女孩，跟家里说她不想读书了，想去做直播。<br>
 <br>
 她天天跟她妈说"大学没用"、"我有才艺"、"直播能赚钱"。<br>
@@ -2208,103 +2190,103 @@
 </p>
   </div>
 
-  <p contenteditable="true">你觉得她真的不想要毕业证吗？</p>
+  <p>你觉得她真的不想要毕业证吗？</p>
 
-  <p contenteditable="true">她想要。<br>
+  <p>她想要。<br>
 她只是不好意思承认她想要。</p>
 
-  <p contenteditable="true">因为承认"我想要毕业证"，就意味着承认"之前说的都是假的"。<br>
+  <p>因为承认"我想要毕业证"，就意味着承认"之前说的都是假的"。<br>
 承认"我想要"，就意味着她必须去面对那些她一直逃避的东西。</p>
 
-  <p contenteditable="true">所以她宁可嘴上说"不要"，然后偷偷去做。</p>
+  <p>所以她宁可嘴上说"不要"，然后偷偷去做。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">再说一个更真实的场景。</p>
+  <p>再说一个更真实的场景。</p>
 
-  <p contenteditable="true">你想象一下，五年之后。</p>
+  <p>你想象一下，五年之后。</p>
 
-  <p contenteditable="true">你25岁或者26岁。你在找工作。</p>
+  <p>你25岁或者26岁。你在找工作。</p>
 
-  <p contenteditable="true">你打开招聘网站。看到一个你很喜欢的岗位。薪资不错，公司也不错。</p>
+  <p>你打开招聘网站。看到一个你很喜欢的岗位。薪资不错，公司也不错。</p>
 
-  <p contenteditable="true">你点开要求：本科及以上学历。</p>
+  <p>你点开要求：本科及以上学历。</p>
 
-  <p contenteditable="true">你没有毕业证。</p>
+  <p>你没有毕业证。</p>
 
-  <p contenteditable="true">你只能关掉页面。</p>
+  <p>你只能关掉页面。</p>
 
-  <p contenteditable="true">这时候你会想什么？</p>
+  <p>这时候你会想什么？</p>
 
-  <p contenteditable="true">你会想：<strong>"我当初要是把那几门课过了就好了。"</strong></p>
+  <p>你会想：<strong>"我当初要是把那几门课过了就好了。"</strong></p>
 
-  <p contenteditable="true">你不会想"毕业证没用"。你不会想"学历不重要"。</p>
+  <p>你不会想"毕业证没用"。你不会想"学历不重要"。</p>
 
-  <p contenteditable="true">你只会后悔。</p>
+  <p>你只会后悔。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">我不是在恐吓你。</p>
+  <p>我不是在恐吓你。</p>
 
-  <p contenteditable="true">我经手过200多个案例，有毕业的，也有没毕业的。</p>
+  <p>我经手过200多个案例，有毕业的，也有没毕业的。</p>
 
-  <p contenteditable="true">没毕业的人后来怎么样了？有的去做了快递，有的去做了销售，有的回家帮忙。</p>
+  <p>没毕业的人后来怎么样了？有的去做了快递，有的去做了销售，有的回家帮忙。</p>
 
-  <p contenteditable="true">他们活得下去吗？当然活得下去。</p>
+  <p>他们活得下去吗？当然活得下去。</p>
 
-  <p contenteditable="true">但他们在面对"本科及以上"这四个字的时候，都会有一瞬间的刺痛。</p>
+  <p>但他们在面对"本科及以上"这四个字的时候，都会有一瞬间的刺痛。</p>
 
-  <p contenteditable="true">不是因为他们活不下去。<br>
+  <p>不是因为他们活不下去。<br>
 是因为他们少了一个选项。</p>
 
-  <div class="golden" contenteditable="true"><strong>拿毕业证不是为了证明大学有用。拿毕业证是为了给你自己多一个选项。未来你可以选择不用它，但当你想用的时候，你有。</strong></div>
+  <div class="golden"><strong>拿毕业证不是为了证明大学有用。拿毕业证是为了给你自己多一个选项。未来你可以选择不用它，但当你想用的时候，你有。</strong></div>
 
-  <p contenteditable="true">这句话你记住。后面还会反复提到。</p>
+  <p>这句话你记住。后面还会反复提到。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">你可能会说：我知道毕业证有用，但我真的觉得自己拿不到了。</p>
+  <p>你可能会说：我知道毕业证有用，但我真的觉得自己拿不到了。</p>
 
-  <p contenteditable="true">我差10门课。我差15门课。我已经降级了。我已经收到退学预警了。</p>
+  <p>我差10门课。我差15门课。我已经降级了。我已经收到退学预警了。</p>
 
-  <p contenteditable="true">我理解。</p>
+  <p>我理解。</p>
 
-  <p contenteditable="true">但堂弟差了38门。</p>
+  <p>但堂弟差了38门。</p>
 
-  <p contenteditable="true">38门。</p>
+  <p>38门。</p>
 
-  <p contenteditable="true">你差多少？</p>
+  <p>你差多少？</p>
 
-  <p contenteditable="true">堂弟最后拿到了双证。而且他走的不是"拼命学习"的路，他走的是"看清规则，用最小代价通关"的路。</p>
+  <p>堂弟最后拿到了双证。而且他走的不是"拼命学习"的路，他走的是"看清规则，用最小代价通关"的路。</p>
 
-  <p contenteditable="true">这条路，后面的章节会一步一步教你走。</p>
+  <p>这条路，后面的章节会一步一步教你走。</p>
 
-  <p contenteditable="true">现在你只需要回答一个问题：</p>
+  <p>现在你只需要回答一个问题：</p>
 
-  <div class="golden" contenteditable="true"><strong>你想不想要那张毕业证？</strong></div>
+  <div class="golden"><strong>你想不想要那张毕业证？</strong></div>
 
-  <p contenteditable="true">不是"你能不能拿到"。<br>
+  <p>不是"你能不能拿到"。<br>
 是"你想不想要"。</p>
 
-  <p contenteditable="true">如果你的答案是"想"，哪怕声音很小，哪怕你自己都不太敢承认，那就够了。</p>
+  <p>如果你的答案是"想"，哪怕声音很小，哪怕你自己都不太敢承认，那就够了。</p>
 
-  <p contenteditable="true">因为这个"想"，是一切改变的起点。</p>
+  <p>因为这个"想"，是一切改变的起点。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">Part 2到这里就结束了。</p>
+  <p>Part 2到这里就结束了。</p>
 
-  <p contenteditable="true">我们拆了四个"假的好处"：<br>
+  <p>我们拆了四个"假的好处"：<br>
 1. 打游戏能缓解压力——不能，它只是暂停键。<br>
 2. "无所谓"能保护你——不能，它是牢笼。<br>
 3. 逃避让你自由——不是，它让你的世界越来越小。<br>
 4. 你不想要毕业证——假的，你只是觉得拿不到。</p>
 
-  <div class="golden" contenteditable="true"><strong>你以为你在享受这些"好处"，其实你什么都没有享受。</strong></div>
+  <div class="golden"><strong>你以为你在享受这些"好处"，其实你什么都没有享受。</strong></div>
 
-  <div class="golden" contenteditable="true"><strong>你什么都不用放弃。因为你本来就没有得到过任何东西。</strong></div>
+  <div class="golden"><strong>你什么都不用放弃。因为你本来就没有得到过任何东西。</strong></div>
 
-  <p contenteditable="true">下一部分，我们要拆另一类东西：那些听起来"正确"的方法，为什么全都不管用。</p>
+  <p>下一部分，我们要拆另一类东西：那些听起来"正确"的方法，为什么全都不管用。</p>
 </article>
 
 <!-- ===== Part 3 · 正确的方法为什么不管用 过渡页 ===== -->
@@ -2319,120 +2301,120 @@
 <!-- ===== 第八章: "好好学习"为什么一定会失败 ===== -->
 <article class="chapter" id="ch-9" data-filename="第08章_好好学习为什么一定会失败.md">
   <div class="chapter-label">Part 3 · 正确的方法为什么不管用 · 第八章</div>
-  <h2 class="chapter-title" contenteditable="true">"好好学习"为什么一定会失败</h2>
-  <p contenteditable="true">你有没有在某天晚上，躺在床上，下定决心：</p>
+  <h2 class="chapter-title">"好好学习"为什么一定会失败</h2>
+  <p>你有没有在某天晚上，躺在床上，下定决心：</p>
 
-  <p contenteditable="true">"从明天开始，我要好好学习。"</p>
+  <p>"从明天开始，我要好好学习。"</p>
 
-  <p contenteditable="true">第二天，你的闹钟响了。你关掉闹钟，又睡了。</p>
+  <p>第二天，你的闹钟响了。你关掉闹钟，又睡了。</p>
 
-  <p contenteditable="true">或者你真的起来了，去了教室，坐了十分钟，发现完全听不懂，然后打开手机。</p>
+  <p>或者你真的起来了，去了教室，坐了十分钟，发现完全听不懂，然后打开手机。</p>
 
-  <p contenteditable="true">到了晚上，你又躺在床上，比昨天更讨厌自己。</p>
+  <p>到了晚上，你又躺在床上，比昨天更讨厌自己。</p>
 
-  <p contenteditable="true">这个剧本你演过几次了？</p>
+  <p>这个剧本你演过几次了？</p>
 
-  <p contenteditable="true">三次？五次？十次？</p>
+  <p>三次？五次？十次？</p>
 
-  <p contenteditable="true">每一次"下定决心"，都以"更讨厌自己"收场。</p>
+  <p>每一次"下定决心"，都以"更讨厌自己"收场。</p>
 
-  <p contenteditable="true">然后你得出一个结论：<strong>我果然不行。</strong></p>
+  <p>然后你得出一个结论：<strong>我果然不行。</strong></p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">但你有没有想过：也许问题不是出在你身上，而是出在"好好学习"这四个字上。</p>
+  <p>但你有没有想过：也许问题不是出在你身上，而是出在"好好学习"这四个字上。</p>
 
-  <p contenteditable="true">"好好学习"的前提是什么？</p>
+  <p>"好好学习"的前提是什么？</p>
 
-  <p contenteditable="true">前提是：学习很痛苦，我需要忍耐。</p>
+  <p>前提是：学习很痛苦，我需要忍耐。</p>
 
-  <p contenteditable="true">你看，当你说"好好学习"的时候，你的潜台词是：</p>
+  <p>你看，当你说"好好学习"的时候，你的潜台词是：</p>
 
-  <p contenteditable="true">"我知道学习很难受，但我必须硬扛。"<br>
+  <p>"我知道学习很难受，但我必须硬扛。"<br>
 "我知道我不想去上课，但我必须逼自己去。"<br>
 "我知道我看不进书，但我必须坐在那里看。"</p>
 
-  <p contenteditable="true">你在跟自己的感受对着干。</p>
+  <p>你在跟自己的感受对着干。</p>
 
-  <p contenteditable="true">你觉得"只要我忍得住，我就能赢"。</p>
+  <p>你觉得"只要我忍得住，我就能赢"。</p>
 
-  <p contenteditable="true">但人不是机器。人不能靠"忍"来持续运转。</p>
+  <p>但人不是机器。人不能靠"忍"来持续运转。</p>
 
-  <p contenteditable="true">你忍了一天，第二天你更不想学了。<br>
+  <p>你忍了一天，第二天你更不想学了。<br>
 你忍了一周，第二周你直接崩了。<br>
 你忍了一个月，你开始怀疑人生。</p>
 
-  <div class="golden" contenteditable="true"><strong>靠意志力硬学，就是靠蛮力推一块你推不动的石头。你推不动不是因为你力气不够，是因为方向错了。</strong></div>
+  <div class="golden"><strong>靠意志力硬学，就是靠蛮力推一块你推不动的石头。你推不动不是因为你力气不够，是因为方向错了。</strong></div>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">"好好学习"还有一个更致命的问题。</p>
+  <p>"好好学习"还有一个更致命的问题。</p>
 
-  <p contenteditable="true">每次你"下定决心好好学习"然后失败，你都会强化一个信念：</p>
+  <p>每次你"下定决心好好学习"然后失败，你都会强化一个信念：</p>
 
-  <div class="golden" contenteditable="true"><strong>"我连好好学习都做不到，我果然是废物。"</strong></div>
+  <div class="golden"><strong>"我连好好学习都做不到，我果然是废物。"</strong></div>
 
-  <p contenteditable="true">你的自信被消耗一次。</p>
+  <p>你的自信被消耗一次。</p>
 
-  <p contenteditable="true">下一次你再"下定决心"，你的起点就更低了。因为你心里已经不太相信自己能做到了。</p>
+  <p>下一次你再"下定决心"，你的起点就更低了。因为你心里已经不太相信自己能做到了。</p>
 
-  <p contenteditable="true">然后你又失败了。自信再消耗一次。</p>
+  <p>然后你又失败了。自信再消耗一次。</p>
 
-  <p contenteditable="true">如此反复。</p>
+  <p>如此反复。</p>
 
-  <div class="golden" contenteditable="true"><strong>"好好学习"不是在帮你，它在消耗你仅剩的自信。</strong></div>
+  <div class="golden"><strong>"好好学习"不是在帮你，它在消耗你仅剩的自信。</strong></div>
 
-  <p contenteditable="true">你不是意志力不够。你是被这种方法反复打击，已经不相信自己了。</p>
+  <p>你不是意志力不够。你是被这种方法反复打击，已经不相信自己了。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">那什么是对的？</p>
+  <p>那什么是对的？</p>
 
-  <p contenteditable="true">不是"好好学习"。是"聪明地过科"。</p>
+  <p>不是"好好学习"。是"聪明地过科"。</p>
 
-  <p contenteditable="true">这两个东西完全不一样。</p>
+  <p>这两个东西完全不一样。</p>
 
-  <p contenteditable="true">"好好学习"说的是：你要认真听课、记笔记、做习题、理解知识点。</p>
+  <p>"好好学习"说的是：你要认真听课、记笔记、做习题、理解知识点。</p>
 
-  <p contenteditable="true">"聪明地过科"说的是：你要搞清楚这门课怎么给分，平时分占多少，期末考什么题型，补考是什么规则。然后用最小的力气达到60分。</p>
+  <p>"聪明地过科"说的是：你要搞清楚这门课怎么给分，平时分占多少，期末考什么题型，补考是什么规则。然后用最小的力气达到60分。</p>
 
-  <p contenteditable="true">前者需要你变成一个"好学生"。<br>
+  <p>前者需要你变成一个"好学生"。<br>
 后者只需要你变成一个"懂规则的人"。</p>
 
-  <p contenteditable="true">你不需要变成别人。你只需要看清规则。</p>
+  <p>你不需要变成别人。你只需要看清规则。</p>
 
-  <p contenteditable="true">具体怎么做，Part 4会详细讲。现在你只需要知道：<strong>如果"好好学习"有用，你早就好了。</strong></p>
+  <p>具体怎么做，Part 4会详细讲。现在你只需要知道：<strong>如果"好好学习"有用，你早就好了。</strong></p>
 </article>
 
 <!-- ===== 第九章: 断网、断经济、威胁退学——全是错的 ===== -->
 <article class="chapter" id="ch-10" data-filename="第09章_断网断经济威胁退学全是错的.md">
   <div class="chapter-label">Part 3 · 正确的方法为什么不管用 · 第九章</div>
-  <h2 class="chapter-title" contenteditable="true">断网、断经济、威胁退学——全是错的</h2>
-  <p contenteditable="true">这一章，不是写给你的。</p>
+  <h2 class="chapter-title">断网、断经济、威胁退学——全是错的</h2>
+  <p>这一章，不是写给你的。</p>
 
-  <p contenteditable="true">这一章是写给你爸妈的。</p>
+  <p>这一章是写给你爸妈的。</p>
 
-  <p contenteditable="true">但你也得看。因为你要理解你爸妈在干什么，以及为什么他们的做法不管用。</p>
+  <p>但你也得看。因为你要理解你爸妈在干什么，以及为什么他们的做法不管用。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">你爸妈可能做过以下事情中的一件或几件：</p>
+  <p>你爸妈可能做过以下事情中的一件或几件：</p>
 
-  <p contenteditable="true">把你的Wi-Fi断了。<br>
+  <p>把你的Wi-Fi断了。<br>
 把你的生活费停了。<br>
 把你的电脑收了。<br>
 威胁你"再挂科就让你退学"。<br>
 跟你说"我们在你身上花了多少钱，你对得起我们吗"。</p>
 
-  <p contenteditable="true">他们觉得这些方法能让你"清醒"。</p>
+  <p>他们觉得这些方法能让你"清醒"。</p>
 
-  <p contenteditable="true">有用吗？</p>
+  <p>有用吗？</p>
 
-  <p contenteditable="true">你告诉我。</p>
+  <p>你告诉我。</p>
 
   <div class="divider-line"></div>
 
-  <div class="case-card" contenteditable="true">
+  <div class="case-card">
     <p>我接触过一个案例。爸爸很强势，方案很简单：断网、断经济、天天打电话盘问。<br>
 <br>
 结果呢？<br>
@@ -2447,32 +2429,32 @@
 </p>
   </div>
 
-  <p contenteditable="true">断网是施压。<br>
+  <p>断网是施压。<br>
 断经济是施压。<br>
 威胁退学是施压。<br>
 "你对得起我们吗"是施压。</p>
 
-  <div class="golden" contenteditable="true"><strong>你不能通过制造更多痛苦来解决一个痛苦的问题。</strong></div>
+  <div class="golden"><strong>你不能通过制造更多痛苦来解决一个痛苦的问题。</strong></div>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">想想看，你的孩子（或者你自己）为什么会沉迷游戏、逃避学业？</p>
+  <p>想想看，你的孩子（或者你自己）为什么会沉迷游戏、逃避学业？</p>
 
-  <p contenteditable="true">因为他痛苦。</p>
+  <p>因为他痛苦。</p>
 
-  <p contenteditable="true">他已经在承受挂科的痛苦、羞耻的痛苦、自我否定的痛苦了。</p>
+  <p>他已经在承受挂科的痛苦、羞耻的痛苦、自我否定的痛苦了。</p>
 
-  <p contenteditable="true">然后你又加了一层痛苦：断网、断经济、威胁。</p>
+  <p>然后你又加了一层痛苦：断网、断经济、威胁。</p>
 
-  <p contenteditable="true">他能承受住吗？</p>
+  <p>他能承受住吗？</p>
 
-  <p contenteditable="true">少数人可能被逼到绝境后爆发出一股劲来。但大多数人不会。大多数人会更崩溃。</p>
+  <p>少数人可能被逼到绝境后爆发出一股劲来。但大多数人不会。大多数人会更崩溃。</p>
 
-  <p contenteditable="true">因为他本来就已经觉得"全世界都在针对我"了。你的施压只是在证明他的判断。</p>
+  <p>因为他本来就已经觉得"全世界都在针对我"了。你的施压只是在证明他的判断。</p>
 
   <div class="divider-line"></div>
 
-  <div class="case-card" contenteditable="true">
+  <div class="case-card">
     <p>还有一个案例。大二女生，黄牌警告。<br>
 <br>
 她妈越管，她越对抗。<br>
@@ -2487,85 +2469,85 @@
 </p>
   </div>
 
-  <div class="golden" contenteditable="true"><strong>管控的问题不是"管得不够狠"。管控的问题是"方向就错了"。</strong></div>
+  <div class="golden"><strong>管控的问题不是"管得不够狠"。管控的问题是"方向就错了"。</strong></div>
 
-  <p contenteditable="true">你管的是他的行为（打游戏、不上课）。<br>
+  <p>你管的是他的行为（打游戏、不上课）。<br>
 但你没有管他的动机（为什么打游戏、为什么不上课）。</p>
 
-  <p contenteditable="true">你拿走了他的止痛药。但你没有治他的病。</p>
+  <p>你拿走了他的止痛药。但你没有治他的病。</p>
 
-  <p contenteditable="true">他不上课不是因为有Wi-Fi。他不上课是因为痛苦。<br>
+  <p>他不上课不是因为有Wi-Fi。他不上课是因为痛苦。<br>
 他打游戏不是因为手机好玩。他打游戏是因为现实太难受。</p>
 
-  <p contenteditable="true">你把Wi-Fi断了、手机收了，他就会去学习吗？</p>
+  <p>你把Wi-Fi断了、手机收了，他就会去学习吗？</p>
 
-  <p contenteditable="true">不会。他会找别的方式逃避。或者，他会直接崩溃。</p>
+  <p>不会。他会找别的方式逃避。或者，他会直接崩溃。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">那家长应该怎么做？</p>
+  <p>那家长应该怎么做？</p>
 
-  <p contenteditable="true">这本书的重点是写给学生的，但我还是说两句。</p>
+  <p>这本书的重点是写给学生的，但我还是说两句。</p>
 
-  <p contenteditable="true">第一：<strong>停止施压。</strong><br>
+  <p>第一：<strong>停止施压。</strong><br>
 你的孩子已经够痛苦了。他需要的不是更多的压力，是一个安全的环境。说真话不会被追问。不会被你的焦虑淹没。不会一开口就听到"你对得起我们吗"。</p>
 
-  <p contenteditable="true">第二：<strong>先修关系，再谈问题。</strong><br>
+  <p>第二：<strong>先修关系，再谈问题。</strong><br>
 如果你和孩子的信任已经崩了，什么方法都没用。因为他不信你。他不信你，你说的话就是噪音。先让他觉得"我跟你说话是安全的"，其他的才有可能。</p>
 
-  <p contenteditable="true">第三：<strong>别急。</strong><br>
+  <p>第三：<strong>别急。</strong><br>
 堂弟用了7年。你的孩子不会在一个学期里就变好。给他时间。给你自己时间。</p>
 
-  <p contenteditable="true">具体的家长沟通策略，第15章会详细讲。</p>
+  <p>具体的家长沟通策略，第15章会详细讲。</p>
 </article>
 
 <!-- ===== 第十章: "我改"这两个字为什么最没用 ===== -->
 <article class="chapter" id="ch-11" data-filename="第10章_我改这两个字为什么最没用.md">
   <div class="chapter-label">Part 3 · 正确的方法为什么不管用 · 第十章</div>
-  <h2 class="chapter-title" contenteditable="true">"我改"这两个字为什么最没用</h2>
-  <p contenteditable="true">"我改。"</p>
+  <h2 class="chapter-title">"我改"这两个字为什么最没用</h2>
+  <p>"我改。"</p>
 
-  <p contenteditable="true">你说过多少遍了？</p>
+  <p>你说过多少遍了？</p>
 
-  <p contenteditable="true">每次被爸妈逮到，你说"我改"。<br>
+  <p>每次被爸妈逮到，你说"我改"。<br>
 每次收到学业警告，你说"我改"。<br>
 每次跟辅导员谈完话，你说"我改"。</p>
 
-  <p contenteditable="true">然后呢？</p>
+  <p>然后呢？</p>
 
-  <p contenteditable="true">三天之后，你又回到了原样。</p>
+  <p>三天之后，你又回到了原样。</p>
 
-  <p contenteditable="true">然后你更讨厌自己了。</p>
+  <p>然后你更讨厌自己了。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">"我改"为什么没用？</p>
+  <p>"我改"为什么没用？</p>
 
-  <p contenteditable="true">因为"我改"这两个字，改的是行为，不是认知。</p>
+  <p>因为"我改"这两个字，改的是行为，不是认知。</p>
 
-  <p contenteditable="true">你说"我改"的意思是：</p>
+  <p>你说"我改"的意思是：</p>
 
-  <p contenteditable="true">"我以后不打游戏了。"<br>
+  <p>"我以后不打游戏了。"<br>
 "我以后按时上课了。"<br>
 "我以后好好学习了。"</p>
 
-  <p contenteditable="true">但你对大学的看法变了吗？没有。你还是觉得大学没意思。<br>
+  <p>但你对大学的看法变了吗？没有。你还是觉得大学没意思。<br>
 你对自己的看法变了吗？没有。你还是觉得自己是废物。<br>
 你对学习的看法变了吗？没有。你还是觉得学习很痛苦。</p>
 
-  <p contenteditable="true">你的认知一点没变。你只是逼自己做出不同的行为。</p>
+  <p>你的认知一点没变。你只是逼自己做出不同的行为。</p>
 
-  <p contenteditable="true">这跟什么一样？</p>
+  <p>这跟什么一样？</p>
 
-  <p contenteditable="true">跟你用橡皮筋绑住一个弹簧，然后告诉自己"你看，弹簧不弹了"一样。</p>
+  <p>跟你用橡皮筋绑住一个弹簧，然后告诉自己"你看，弹簧不弹了"一样。</p>
 
-  <p contenteditable="true">你一松手，弹簧会比之前弹得更远。</p>
+  <p>你一松手，弹簧会比之前弹得更远。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">我见过太多"我改"的人了。</p>
+  <p>我见过太多"我改"的人了。</p>
 
-  <div class="case-card" contenteditable="true">
+  <div class="case-card">
     <p>几乎每个家长都跟我说过同一句话："林哥，他每次都保证，但从来没做到过。"<br>
 <br>
 有的孩子保证了三次。有的保证了十次。有的每学期开学都保证一次。<br>
@@ -2574,89 +2556,89 @@
 </p>
   </div>
 
-  <p contenteditable="true">你知道为什么吗？</p>
+  <p>你知道为什么吗？</p>
 
-  <p contenteditable="true">因为"我改"的本质是一笔交易。</p>
+  <p>因为"我改"的本质是一笔交易。</p>
 
-  <p contenteditable="true">你说"我改"，换来的是：爸妈暂时不追问了、辅导员暂时放过你了、你自己的愧疚感暂时缓解了。</p>
+  <p>你说"我改"，换来的是：爸妈暂时不追问了、辅导员暂时放过你了、你自己的愧疚感暂时缓解了。</p>
 
-  <p contenteditable="true">这就是"我改"真正的作用——<strong>止痛。</strong></p>
+  <p>这就是"我改"真正的作用——<strong>止痛。</strong></p>
 
-  <p contenteditable="true">它不是承诺。它是又一剂止痛药。</p>
+  <p>它不是承诺。它是又一剂止痛药。</p>
 
-  <p contenteditable="true">你说完"我改"，心里舒服了一点。爸妈也舒服了一点。大家暂时松口气。</p>
+  <p>你说完"我改"，心里舒服了一点。爸妈也舒服了一点。大家暂时松口气。</p>
 
-  <p contenteditable="true">但三天之后，药效过了。一切回到原点。</p>
-
-  <div class="divider-line"></div>
-
-  <p contenteditable="true">"我改"还有一个更毒的副作用。</p>
-
-  <p contenteditable="true">每次你说"我改"然后没做到，你就在强化一个信念：</p>
-
-  <div class="golden" contenteditable="true"><strong>"我果然说到做不到。"</strong></div>
-
-  <p contenteditable="true">这个信念说一次就深一点。</p>
-
-  <p contenteditable="true">说了十次之后，你就真的相信了：我是一个"说到做不到"的人。</p>
-
-  <p contenteditable="true">然后你连说"我改"的力气都没有了。</p>
-
-  <p contenteditable="true">因为你知道说了也是假的。</p>
-
-  <div class="golden" contenteditable="true"><strong>"我改"不是在帮你改。"我改"是在消耗你对自己的信任。</strong></div>
+  <p>但三天之后，药效过了。一切回到原点。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">那应该说什么？</p>
+  <p>"我改"还有一个更毒的副作用。</p>
 
-  <p contenteditable="true">不是"我改"。</p>
+  <p>每次你说"我改"然后没做到，你就在强化一个信念：</p>
 
-  <p contenteditable="true">是"我看到了"。</p>
+  <div class="golden"><strong>"我果然说到做不到。"</strong></div>
 
-  <p contenteditable="true">"我看到了我为什么会打游戏——因为我在逃避痛苦。"<br>
+  <p>这个信念说一次就深一点。</p>
+
+  <p>说了十次之后，你就真的相信了：我是一个"说到做不到"的人。</p>
+
+  <p>然后你连说"我改"的力气都没有了。</p>
+
+  <p>因为你知道说了也是假的。</p>
+
+  <div class="golden"><strong>"我改"不是在帮你改。"我改"是在消耗你对自己的信任。</strong></div>
+
+  <div class="divider-line"></div>
+
+  <p>那应该说什么？</p>
+
+  <p>不是"我改"。</p>
+
+  <p>是"我看到了"。</p>
+
+  <p>"我看到了我为什么会打游戏——因为我在逃避痛苦。"<br>
 "我看到了我为什么不去上课——因为我害怕面对失败。"<br>
 "我看到了'无所谓'不是我不在乎——是我太在乎了不敢面对。"</p>
 
-  <div class="golden" contenteditable="true"><strong>真正的改变不是从"我改"开始的。真正的改变是从"我看清了"开始的。</strong></div>
+  <div class="golden"><strong>真正的改变不是从"我改"开始的。真正的改变是从"我看清了"开始的。</strong></div>
 
-  <p contenteditable="true">当你看清了陷阱的运作方式，看清了那些"假的好处"，看清了"好好学习"和"我改"为什么不管用的时候——</p>
+  <p>当你看清了陷阱的运作方式，看清了那些"假的好处"，看清了"好好学习"和"我改"为什么不管用的时候——</p>
 
-  <p contenteditable="true">你就不需要"改"了。</p>
+  <p>你就不需要"改"了。</p>
 
-  <p contenteditable="true">因为当你看清了一个东西是假的，你自然就不会再被它骗了。</p>
+  <p>因为当你看清了一个东西是假的，你自然就不会再被它骗了。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">Part 3到这里结束。</p>
+  <p>Part 3到这里结束。</p>
 
-  <p contenteditable="true">我们拆了三个"正确但没用"的方法：<br>
+  <p>我们拆了三个"正确但没用"的方法：<br>
 1. "好好学习"——靠意志力硬扛，越扛越崩。<br>
 2. 断网、断经济、威胁——制造更多痛苦解决不了痛苦。<br>
 3. "我改"——改的是行为不是认知，说完就忘。</p>
 
-  <p contenteditable="true">到这里，"破"的部分基本完成了。</p>
+  <p>到这里，"破"的部分基本完成了。</p>
 
-  <p contenteditable="true">你现在应该看清了：</p>
+  <p>你现在应该看清了：</p>
 
   <ul class="story-list">
-    <li contenteditable="true">你掉进了一个陷阱（Part 1）</li>
-    <li contenteditable="true">你以为的"好处"全是假的（Part 2）</li>
-    <li contenteditable="true">过去的方法全都是错的（Part 3）</li>
+    <li>你掉进了一个陷阱（Part 1）</li>
+    <li>你以为的"好处"全是假的（Part 2）</li>
+    <li>过去的方法全都是错的（Part 3）</li>
   </ul>
 
-  <p contenteditable="true">那接下来呢？</p>
+  <p>那接下来呢？</p>
 
-  <p contenteditable="true">接下来是"立"。</p>
+  <p>接下来是"立"。</p>
 
-  <p contenteditable="true">从下一章开始，我不会再告诉你"什么是假的"了。<br>
+  <p>从下一章开始，我不会再告诉你"什么是假的"了。<br>
 我要告诉你"什么是真的"。</p>
 
-  <p contenteditable="true">这个系统的真实规则是什么。<br>
+  <p>这个系统的真实规则是什么。<br>
 你可以选择成为谁。<br>
 你明天就能做的第一步是什么。</p>
 
-  <p contenteditable="true">准备好了就翻页。</p>
+  <p>准备好了就翻页。</p>
 </article>
 
 <!-- ===== Part 4 · 你可以选择成为谁 过渡页 ===== -->
@@ -2671,767 +2653,767 @@
 <!-- ===== 第十一章: 这个系统的真实规则 ===== -->
 <article class="chapter" id="ch-12" data-filename="第11章_这个系统的真实规则.md">
   <div class="chapter-label">Part 4 · 你可以选择成为谁 · 第十一章</div>
-  <h2 class="chapter-title" contenteditable="true">这个系统的真实规则</h2>
-  <p contenteditable="true">前面十章，我一直在告诉你"什么是假的"。</p>
+  <h2 class="chapter-title">这个系统的真实规则</h2>
+  <p>前面十章，我一直在告诉你"什么是假的"。</p>
 
-  <p contenteditable="true">假的好处、假的方法、假的承诺。</p>
+  <p>假的好处、假的方法、假的承诺。</p>
 
-  <p contenteditable="true">从这一章开始，我告诉你"什么是真的"。</p>
-
-  <div class="divider-line"></div>
-
-  <p contenteditable="true">先问你一个问题。</p>
-
-  <p contenteditable="true">你觉得大学过科难吗？</p>
-
-  <p contenteditable="true">如果你觉得难，那我再问你一个问题：</p>
-
-  <div class="golden" contenteditable="true"><strong>你看过这个游戏的规则吗？</strong></div>
-
-  <p contenteditable="true">你有没有认真研究过：一门课的总成绩是怎么算的？平时分占多少？期末占多少？补考的规则是什么？老师判卷的时候在想什么？</p>
-
-  <p contenteditable="true">如果你没研究过，那你说"大学好难"就像一个人打游戏，连教程都没看就上手，死了十次之后说"这游戏太难了"。</p>
-
-  <p contenteditable="true">不是游戏难。是你没看规则。</p>
+  <p>从这一章开始，我告诉你"什么是真的"。</p>
 
   <div class="divider-line"></div>
 
-  <h3 class="section-title" contenteditable="true">规则一：平时分比你想象的重要</h3>
+  <p>先问你一个问题。</p>
 
-  <p contenteditable="true">大部分课的总成绩是这么算的：</p>
+  <p>你觉得大学过科难吗？</p>
 
-  <div class="golden" contenteditable="true"><strong>平时分 × 40% + 期末考试 × 60%</strong></div>
+  <p>如果你觉得难，那我再问你一个问题：</p>
 
-  <p contenteditable="true">有的课甚至是五五开。</p>
+  <div class="golden"><strong>你看过这个游戏的规则吗？</strong></div>
 
-  <p contenteditable="true">这意味着什么？</p>
+  <p>你有没有认真研究过：一门课的总成绩是怎么算的？平时分占多少？期末占多少？补考的规则是什么？老师判卷的时候在想什么？</p>
 
-  <p contenteditable="true">意味着如果你平时分拿满了，期末你只需要考40分就能过。</p>
+  <p>如果你没研究过，那你说"大学好难"就像一个人打游戏，连教程都没看就上手，死了十次之后说"这游戏太难了"。</p>
 
-  <p contenteditable="true">40分。</p>
-
-  <p contenteditable="true">你随便写写都有40分。</p>
-
-  <p contenteditable="true">但如果你平时分是0，你期末需要考100分才能过。</p>
-
-  <p contenteditable="true">100分。你自己想想可能吗？</p>
-
-  <div class="golden" contenteditable="true"><strong>很多人挂科不是因为考试太难，是因为平时分太低。</strong></div>
+  <p>不是游戏难。是你没看规则。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">那平时分怎么拿？</p>
+  <h3 class="section-title">规则一：平时分比你想象的重要</h3>
 
-  <p contenteditable="true">三个字：<strong>去上课。</strong></p>
+  <p>大部分课的总成绩是这么算的：</p>
 
-  <p contenteditable="true">不是让你认真听课。不是让你做笔记。不是让你坐在前排跟老师眼神交流。</p>
+  <div class="golden"><strong>平时分 × 40% + 期末考试 × 60%</strong></div>
 
-  <p contenteditable="true">就是去。</p>
+  <p>有的课甚至是五五开。</p>
 
-  <p contenteditable="true">去了就有分。不去就没有。</p>
+  <p>这意味着什么？</p>
 
-  <p contenteditable="true">而且前几次课特别重要。</p>
+  <p>意味着如果你平时分拿满了，期末你只需要考40分就能过。</p>
 
-  <p contenteditable="true">很多老师的习惯是：前两次课点名。如果你前两次都没来，他就不会再点你了。不是因为他忘了，是因为他已经把你归到"不来的人"那一类了。</p>
+  <p>40分。</p>
 
-  <p contenteditable="true">但如果你前两次都来了，他就记住你了。后面你偶尔缺个一两次，他也不会太在意。</p>
+  <p>你随便写写都有40分。</p>
 
-  <div class="golden" contenteditable="true"><strong>所以策略是：前几次课一定去，中间可以偶尔不去，最后几次课一定去。</strong></div>
+  <p>但如果你平时分是0，你期末需要考100分才能过。</p>
 
-  <p contenteditable="true">别的你不用管。去了就坐着，玩手机也行，带耳机也行。别影响别人就行。</p>
+  <p>100分。你自己想想可能吗？</p>
 
-  <div class="divider-line"></div>
-
-  <p contenteditable="true">然后是作业。</p>
-
-  <p contenteditable="true">作业必须交。</p>
-
-  <p contenteditable="true">不是让你认真做。是让你交。</p>
-
-  <p contenteditable="true">交了就有分。不交就是0。</p>
-
-  <p contenteditable="true">现在AI这么发达，你连想都不用想。把题目丢给ChatGPT、Claude、Gemini，任何一个都行，三分钟就能给你一份像样的作业。</p>
-
-  <p contenteditable="true">你稍微改改措辞，换几个词，调整一下格式，就交了。</p>
-
-  <p contenteditable="true">老师有两百多份作业要看。他看你交了，打个勾就过了。他没时间研究你到底是不是自己写的。</p>
-
-  <div class="golden" contenteditable="true"><strong>但有一点注意：别每份作业都用AI。偶尔自己写一次，混在里面。别让老师看出所有作业都是一个模子出来的。</strong></div>
+  <div class="golden"><strong>很多人挂科不是因为考试太难，是因为平时分太低。</strong></div>
 
   <div class="divider-line"></div>
 
-  <h3 class="section-title" contenteditable="true">规则二：补考只看卷面成绩</h3>
+  <p>那平时分怎么拿？</p>
 
-  <p contenteditable="true">这条规则，我必须告诉你。因为很多人不知道。</p>
+  <p>三个字：<strong>去上课。</strong></p>
 
-  <p contenteditable="true">正考的时候，你的总成绩 = 平时分 × 40% + 考试 × 60%。</p>
+  <p>不是让你认真听课。不是让你做笔记。不是让你坐在前排跟老师眼神交流。</p>
 
-  <p contenteditable="true">但补考的时候，你的总成绩 = 卷面成绩 × 100%。</p>
+  <p>就是去。</p>
 
-  <p contenteditable="true">平时分不算了。</p>
+  <p>去了就有分。不去就没有。</p>
 
-  <p contenteditable="true">这意味着什么？</p>
+  <p>而且前几次课特别重要。</p>
 
-  <p contenteditable="true">意味着如果你平时分很低，正考的时候不管怎么考都过不了。但补考的时候，你只要卷面考60分就能过。</p>
+  <p>很多老师的习惯是：前两次课点名。如果你前两次都没来，他就不会再点你了。不是因为他忘了，是因为他已经把你归到"不来的人"那一类了。</p>
 
-  <p contenteditable="true">堂弟就是利用这个规则的高手。</p>
+  <p>但如果你前两次都来了，他就记住你了。后面你偶尔缺个一两次，他也不会太在意。</p>
 
-  <p contenteditable="true">他所有科目正考都交白卷。不是因为他不会，是因为他的平时分是0，正考怎么考都过不了。交白卷是为了拿到补考资格。</p>
+  <div class="golden"><strong>所以策略是：前几次课一定去，中间可以偶尔不去，最后几次课一定去。</strong></div>
 
-  <p contenteditable="true">然后补考的时候集中火力，刷两周题，考个60分就过了。</p>
-
-  <p contenteditable="true">你可能觉得这很取巧。</p>
-
-  <p contenteditable="true">但这不是取巧。这是看清规则之后，选择了一条阻力最小的路。</p>
-
-  <p contenteditable="true"><strong>补考通过后，成绩统一按60分记录。</strong> 不好看？不重要。毕业证上不写你每门课考了多少分。</p>
+  <p>别的你不用管。去了就坐着，玩手机也行，带耳机也行。别影响别人就行。</p>
 
   <div class="divider-line"></div>
 
-  <h3 class="section-title" contenteditable="true">规则三：老师比你想象的好说话</h3>
+  <p>然后是作业。</p>
 
-  <p contenteditable="true">你怕老师吗？</p>
+  <p>作业必须交。</p>
 
-  <p contenteditable="true">很多挂科的同学都怕老师。怕被批评，怕被追问，怕被看不起。</p>
+  <p>不是让你认真做。是让你交。</p>
 
-  <p contenteditable="true">所以他们不去找老师。考完试不管过没过，就躲起来。</p>
+  <p>交了就有分。不交就是0。</p>
 
-  <p contenteditable="true">但你知道老师在想什么吗？</p>
+  <p>现在AI这么发达，你连想都不用想。把题目丢给ChatGPT、Claude、Gemini，任何一个都行，三分钟就能给你一份像样的作业。</p>
 
-  <p contenteditable="true">老师在想："这个学生怎么不来找我？我想帮他都找不到人。"</p>
+  <p>你稍微改改措辞，换几个词，调整一下格式，就交了。</p>
 
-  <p contenteditable="true">真的。</p>
+  <p>老师有两百多份作业要看。他看你交了，打个勾就过了。他没时间研究你到底是不是自己写的。</p>
 
-  <p contenteditable="true">大学老师跟高中老师不一样。高中老师管你管得死死的。大学老师不管你。不是因为他不关心你，是因为他管不了那么多人。</p>
-
-  <p contenteditable="true">但如果你主动去找他，大部分老师都愿意帮你。</p>
-
-  <p contenteditable="true">考试完了，你觉得自己可能挂了，给老师发个消息。不要直说"老师你能不能让我过"，那是傻子才干的事。</p>
-
-  <p contenteditable="true">你要委婉。</p>
-
-  <p contenteditable="true">"老师，我是XXX，这学期您的课我受益很多。我知道自己这次考得不太好，想问您下学期如果重修的话，有什么需要重点注意的地方吗？"</p>
-
-  <p contenteditable="true">你看，这句话没有求老师放水。但老师看了就懂你的意思。</p>
-
-  <p contenteditable="true">而且这条消息传递了几个信号：你知道自己考得不好（有自知之明）、你打算重修（有态度）、你在请教（尊重老师）。</p>
-
-  <p contenteditable="true">大部分老师看到这种消息，如果你的分数在55-59之间，他会考虑抬一抬手。</p>
-
-  <div class="golden" contenteditable="true"><strong>但记住：文字有痕迹。不要在消息里写任何让老师为难的话。</strong></div>
+  <div class="golden"><strong>但有一点注意：别每份作业都用AI。偶尔自己写一次，混在里面。别让老师看出所有作业都是一个模子出来的。</strong></div>
 
   <div class="divider-line"></div>
 
-  <h3 class="section-title" contenteditable="true">规则四：不要一次性重修太多门</h3>
+  <h3 class="section-title">规则二：补考只看卷面成绩</h3>
 
-  <p contenteditable="true">这是很多人犯的错。</p>
+  <p>这条规则，我必须告诉你。因为很多人不知道。</p>
 
-  <p contenteditable="true">比如你挂了12门。你一看，完了，差太多了。然后你一口气把12门全选了。</p>
+  <p>正考的时候，你的总成绩 = 平时分 × 40% + 考试 × 60%。</p>
 
-  <p contenteditable="true">结果课程冲突了、时间排不开了、每周排满了、累得半死，三周之后你又崩了。</p>
+  <p>但补考的时候，你的总成绩 = 卷面成绩 × 100%。</p>
 
-  <p contenteditable="true">又回到了原来那个打游戏的状态。</p>
+  <p>平时分不算了。</p>
 
-  <div class="golden" contenteditable="true"><strong>正确的做法是：这学期选2-3门，先把这几门搞定。下学期再选几门。</strong></div>
+  <p>这意味着什么？</p>
 
-  <p contenteditable="true">分批击破。</p>
+  <p>意味着如果你平时分很低，正考的时候不管怎么考都过不了。但补考的时候，你只要卷面考60分就能过。</p>
 
-  <p contenteditable="true">你挂了12门，每学期过2-3门，两年就补回来了。</p>
+  <p>堂弟就是利用这个规则的高手。</p>
 
-  <p contenteditable="true">加上延毕一年，你大五毕业。大五毕业怎么了？堂弟大七毕业。</p>
+  <p>他所有科目正考都交白卷。不是因为他不会，是因为他的平时分是0，正考怎么考都过不了。交白卷是为了拿到补考资格。</p>
 
-  <p contenteditable="true">而且你毕业之后，两年以内都算应届毕业生。企业招应届生是因为国家给补贴，他不管你是4年毕业还是5年毕业。</p>
+  <p>然后补考的时候集中火力，刷两周题，考个60分就过了。</p>
 
-  <div class="golden" contenteditable="true"><strong>社会不在乎你用了几年毕业。社会只在乎你有没有毕业证。</strong></div>
+  <p>你可能觉得这很取巧。</p>
+
+  <p>但这不是取巧。这是看清规则之后，选择了一条阻力最小的路。</p>
+
+  <p><strong>补考通过后，成绩统一按60分记录。</strong> 不好看？不重要。毕业证上不写你每门课考了多少分。</p>
 
   <div class="divider-line"></div>
 
-  <h3 class="section-title" contenteditable="true">规则五：考前突击是核心</h3>
+  <h3 class="section-title">规则三：老师比你想象的好说话</h3>
 
-  <p contenteditable="true">你平时不学习也行。但考前两周你必须冲。</p>
+  <p>你怕老师吗？</p>
 
-  <p contenteditable="true">怎么冲？</p>
+  <p>很多挂科的同学都怕老师。怕被批评，怕被追问，怕被看不起。</p>
 
-  <p contenteditable="true"><strong>第一步：找复习范围。</strong><br>
+  <p>所以他们不去找老师。考完试不管过没过，就躲起来。</p>
+
+  <p>但你知道老师在想什么吗？</p>
+
+  <p>老师在想："这个学生怎么不来找我？我想帮他都找不到人。"</p>
+
+  <p>真的。</p>
+
+  <p>大学老师跟高中老师不一样。高中老师管你管得死死的。大学老师不管你。不是因为他不关心你，是因为他管不了那么多人。</p>
+
+  <p>但如果你主动去找他，大部分老师都愿意帮你。</p>
+
+  <p>考试完了，你觉得自己可能挂了，给老师发个消息。不要直说"老师你能不能让我过"，那是傻子才干的事。</p>
+
+  <p>你要委婉。</p>
+
+  <p>"老师，我是XXX，这学期您的课我受益很多。我知道自己这次考得不太好，想问您下学期如果重修的话，有什么需要重点注意的地方吗？"</p>
+
+  <p>你看，这句话没有求老师放水。但老师看了就懂你的意思。</p>
+
+  <p>而且这条消息传递了几个信号：你知道自己考得不好（有自知之明）、你打算重修（有态度）、你在请教（尊重老师）。</p>
+
+  <p>大部分老师看到这种消息，如果你的分数在55-59之间，他会考虑抬一抬手。</p>
+
+  <div class="golden"><strong>但记住：文字有痕迹。不要在消息里写任何让老师为难的话。</strong></div>
+
+  <div class="divider-line"></div>
+
+  <h3 class="section-title">规则四：不要一次性重修太多门</h3>
+
+  <p>这是很多人犯的错。</p>
+
+  <p>比如你挂了12门。你一看，完了，差太多了。然后你一口气把12门全选了。</p>
+
+  <p>结果课程冲突了、时间排不开了、每周排满了、累得半死，三周之后你又崩了。</p>
+
+  <p>又回到了原来那个打游戏的状态。</p>
+
+  <div class="golden"><strong>正确的做法是：这学期选2-3门，先把这几门搞定。下学期再选几门。</strong></div>
+
+  <p>分批击破。</p>
+
+  <p>你挂了12门，每学期过2-3门，两年就补回来了。</p>
+
+  <p>加上延毕一年，你大五毕业。大五毕业怎么了？堂弟大七毕业。</p>
+
+  <p>而且你毕业之后，两年以内都算应届毕业生。企业招应届生是因为国家给补贴，他不管你是4年毕业还是5年毕业。</p>
+
+  <div class="golden"><strong>社会不在乎你用了几年毕业。社会只在乎你有没有毕业证。</strong></div>
+
+  <div class="divider-line"></div>
+
+  <h3 class="section-title">规则五：考前突击是核心</h3>
+
+  <p>你平时不学习也行。但考前两周你必须冲。</p>
+
+  <p>怎么冲？</p>
+
+  <p><strong>第一步：找复习范围。</strong><br>
 去找老师，去找班群，去找学长学姐。大部分老师考前都会划范围。有的直接告诉你考哪几章，有的给你复习提纲。如果老师不划，那就找往年试卷，看看出题规律。</p>
 
-  <p contenteditable="true"><strong>第二步：刷课后习题。</strong><br>
+  <p><strong>第二步：刷课后习题。</strong><br>
 大学考试80%的题目来自课后习题和PPT上的例题。你不需要理解原理，你只需要会做题。把课后习题过两遍，大部分题你都能做对。</p>
 
-  <p contenteditable="true"><strong>第三步：找往年试卷。</strong><br>
+  <p><strong>第三步：找往年试卷。</strong><br>
 学长学姐手里有。班群里有。网上可能也有。往年试卷是最好的复习资料，因为很多老师每年出的题都差不多。</p>
 
-  <p contenteditable="true"><strong>第四步：卷子写满。</strong><br>
+  <p><strong>第四步：卷子写满。</strong><br>
 这一点极其重要。</p>
 
-  <p contenteditable="true">就算你不会，也要写满。</p>
+  <p>就算你不会，也要写满。</p>
 
-  <p contenteditable="true">老师判卷的时候，如果你卷子是空的，他想帮你都没法帮。但如果你写满了，他会觉得你态度还行，58分的时候他愿意给你抬到60。</p>
+  <p>老师判卷的时候，如果你卷子是空的，他想帮你都没法帮。但如果你写满了，他会觉得你态度还行，58分的时候他愿意给你抬到60。</p>
 
-  <p contenteditable="true">你卷子空着，他连抬手的理由都没有。</p>
-
-  <div class="divider-line"></div>
-
-  <h3 class="section-title" contenteditable="true">规则六：课程冲突可以申请免听</h3>
-
-  <p contenteditable="true">如果你选了两门重修课时间冲突了，不要慌。</p>
-
-  <p contenteditable="true">去找教务秘书或者辅导员："老师，我这学期两门重修课时间冲突了，能不能申请其中一门免听？我保证交作业、去考试。"</p>
-
-  <p contenteditable="true">大部分情况都会同意。</p>
-
-  <p contenteditable="true">免听就是不用去上课，但作业照交、考试照考。</p>
-
-  <p contenteditable="true">如果不同意，就退掉一门下学期再选。<strong>不要硬扛，两门都硬扛的结果就是两门都挂。</strong></p>
+  <p>你卷子空着，他连抬手的理由都没有。</p>
 
   <div class="divider-line"></div>
 
-  <h3 class="section-title" contenteditable="true">规则七：处对象可能比你想的有用</h3>
+  <h3 class="section-title">规则六：课程冲突可以申请免听</h3>
 
-  <p contenteditable="true">这一条听起来不像"规则"。但我必须说。</p>
+  <p>如果你选了两门重修课时间冲突了，不要慌。</p>
 
-  <p contenteditable="true">我见过不少同学，走出困境的转折点，不是什么"醒悟"，是谈了个对象。</p>
+  <p>去找教务秘书或者辅导员："老师，我这学期两门重修课时间冲突了，能不能申请其中一门免听？我保证交作业、去考试。"</p>
 
-  <p contenteditable="true">为什么？</p>
+  <p>大部分情况都会同意。</p>
 
-  <div class="golden" contenteditable="true"><strong>不是因为对象能帮你写作业。是因为有一个人需要你、在乎你，你就不会再用"无所谓"来保护自己了。</strong></div>
+  <p>免听就是不用去上课，但作业照交、考试照考。</p>
 
-  <p contenteditable="true">你一直觉得自己是废物。但当另一个人觉得你不是废物的时候，你会开始怀疑：也许我真的不是？</p>
-
-  <p contenteditable="true">这是心理学上的东西，叫"被需要感"。当一个人有了被需要感，他的行动力会自然提升。</p>
-
-  <p contenteditable="true">当然，这不是让你为了过科去谈恋爱。但如果你在重修的课堂上，碰到一个聊得来的人，别躲。多说几句话。也许那个人就是拉你一把的人。</p>
+  <p>如果不同意，就退掉一门下学期再选。<strong>不要硬扛，两门都硬扛的结果就是两门都挂。</strong></p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">好，到这里，规则讲完了。</p>
+  <h3 class="section-title">规则七：处对象可能比你想的有用</h3>
 
-  <p contenteditable="true">你现在应该看到一个东西：</p>
+  <p>这一条听起来不像"规则"。但我必须说。</p>
 
-  <div class="golden" contenteditable="true"><strong>大学过科，根本不需要"好好学习"。</strong></div>
+  <p>我见过不少同学，走出困境的转折点，不是什么"醒悟"，是谈了个对象。</p>
 
-  <p contenteditable="true">你需要的是：去上课拿平时分、用AI交作业、考前突击两周、考后找老师、补考冲刺60分。</p>
+  <p>为什么？</p>
 
-  <p contenteditable="true">就这几步。</p>
+  <div class="golden"><strong>不是因为对象能帮你写作业。是因为有一个人需要你、在乎你，你就不会再用"无所谓"来保护自己了。</strong></div>
 
-  <p contenteditable="true">没有一步需要你"变成一个好学生"。</p>
+  <p>你一直觉得自己是废物。但当另一个人觉得你不是废物的时候，你会开始怀疑：也许我真的不是？</p>
 
-  <p contenteditable="true">没有一步需要你"下定决心认真学习"。</p>
+  <p>这是心理学上的东西，叫"被需要感"。当一个人有了被需要感，他的行动力会自然提升。</p>
 
-  <p contenteditable="true">你只需要看清规则，然后按规则走。</p>
+  <p>当然，这不是让你为了过科去谈恋爱。但如果你在重修的课堂上，碰到一个聊得来的人，别躲。多说几句话。也许那个人就是拉你一把的人。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">但我知道你现在在想什么。</p>
+  <p>好，到这里，规则讲完了。</p>
 
-  <p contenteditable="true">你在想："林哥，道理我都懂，但我就是做不到。"</p>
+  <p>你现在应该看到一个东西：</p>
 
-  <p contenteditable="true">你不是做不到。你是不相信自己做得到。</p>
+  <div class="golden"><strong>大学过科，根本不需要"好好学习"。</strong></div>
 
-  <p contenteditable="true">因为你给自己贴了一个标签：<strong>学渣。废物。不行的人。</strong></p>
+  <p>你需要的是：去上课拿平时分、用AI交作业、考前突击两周、考后找老师、补考冲刺60分。</p>
 
-  <p contenteditable="true">只要这个标签还贴着，你看到再多规则也没用。因为你会告诉自己："这些规则是给正常人用的，我不行。"</p>
+  <p>就这几步。</p>
 
-  <p contenteditable="true">所以下一章，我们不聊规则了。</p>
+  <p>没有一步需要你"变成一个好学生"。</p>
 
-  <p contenteditable="true">我们聊你是谁。</p>
+  <p>没有一步需要你"下定决心认真学习"。</p>
 
-  <p contenteditable="true">或者说，你可以选择成为谁。</p>
+  <p>你只需要看清规则，然后按规则走。</p>
+
+  <div class="divider-line"></div>
+
+  <p>但我知道你现在在想什么。</p>
+
+  <p>你在想："林哥，道理我都懂，但我就是做不到。"</p>
+
+  <p>你不是做不到。你是不相信自己做得到。</p>
+
+  <p>因为你给自己贴了一个标签：<strong>学渣。废物。不行的人。</strong></p>
+
+  <p>只要这个标签还贴着，你看到再多规则也没用。因为你会告诉自己："这些规则是给正常人用的，我不行。"</p>
+
+  <p>所以下一章，我们不聊规则了。</p>
+
+  <p>我们聊你是谁。</p>
+
+  <p>或者说，你可以选择成为谁。</p>
 </article>
 
 <!-- ===== 第十二章: 你不是"学渣"，你只是还没选 ===== -->
 <article class="chapter" id="ch-13" data-filename="第12章_你不是学渣你只是还没选.md">
   <div class="chapter-label">Part 4 · 你可以选择成为谁 · 第十二章</div>
-  <h2 class="chapter-title" contenteditable="true">你不是"学渣"，你只是还没选</h2>
-  <p contenteditable="true">上一章我给你看了规则。</p>
+  <h2 class="chapter-title">你不是"学渣"，你只是还没选</h2>
+  <p>上一章我给你看了规则。</p>
 
-  <p contenteditable="true">你现在知道大学过科靠什么了。平时分、作业、考前突击、补考冲刺、找老师。</p>
+  <p>你现在知道大学过科靠什么了。平时分、作业、考前突击、补考冲刺、找老师。</p>
 
-  <p contenteditable="true">但我知道你在想什么。</p>
+  <p>但我知道你在想什么。</p>
 
-  <p contenteditable="true">你在想："林哥，道理我都懂，但我就是做不到。"</p>
+  <p>你在想："林哥，道理我都懂，但我就是做不到。"</p>
 
-  <p contenteditable="true">这句话我听过一百遍了。几乎每个找我的学生都说过。</p>
+  <p>这句话我听过一百遍了。几乎每个找我的学生都说过。</p>
 
-  <p contenteditable="true">你知道为什么"做不到"吗？</p>
+  <p>你知道为什么"做不到"吗？</p>
 
-  <p contenteditable="true">不是因为你懒。不是因为你笨。不是因为你意志力不够。</p>
+  <p>不是因为你懒。不是因为你笨。不是因为你意志力不够。</p>
 
-  <p contenteditable="true">是因为你给自己贴了一个标签。</p>
+  <p>是因为你给自己贴了一个标签。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">你叫自己什么？</p>
+  <p>你叫自己什么？</p>
 
-  <p contenteditable="true">学渣。废物。不行的人。</p>
+  <p>学渣。废物。不行的人。</p>
 
-  <p contenteditable="true">这些标签是谁贴的？</p>
+  <p>这些标签是谁贴的？</p>
 
-  <p contenteditable="true">一开始不是你。是成绩单贴的。是排名贴的。是老师的眼神贴的。是爸妈那句"你怎么搞的"贴的。</p>
+  <p>一开始不是你。是成绩单贴的。是排名贴的。是老师的眼神贴的。是爸妈那句"你怎么搞的"贴的。</p>
 
-  <p contenteditable="true">但贴久了，你就信了。</p>
+  <p>但贴久了，你就信了。</p>
 
-  <p contenteditable="true">你不是"觉得"自己是学渣。你"认定"自己是学渣。</p>
+  <p>你不是"觉得"自己是学渣。你"认定"自己是学渣。</p>
 
-  <p contenteditable="true">一旦你认定了，所有行为都会跟着走。</p>
+  <p>一旦你认定了，所有行为都会跟着走。</p>
 
-  <p contenteditable="true">"学渣"会想：我肯定过不了，算了不学了。<br>
+  <p>"学渣"会想：我肯定过不了，算了不学了。<br>
 "学渣"会想：去找老师？我挂了那么多门，我有什么脸去？<br>
 "学渣"会想：规则我看了，但那是给正常人用的，我不行。</p>
 
-  <p contenteditable="true">你看到了吗？</p>
+  <p>你看到了吗？</p>
 
-  <div class="golden" contenteditable="true"><strong>不是规则不管用。是你的身份不允许你用规则。</strong></div>
+  <div class="golden"><strong>不是规则不管用。是你的身份不允许你用规则。</strong></div>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">我给你讲一个东西。</p>
+  <p>我给你讲一个东西。</p>
 
-  <p contenteditable="true">你觉得自己是谁，你就会做什么事。</p>
+  <p>你觉得自己是谁，你就会做什么事。</p>
 
-  <p contenteditable="true">这不是鸡汤。这是一个很硬的逻辑。</p>
+  <p>这不是鸡汤。这是一个很硬的逻辑。</p>
 
-  <p contenteditable="true">你觉得自己是"不去上课的人"，你就不会去上课。<br>
+  <p>你觉得自己是"不去上课的人"，你就不会去上课。<br>
 你觉得自己是"考试肯定挂的人"，你就不会去复习。<br>
 你觉得自己是"找老师只会被骂的人"，你就不会去找老师。</p>
 
-  <p contenteditable="true">反过来也一样。</p>
+  <p>反过来也一样。</p>
 
-  <p contenteditable="true">如果你觉得自己是"看清了规则、选择拿毕业证的人"呢？</p>
+  <p>如果你觉得自己是"看清了规则、选择拿毕业证的人"呢？</p>
 
-  <p contenteditable="true">你会去上前几次课。因为你知道这是拿平时分的。<br>
+  <p>你会去上前几次课。因为你知道这是拿平时分的。<br>
 你会用AI交作业。因为你知道这是策略不是作弊。<br>
 你会考前突击两周。因为你知道这就够了。</p>
 
-  <div class="golden" contenteditable="true"><strong>同一个人，不同的身份认定，完全不同的行为。</strong></div>
+  <div class="golden"><strong>同一个人，不同的身份认定，完全不同的行为。</strong></div>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">"学渣"和"系统玩家"看同一件事，看到的东西完全不同。</p>
+  <p>"学渣"和"系统玩家"看同一件事，看到的东西完全不同。</p>
 
-  <p contenteditable="true">挂了12门课。</p>
+  <p>挂了12门课。</p>
 
-  <p contenteditable="true">"学渣"看到的是：完了，太多了，不可能补回来了。<br>
+  <p>"学渣"看到的是：完了，太多了，不可能补回来了。<br>
 "系统玩家"看到的是：每学期补3门，两年搞定。</p>
 
-  <p contenteditable="true">老师在课上点名。</p>
+  <p>老师在课上点名。</p>
 
-  <p contenteditable="true">"学渣"想的是：又点名了，烦死了。<br>
+  <p>"学渣"想的是：又点名了，烦死了。<br>
 "系统玩家"想的是：前几次课去，后面就不用每次去了。</p>
 
-  <p contenteditable="true">补考通知下来了。</p>
+  <p>补考通知下来了。</p>
 
-  <p contenteditable="true">"学渣"想的是：又要考了，肯定过不了。<br>
+  <p>"学渣"想的是：又要考了，肯定过不了。<br>
 "系统玩家"想的是：补考只看卷面，不看平时分，这对我有利。</p>
 
-  <div class="golden" contenteditable="true"><strong>不是情况不同。是看情况的人不同。</strong></div>
+  <div class="golden"><strong>不是情况不同。是看情况的人不同。</strong></div>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">你可能会说：林哥，你说得轻巧，我怎么可能一下子就从"学渣"变成"系统玩家"？</p>
+  <p>你可能会说：林哥，你说得轻巧，我怎么可能一下子就从"学渣"变成"系统玩家"？</p>
 
-  <p contenteditable="true">你说得对。不可能一下子变。</p>
+  <p>你说得对。不可能一下子变。</p>
 
-  <p contenteditable="true">但你不需要一下子变。</p>
+  <p>但你不需要一下子变。</p>
 
-  <p contenteditable="true">你只需要做一个选择。</p>
-
-  <div class="divider-line"></div>
-
-  <p contenteditable="true">序章里我讲过堂弟的故事。他说了好几年"无所谓"。但到了大七，他突然找到我说：</p>
-
-  <p contenteditable="true">"林哥，我想拿双证。"</p>
-
-  <p contenteditable="true">这句话是怎么来的？</p>
-
-  <p contenteditable="true">不是因为他突然变了一个人。不是因为他下定了什么决心。</p>
-
-  <p contenteditable="true">是因为他发现毕业证触手可及了。他发现只差两三门课就能毕业了。</p>
-
-  <p contenteditable="true">当希望出现的时候，他心里那个被"无所谓"压住的真实想法冒出来了。</p>
-
-  <p contenteditable="true">他一直都想要。他只是一直不敢承认。</p>
-
-  <p contenteditable="true">因为承认了就得行动。行动了就可能失败。失败了，连"无所谓"这块最后的盾牌都没了。</p>
-
-  <div class="golden" contenteditable="true"><strong>但当他说出"我想拿双证"的那一刻，他的身份就切换了。</strong></div>
-
-  <p contenteditable="true">他不再是"混日子等被开除的人"了。</p>
-
-  <p contenteditable="true">他是"选择拿双证的人"。</p>
-
-  <p contenteditable="true">然后他的行为跟着变了。他一门一门地补考，一门一门地过。</p>
-
-  <p contenteditable="true">不是意志力。不是下定决心。</p>
-
-  <p contenteditable="true">是身份变了，行为自然就变了。</p>
+  <p>你只需要做一个选择。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">那你的身份怎么切换？</p>
+  <p>序章里我讲过堂弟的故事。他说了好几年"无所谓"。但到了大七，他突然找到我说：</p>
 
-  <p contenteditable="true">不需要什么仪式。不需要写日记、发誓、告诉全世界。</p>
+  <p>"林哥，我想拿双证。"</p>
 
-  <p contenteditable="true">你只需要想清楚一件事：</p>
+  <p>这句话是怎么来的？</p>
 
-  <div class="golden" contenteditable="true"><strong>你拿毕业证是为了谁？</strong></div>
+  <p>不是因为他突然变了一个人。不是因为他下定了什么决心。</p>
 
-  <p contenteditable="true">如果你的回答是"为了爸妈"、"为了不让别人看不起"、"为了老师"——</p>
+  <p>是因为他发现毕业证触手可及了。他发现只差两三门课就能毕业了。</p>
 
-  <p contenteditable="true">那你还是在用别人的标准定义自己。你还是那个"被逼着读书的人"。</p>
+  <p>当希望出现的时候，他心里那个被"无所谓"压住的真实想法冒出来了。</p>
 
-  <p contenteditable="true">但如果你的回答是"为了我自己"——</p>
+  <p>他一直都想要。他只是一直不敢承认。</p>
 
-  <p contenteditable="true">那你就开始切换了。</p>
+  <p>因为承认了就得行动。行动了就可能失败。失败了，连"无所谓"这块最后的盾牌都没了。</p>
 
-  <div class="golden" contenteditable="true"><strong>拿毕业证不是为了证明大学有用。是为了给自己多一个选项。未来你可以选择不用它，但当你想用的时候，你有。</strong></div>
+  <div class="golden"><strong>但当他说出"我想拿双证"的那一刻，他的身份就切换了。</strong></div>
 
-  <p contenteditable="true">这才是真正的选择权。</p>
+  <p>他不再是"混日子等被开除的人"了。</p>
 
-  <p contenteditable="true">不是"我必须拿毕业证"。是"我选择拿毕业证"。</p>
+  <p>他是"选择拿双证的人"。</p>
 
-  <p contenteditable="true">"必须"是被迫的。"选择"是主动的。</p>
+  <p>然后他的行为跟着变了。他一门一门地补考，一门一门地过。</p>
 
-  <p contenteditable="true">被迫做事的人，做三天就崩了。<br>
+  <p>不是意志力。不是下定决心。</p>
+
+  <p>是身份变了，行为自然就变了。</p>
+
+  <div class="divider-line"></div>
+
+  <p>那你的身份怎么切换？</p>
+
+  <p>不需要什么仪式。不需要写日记、发誓、告诉全世界。</p>
+
+  <p>你只需要想清楚一件事：</p>
+
+  <div class="golden"><strong>你拿毕业证是为了谁？</strong></div>
+
+  <p>如果你的回答是"为了爸妈"、"为了不让别人看不起"、"为了老师"——</p>
+
+  <p>那你还是在用别人的标准定义自己。你还是那个"被逼着读书的人"。</p>
+
+  <p>但如果你的回答是"为了我自己"——</p>
+
+  <p>那你就开始切换了。</p>
+
+  <div class="golden"><strong>拿毕业证不是为了证明大学有用。是为了给自己多一个选项。未来你可以选择不用它，但当你想用的时候，你有。</strong></div>
+
+  <p>这才是真正的选择权。</p>
+
+  <p>不是"我必须拿毕业证"。是"我选择拿毕业证"。</p>
+
+  <p>"必须"是被迫的。"选择"是主动的。</p>
+
+  <p>被迫做事的人，做三天就崩了。<br>
 主动选择的人，撑得住。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">还有一个东西你要放下。</p>
+  <p>还有一个东西你要放下。</p>
 
-  <p contenteditable="true">羞耻感。</p>
+  <p>羞耻感。</p>
 
-  <p contenteditable="true">很多人不是不想行动，是羞耻感挡住了。</p>
+  <p>很多人不是不想行动，是羞耻感挡住了。</p>
 
-  <p contenteditable="true">"我挂了15门，我还有脸去找老师吗？"<br>
+  <p>"我挂了15门，我还有脸去找老师吗？"<br>
 "我都大五了，我还有脸去教室吗？"<br>
 "我的同学都毕业了，我还在这儿补考，丢不丢人？"</p>
 
-  <p contenteditable="true">你知道羞耻感是怎么来的吗？</p>
+  <p>你知道羞耻感是怎么来的吗？</p>
 
-  <p contenteditable="true">是"我应该怎样"和"我实际怎样"之间的差距。</p>
+  <p>是"我应该怎样"和"我实际怎样"之间的差距。</p>
 
-  <p contenteditable="true">你觉得"我应该4年毕业"，但你可能要念6年。这个差距让你羞耻。</p>
+  <p>你觉得"我应该4年毕业"，但你可能要念6年。这个差距让你羞耻。</p>
 
-  <p contenteditable="true">但"我应该4年毕业"这个标准是谁定的？</p>
+  <p>但"我应该4年毕业"这个标准是谁定的？</p>
 
-  <p contenteditable="true">是社会定的。是"别人都4年毕业"这个参照系定的。</p>
+  <p>是社会定的。是"别人都4年毕业"这个参照系定的。</p>
 
-  <p contenteditable="true">堂弟用了7年。他丢人吗？</p>
+  <p>堂弟用了7年。他丢人吗？</p>
 
-  <p contenteditable="true">他拿到双证的那天，他哭了。</p>
+  <p>他拿到双证的那天，他哭了。</p>
 
-  <p contenteditable="true">他不觉得丢人。他觉得值。</p>
+  <p>他不觉得丢人。他觉得值。</p>
 
-  <div class="golden" contenteditable="true"><strong>你不是在跟别人比。你是在跟你自己的人生做交易。</strong></div>
+  <div class="golden"><strong>你不是在跟别人比。你是在跟你自己的人生做交易。</strong></div>
 
-  <p contenteditable="true">多花两年时间，换一张毕业证、一个选择权。</p>
+  <p>多花两年时间，换一张毕业证、一个选择权。</p>
 
-  <p contenteditable="true">这笔交易，值不值？</p>
+  <p>这笔交易，值不值？</p>
 
-  <p contenteditable="true">你自己算。</p>
+  <p>你自己算。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">我再说一个很多人不敢面对的东西。</p>
+  <p>我再说一个很多人不敢面对的东西。</p>
 
-  <p contenteditable="true">"我没努力所以我挂科"——这句话是真的吗？</p>
+  <p>"我没努力所以我挂科"——这句话是真的吗？</p>
 
-  <p contenteditable="true">很多人用这句话保护自己。</p>
+  <p>很多人用这句话保护自己。</p>
 
-  <p contenteditable="true">"我不是能力不行，我只是没学。我只要学了，肯定比谁都强。"</p>
+  <p>"我不是能力不行，我只是没学。我只要学了，肯定比谁都强。"</p>
 
-  <p contenteditable="true">这句话的作用是什么？保护你的自尊。</p>
+  <p>这句话的作用是什么？保护你的自尊。</p>
 
-  <p contenteditable="true">因为如果你努力了还是挂了，那就证明"我真的不行"。但如果你不努力，挂科是理所当然的。你可以继续告诉自己"我只是没学"。</p>
+  <p>因为如果你努力了还是挂了，那就证明"我真的不行"。但如果你不努力，挂科是理所当然的。你可以继续告诉自己"我只是没学"。</p>
 
-  <p contenteditable="true">但你有没有想过：这个保护机制正在害你？</p>
+  <p>但你有没有想过：这个保护机制正在害你？</p>
 
-  <p contenteditable="true">因为只要你继续说"我没努力"，你就永远不会去努力。你永远活在那个"我只要学了肯定行"的幻觉里。</p>
+  <p>因为只要你继续说"我没努力"，你就永远不会去努力。你永远活在那个"我只要学了肯定行"的幻觉里。</p>
 
-  <p contenteditable="true">但你永远不去学。</p>
+  <p>但你永远不去学。</p>
 
-  <p contenteditable="true">所以你永远不知道自己行不行。</p>
+  <p>所以你永远不知道自己行不行。</p>
 
-  <p contenteditable="true">打破这个循环的方式很简单：</p>
+  <p>打破这个循环的方式很简单：</p>
 
-  <div class="golden" contenteditable="true"><strong>接受"我可能需要比别人更多的时间"。</strong></div>
+  <div class="golden"><strong>接受"我可能需要比别人更多的时间"。</strong></div>
 
-  <p contenteditable="true">高数挂了？没关系，补考再来。<br>
+  <p>高数挂了？没关系，补考再来。<br>
 补考还挂了？没关系，重修再来。<br>
 重修还挂了？换个老师再来。</p>
 
-  <p contenteditable="true">你不是在跟别人比谁学得快。你是在跟这门课死磕。</p>
+  <p>你不是在跟别人比谁学得快。你是在跟这门课死磕。</p>
 
-  <p contenteditable="true">只要你不放弃，总有一天你会过。</p>
-
-  <div class="divider-line"></div>
-
-  <p contenteditable="true">所以，回到最开始的问题。</p>
-
-  <p contenteditable="true">你不是"学渣"。</p>
-
-  <p contenteditable="true">你从来都不是。</p>
-
-  <p contenteditable="true">"学渣"是别人贴的标签。是成绩单贴的。是排名贴的。是那个只看分数的系统贴的。</p>
-
-  <p contenteditable="true">你信了。你活在了这个标签里。</p>
-
-  <p contenteditable="true">但标签是可以撕掉的。</p>
-
-  <p contenteditable="true">你只需要做一个选择：</p>
-
-  <div class="golden" contenteditable="true"><strong>我不是"学渣"。我是一个看清了规则、选择拿毕业证的人。</strong></div>
-
-  <p contenteditable="true">你不需要变成另一个人。</p>
-
-  <p contenteditable="true">你只需要做一个选择。</p>
-
-  <p contenteditable="true">然后按照上一章的规则，一步一步走。</p>
+  <p>只要你不放弃，总有一天你会过。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">但我知道还有一个问题在你脑子里。</p>
+  <p>所以，回到最开始的问题。</p>
 
-  <p contenteditable="true">"林哥，你让我选择成为谁，我选不出来。我不知道我想要什么。"</p>
+  <p>你不是"学渣"。</p>
 
-  <p contenteditable="true">没关系。</p>
+  <p>你从来都不是。</p>
 
-  <p contenteditable="true">你不需要知道你想成为谁。</p>
+  <p>"学渣"是别人贴的标签。是成绩单贴的。是排名贴的。是那个只看分数的系统贴的。</p>
 
-  <p contenteditable="true">你只需要知道你<strong>绝对不要</strong>成为谁。</p>
+  <p>你信了。你活在了这个标签里。</p>
 
-  <p contenteditable="true">下一章，我们聊这个。</p>
+  <p>但标签是可以撕掉的。</p>
+
+  <p>你只需要做一个选择：</p>
+
+  <div class="golden"><strong>我不是"学渣"。我是一个看清了规则、选择拿毕业证的人。</strong></div>
+
+  <p>你不需要变成另一个人。</p>
+
+  <p>你只需要做一个选择。</p>
+
+  <p>然后按照上一章的规则，一步一步走。</p>
+
+  <div class="divider-line"></div>
+
+  <p>但我知道还有一个问题在你脑子里。</p>
+
+  <p>"林哥，你让我选择成为谁，我选不出来。我不知道我想要什么。"</p>
+
+  <p>没关系。</p>
+
+  <p>你不需要知道你想成为谁。</p>
+
+  <p>你只需要知道你<strong>绝对不要</strong>成为谁。</p>
+
+  <p>下一章，我们聊这个。</p>
 </article>
 
 <!-- ===== 第十三章: 你拒绝成为谁？ ===== -->
 <article class="chapter" id="ch-14" data-filename="第13章_你拒绝成为谁.md">
   <div class="chapter-label">Part 4 · 你可以选择成为谁 · 第十三章</div>
-  <h2 class="chapter-title" contenteditable="true">你拒绝成为谁？</h2>
-  <p contenteditable="true">上一章我让你做一个选择：你想成为谁？</p>
+  <h2 class="chapter-title">你拒绝成为谁？</h2>
+  <p>上一章我让你做一个选择：你想成为谁？</p>
 
-  <p contenteditable="true">你可能没选出来。</p>
+  <p>你可能没选出来。</p>
 
-  <p contenteditable="true">没关系。大部分人都选不出来。</p>
+  <p>没关系。大部分人都选不出来。</p>
 
-  <p contenteditable="true">"我想成为什么样的人"——这个问题太大了、太虚了、太远了。</p>
+  <p>"我想成为什么样的人"——这个问题太大了、太虚了、太远了。</p>
 
-  <p contenteditable="true">你20岁，你连明天吃什么都不确定，你怎么知道自己想成为什么样的人？</p>
+  <p>你20岁，你连明天吃什么都不确定，你怎么知道自己想成为什么样的人？</p>
 
-  <p contenteditable="true">所以我换一个问题。</p>
+  <p>所以我换一个问题。</p>
 
-  <p contenteditable="true">这个问题简单得多，但力量大得多：</p>
+  <p>这个问题简单得多，但力量大得多：</p>
 
-  <div class="golden" contenteditable="true"><strong>你绝对不要成为什么样的人？</strong></div>
-
-  <div class="divider-line"></div>
-
-  <p contenteditable="true">你可能没想过这个问题。</p>
-
-  <p contenteditable="true">那我帮你想。</p>
-
-  <p contenteditable="true">闭上眼睛，想象一下你30岁的时候。</p>
-
-  <p contenteditable="true">不是想象"成功的你"——那个太虚了，没用。</p>
-
-  <p contenteditable="true">想象"最糟糕的你"。</p>
-
-  <p contenteditable="true">那个你最不想成为的版本。</p>
+  <div class="golden"><strong>你绝对不要成为什么样的人？</strong></div>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">他是什么样的？</p>
+  <p>你可能没想过这个问题。</p>
 
-  <p contenteditable="true">也许是这样的：</p>
+  <p>那我帮你想。</p>
 
-  <p contenteditable="true">30岁了。没有毕业证。在一份不喜欢的工作里混日子。每天重复一样的事情。</p>
+  <p>闭上眼睛，想象一下你30岁的时候。</p>
 
-  <p contenteditable="true">亲戚聚会的时候，别人问"你在哪上班"，他含糊地说个名字就低头吃菜。</p>
+  <p>不是想象"成功的你"——那个太虚了，没用。</p>
 
-  <p contenteditable="true">爸妈在旁边笑得很勉强。</p>
+  <p>想象"最糟糕的你"。</p>
 
-  <p contenteditable="true">他打开手机，刷短视频，一刷就是两个小时。跟20岁的时候一模一样。</p>
-
-  <p contenteditable="true">唯一的变化是：他不打游戏了。不是因为他戒了，是因为连游戏都觉得没意思了。</p>
-
-  <p contenteditable="true">他偶尔会想起大学的事。想起来就烦。</p>
-
-  <p contenteditable="true">他跟朋友喝酒的时候会说："当年大学要是好好读……"</p>
-
-  <p contenteditable="true">然后摆摆手："算了，不说了。"</p>
+  <p>那个你最不想成为的版本。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">或者是另一个版本：</p>
+  <p>他是什么样的？</p>
 
-  <p contenteditable="true">30岁了。毕业了，但什么都没学到。在一个小公司做着跟专业无关的事。</p>
+  <p>也许是这样的：</p>
 
-  <p contenteditable="true">他不讨厌这份工作，但也不喜欢。</p>
+  <p>30岁了。没有毕业证。在一份不喜欢的工作里混日子。每天重复一样的事情。</p>
 
-  <p contenteditable="true">他最大的爱好是下班后躺在沙发上刷手机。</p>
+  <p>亲戚聚会的时候，别人问"你在哪上班"，他含糊地说个名字就低头吃菜。</p>
 
-  <p contenteditable="true">他没有什么朋友。大学的朋友们早就散了。</p>
+  <p>爸妈在旁边笑得很勉强。</p>
 
-  <p contenteditable="true">他偶尔会在深夜想："我的人生就这样了吗？"</p>
+  <p>他打开手机，刷短视频，一刷就是两个小时。跟20岁的时候一模一样。</p>
 
-  <p contenteditable="true">然后翻个身，睡了。</p>
+  <p>唯一的变化是：他不打游戏了。不是因为他戒了，是因为连游戏都觉得没意思了。</p>
 
-  <p contenteditable="true">第二天继续上班。</p>
+  <p>他偶尔会想起大学的事。想起来就烦。</p>
+
+  <p>他跟朋友喝酒的时候会说："当年大学要是好好读……"</p>
+
+  <p>然后摆摆手："算了，不说了。"</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">或者是第三个版本：</p>
+  <p>或者是另一个版本：</p>
 
-  <p contenteditable="true">30岁了。还在怪爸妈。</p>
+  <p>30岁了。毕业了，但什么都没学到。在一个小公司做着跟专业无关的事。</p>
 
-  <p contenteditable="true">"当年要不是我爸逼我选那个专业，我不会是现在这样。"<br>
+  <p>他不讨厌这份工作，但也不喜欢。</p>
+
+  <p>他最大的爱好是下班后躺在沙发上刷手机。</p>
+
+  <p>他没有什么朋友。大学的朋友们早就散了。</p>
+
+  <p>他偶尔会在深夜想："我的人生就这样了吗？"</p>
+
+  <p>然后翻个身，睡了。</p>
+
+  <p>第二天继续上班。</p>
+
+  <div class="divider-line"></div>
+
+  <p>或者是第三个版本：</p>
+
+  <p>30岁了。还在怪爸妈。</p>
+
+  <p>"当年要不是我爸逼我选那个专业，我不会是现在这样。"<br>
 "当年要不是我妈天天逼我，我不会那么反感学习。"<br>
 "都是他们害的。"</p>
 
-  <p contenteditable="true">他把所有的问题都推给了别人。</p>
+  <p>他把所有的问题都推给了别人。</p>
 
-  <p contenteditable="true">他从来没有为自己的人生负过责。</p>
+  <p>他从来没有为自己的人生负过责。</p>
 
-  <p contenteditable="true">20岁的时候怪爸妈。25岁的时候怪社会。30岁的时候怪运气。</p>
+  <p>20岁的时候怪爸妈。25岁的时候怪社会。30岁的时候怪运气。</p>
 
-  <p contenteditable="true">但他从来不问自己：<strong>我做了什么？</strong></p>
+  <p>但他从来不问自己：<strong>我做了什么？</strong></p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">你看到了吗？</p>
+  <p>你看到了吗？</p>
 
-  <p contenteditable="true">这三个版本的人，有一个共同点：</p>
+  <p>这三个版本的人，有一个共同点：</p>
 
-  <div class="golden" contenteditable="true"><strong>他们都还在陷阱里。</strong></div>
+  <div class="golden"><strong>他们都还在陷阱里。</strong></div>
 
-  <p contenteditable="true">20岁的时候掉进去了，30岁还没出来。</p>
+  <p>20岁的时候掉进去了，30岁还没出来。</p>
 
-  <p contenteditable="true">只是陷阱的形式变了。</p>
+  <p>只是陷阱的形式变了。</p>
 
-  <p contenteditable="true">20岁的时候是打游戏、逃课、说"无所谓"。<br>
+  <p>20岁的时候是打游戏、逃课、说"无所谓"。<br>
 30岁的时候是混日子、刷手机、说"算了"。</p>
 
-  <p contenteditable="true">本质一样：逃避。</p>
+  <p>本质一样：逃避。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">我为什么要让你想象这些？</p>
+  <p>我为什么要让你想象这些？</p>
 
-  <p contenteditable="true">因为"我想成为谁"这个问题太模糊了，你不知道答案。</p>
+  <p>因为"我想成为谁"这个问题太模糊了，你不知道答案。</p>
 
-  <p contenteditable="true">但"我绝对不要成为谁"这个问题，你一秒就能回答。</p>
+  <p>但"我绝对不要成为谁"这个问题，你一秒就能回答。</p>
 
-  <p contenteditable="true">你不想成为30岁还在混日子的人。<br>
+  <p>你不想成为30岁还在混日子的人。<br>
 你不想成为30岁还在怪爸妈的人。<br>
 你不想成为30岁连选择权都没有的人。</p>
 
-  <div class="golden" contenteditable="true"><strong>你不需要知道你想要什么。你只需要知道你绝对不要什么。</strong></div>
+  <div class="golden"><strong>你不需要知道你想要什么。你只需要知道你绝对不要什么。</strong></div>
 
-  <p contenteditable="true">然后反着走。</p>
-
-  <div class="divider-line"></div>
-
-  <p contenteditable="true">这个逻辑比"正向目标"强十倍。</p>
-
-  <p contenteditable="true">你设一个正向目标："我要好好学习，考90分。"</p>
-
-  <p contenteditable="true">三天后你就忘了。因为90分离你太远了，远到你觉得不可能。</p>
-
-  <p contenteditable="true">但你设一个反向目标："我绝对不要成为30岁还在后悔的人。"</p>
-
-  <p contenteditable="true">这个目标你忘不了。</p>
-
-  <p contenteditable="true">因为每次你想逃课的时候，那个30岁混日子的画面就会冒出来。</p>
-
-  <p contenteditable="true">每次你想说"无所谓"的时候，那个30岁还在怪爸妈的画面就会冒出来。</p>
-
-  <p contenteditable="true">每次你想放弃的时候，那个30岁连选择权都没有的画面就会冒出来。</p>
-
-  <div class="golden" contenteditable="true"><strong>恐惧是比梦想更强的驱动力。</strong></div>
-
-  <p contenteditable="true">你可能追不上梦想，但你一定跑得过恐惧。</p>
+  <p>然后反着走。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">我跟你讲一个真实的事。</p>
+  <p>这个逻辑比"正向目标"强十倍。</p>
 
-  <p contenteditable="true">我帮了200多个学生。这些学生里，真正走出来的，几乎没有一个人是被"正向目标"驱动的。</p>
+  <p>你设一个正向目标："我要好好学习，考90分。"</p>
 
-  <p contenteditable="true">没有人是因为"我想当学霸"走出来的。<br>
+  <p>三天后你就忘了。因为90分离你太远了，远到你觉得不可能。</p>
+
+  <p>但你设一个反向目标："我绝对不要成为30岁还在后悔的人。"</p>
+
+  <p>这个目标你忘不了。</p>
+
+  <p>因为每次你想逃课的时候，那个30岁混日子的画面就会冒出来。</p>
+
+  <p>每次你想说"无所谓"的时候，那个30岁还在怪爸妈的画面就会冒出来。</p>
+
+  <p>每次你想放弃的时候，那个30岁连选择权都没有的画面就会冒出来。</p>
+
+  <div class="golden"><strong>恐惧是比梦想更强的驱动力。</strong></div>
+
+  <p>你可能追不上梦想，但你一定跑得过恐惧。</p>
+
+  <div class="divider-line"></div>
+
+  <p>我跟你讲一个真实的事。</p>
+
+  <p>我帮了200多个学生。这些学生里，真正走出来的，几乎没有一个人是被"正向目标"驱动的。</p>
+
+  <p>没有人是因为"我想当学霸"走出来的。<br>
 没有人是因为"我想考研"走出来的。<br>
 没有人是因为"我想让爸妈开心"走出来的。</p>
 
-  <p contenteditable="true">他们走出来，几乎都是因为同一个东西：</p>
+  <p>他们走出来，几乎都是因为同一个东西：</p>
 
-  <div class="golden" contenteditable="true"><strong>他们不想成为"那种人"。</strong></div>
+  <div class="golden"><strong>他们不想成为"那种人"。</strong></div>
 
-  <p contenteditable="true">堂弟不想成为一辈子被人说"连大学都没毕业"的人。<br>
+  <p>堂弟不想成为一辈子被人说"连大学都没毕业"的人。<br>
 那个大二的男孩不想成为30岁还躲在宿舍打游戏的人。<br>
 杨姐不想成为嘴上说"无所谓"但心里后悔一辈子的人。</p>
 
-  <p contenteditable="true">他们不是被"好的未来"吸引出来的。</p>
+  <p>他们不是被"好的未来"吸引出来的。</p>
 
-  <p contenteditable="true">他们是被"最坏的未来"推出来的。</p>
-
-  <div class="divider-line"></div>
-
-  <p contenteditable="true">你可以试试。</p>
-
-  <p contenteditable="true">现在就试。</p>
-
-  <p contenteditable="true">拿出手机，打开备忘录，写三句话：</p>
-
-  <div class="golden" contenteditable="true"><strong>"我绝对不要成为______的人。"</strong></div>
-
-  <p contenteditable="true">写三个。</p>
-
-  <p contenteditable="true">写完之后，你会发现一个有意思的事：</p>
-
-  <p contenteditable="true">你比你以为的更清楚自己想要什么。</p>
-
-  <p contenteditable="true">你只是不习惯从这个角度去想。</p>
+  <p>他们是被"最坏的未来"推出来的。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">写完之后，再写一句：</p>
+  <p>你可以试试。</p>
 
-  <div class="golden" contenteditable="true"><strong>"为了不成为那种人，我这学期可以做的最小的一件事是什么？"</strong></div>
+  <p>现在就试。</p>
 
-  <p contenteditable="true">注意：是最小的一件事。</p>
+  <p>拿出手机，打开备忘录，写三句话：</p>
 
-  <p contenteditable="true">不是"好好学习"。不是"过6门课"。不是"每天去图书馆"。</p>
+  <div class="golden"><strong>"我绝对不要成为______的人。"</strong></div>
 
-  <p contenteditable="true">是最小的一件事。</p>
+  <p>写三个。</p>
 
-  <p contenteditable="true">比如：这周去上一次重修课的第一节。<br>
+  <p>写完之后，你会发现一个有意思的事：</p>
+
+  <p>你比你以为的更清楚自己想要什么。</p>
+
+  <p>你只是不习惯从这个角度去想。</p>
+
+  <div class="divider-line"></div>
+
+  <p>写完之后，再写一句：</p>
+
+  <div class="golden"><strong>"为了不成为那种人，我这学期可以做的最小的一件事是什么？"</strong></div>
+
+  <p>注意：是最小的一件事。</p>
+
+  <p>不是"好好学习"。不是"过6门课"。不是"每天去图书馆"。</p>
+
+  <p>是最小的一件事。</p>
+
+  <p>比如：这周去上一次重修课的第一节。<br>
 比如：今天用AI把一份作业交了。<br>
 比如：给辅导员发一条消息，问问自己还欠几门课。</p>
 
-  <p contenteditable="true">就一件。</p>
+  <p>就一件。</p>
 
-  <p contenteditable="true">你不需要改变人生。你只需要做一件事。</p>
+  <p>你不需要改变人生。你只需要做一件事。</p>
 
-  <div class="golden" contenteditable="true"><strong>因为一件事做完之后，你会想做第二件。</strong></div>
+  <div class="golden"><strong>因为一件事做完之后，你会想做第二件。</strong></div>
 
-  <p contenteditable="true">这就是系统的力量。下一章讲。</p>
+  <p>这就是系统的力量。下一章讲。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">Part 4到这里就讲完了。</p>
+  <p>Part 4到这里就讲完了。</p>
 
-  <p contenteditable="true">我们做了三件事：</p>
+  <p>我们做了三件事：</p>
 
-  <p contenteditable="true">1. 看清了规则——大学过科没你想的那么难。<br>
+  <p>1. 看清了规则——大学过科没你想的那么难。<br>
 2. 撕掉了标签——你不是"学渣"，你只是还没做选择。<br>
 3. 找到了方向——你不需要知道你想成为谁，你只需要知道你绝对不要成为谁。</p>
 
-  <p contenteditable="true">从下一章开始，是Part 5：从今天开始。</p>
+  <p>从下一章开始，是Part 5：从今天开始。</p>
 
-  <p contenteditable="true">我不会再跟你讲道理了。</p>
+  <p>我不会再跟你讲道理了。</p>
 
-  <p contenteditable="true">我要告诉你，今天、这周、这个学期，你具体该做什么。</p>
+  <p>我要告诉你，今天、这周、这个学期，你具体该做什么。</p>
 
-  <p contenteditable="true">一步一步来。</p>
+  <p>一步一步来。</p>
 </article>
 
 <!-- ===== Part 5 · 从今天开始 过渡页 ===== -->
@@ -3446,54 +3428,54 @@
 <!-- ===== 第十四章: 系统大于目标 ===== -->
 <article class="chapter" id="ch-15" data-filename="第14章_系统大于目标.md">
   <div class="chapter-label">Part 5 · 从今天开始 · 第十四章</div>
-  <h2 class="chapter-title" contenteditable="true">系统大于目标</h2>
-  <p contenteditable="true">"我要这学期过6门课。"</p>
+  <h2 class="chapter-title">系统大于目标</h2>
+  <p>"我要这学期过6门课。"</p>
 
-  <p contenteditable="true">这是一个目标。</p>
+  <p>这是一个目标。</p>
 
-  <p contenteditable="true">听起来很有决心，对吧？</p>
+  <p>听起来很有决心，对吧？</p>
 
-  <p contenteditable="true">但你知道会发生什么吗？</p>
+  <p>但你知道会发生什么吗？</p>
 
-  <p contenteditable="true">第一周你冲劲十足。第二周你有点累了。第三周你开始逃课了。第四周你把这个目标忘了。</p>
+  <p>第一周你冲劲十足。第二周你有点累了。第三周你开始逃课了。第四周你把这个目标忘了。</p>
 
-  <p contenteditable="true">然后到了期末，你一门都没过。</p>
+  <p>然后到了期末，你一门都没过。</p>
 
-  <p contenteditable="true">你又一次验证了"我果然不行"。</p>
-
-  <div class="divider-line"></div>
-
-  <p contenteditable="true">目标为什么不管用？</p>
-
-  <p contenteditable="true">因为目标是终点。它只告诉你"你要去哪"，不告诉你"你今天做什么"。</p>
-
-  <p contenteditable="true">"过6门课"——然后呢？</p>
-
-  <p contenteditable="true">你不知道今天该做什么。明天该做什么。这周该做什么。</p>
-
-  <p contenteditable="true">你只有一个远远的终点，中间全是空白。</p>
-
-  <p contenteditable="true">空白会让你焦虑。焦虑会让你逃避。逃避会让你打游戏。打游戏会让你更焦虑。</p>
-
-  <p contenteditable="true">又是那个循环。</p>
+  <p>你又一次验证了"我果然不行"。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">那什么管用？</p>
+  <p>目标为什么不管用？</p>
 
-  <div class="golden" contenteditable="true"><strong>系统。</strong></div>
+  <p>因为目标是终点。它只告诉你"你要去哪"，不告诉你"你今天做什么"。</p>
 
-  <p contenteditable="true">系统不是终点。系统是路径。</p>
+  <p>"过6门课"——然后呢？</p>
 
-  <p contenteditable="true">系统不告诉你"你要过6门课"。系统告诉你"你每天做什么"。</p>
+  <p>你不知道今天该做什么。明天该做什么。这周该做什么。</p>
 
-  <p contenteditable="true">做完就行。不用想结果。</p>
+  <p>你只有一个远远的终点，中间全是空白。</p>
+
+  <p>空白会让你焦虑。焦虑会让你逃避。逃避会让你打游戏。打游戏会让你更焦虑。</p>
+
+  <p>又是那个循环。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">我给你讲一个人的故事。</p>
+  <p>那什么管用？</p>
 
-  <div class="case-card" contenteditable="true">
+  <div class="golden"><strong>系统。</strong></div>
+
+  <p>系统不是终点。系统是路径。</p>
+
+  <p>系统不告诉你"你要过6门课"。系统告诉你"你每天做什么"。</p>
+
+  <p>做完就行。不用想结果。</p>
+
+  <div class="divider-line"></div>
+
+  <p>我给你讲一个人的故事。</p>
+
+  <div class="case-card">
     <p>他挂了11门课。11门。<br>
 <br>
 我跟他说："那11门课里，哪一门最简单？"<br>
@@ -3508,246 +3490,246 @@
 </p>
   </div>
 
-  <p contenteditable="true">70分。</p>
+  <p>70分。</p>
 
-  <p contenteditable="true">你可能觉得70分算什么。</p>
+  <p>你可能觉得70分算什么。</p>
 
-  <p contenteditable="true">但对于一个长期挂科、觉得自己什么都做不到的人来说，这70分不是分数。</p>
+  <p>但对于一个长期挂科、觉得自己什么都做不到的人来说，这70分不是分数。</p>
 
-  <div class="golden" contenteditable="true"><strong>这70分是氧气。</strong></div>
+  <div class="golden"><strong>这70分是氧气。</strong></div>
 
-  <p contenteditable="true">他第一次发现：我也能过科。</p>
+  <p>他第一次发现：我也能过科。</p>
 
-  <p contenteditable="true">这个发现比任何鸡汤、任何决心、任何目标都管用。</p>
+  <p>这个发现比任何鸡汤、任何决心、任何目标都管用。</p>
 
-  <p contenteditable="true">因为它不是别人告诉他的。是他自己做到的。</p>
+  <p>因为它不是别人告诉他的。是他自己做到的。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">这就是系统的核心逻辑：</p>
+  <p>这就是系统的核心逻辑：</p>
 
-  <div class="golden" contenteditable="true"><strong>不要想着一次过6门。先过1门。</strong></div>
+  <div class="golden"><strong>不要想着一次过6门。先过1门。</strong></div>
 
-  <p contenteditable="true">过了1门，你的信心+1。<br>
+  <p>过了1门，你的信心+1。<br>
 然后过第2门，信心+2。<br>
 然后过第3门，信心+3。</p>
 
-  <p contenteditable="true">每过一门，下一门就更容易。</p>
+  <p>每过一门，下一门就更容易。</p>
 
-  <p contenteditable="true">不是因为题目变简单了。是因为你变了。</p>
+  <p>不是因为题目变简单了。是因为你变了。</p>
 
-  <p contenteditable="true">你从"我什么都过不了"变成了"我过了1门，我可以过第2门"。</p>
+  <p>你从"我什么都过不了"变成了"我过了1门，我可以过第2门"。</p>
 
-  <div class="golden" contenteditable="true"><strong>这就是复利。</strong></div>
-
-  <div class="divider-line"></div>
-
-  <p contenteditable="true">那具体怎么建一个系统？</p>
-
-  <p contenteditable="true">我给你一个框架。三个部分：触发器、最小动作、熔断机制。</p>
+  <div class="golden"><strong>这就是复利。</strong></div>
 
   <div class="divider-line"></div>
 
-  <h3 class="section-title" contenteditable="true">触发器：什么时候开始</h3>
+  <p>那具体怎么建一个系统？</p>
 
-  <p contenteditable="true">系统不能靠"想起来就做"。</p>
+  <p>我给你一个框架。三个部分：触发器、最小动作、熔断机制。</p>
 
-  <p contenteditable="true">"想起来就做"的结果是永远想不起来。</p>
+  <div class="divider-line"></div>
 
-  <p contenteditable="true">你需要一个触发器。一个固定的信号，一出现你就开始执行。</p>
+  <h3 class="section-title">触发器：什么时候开始</h3>
 
-  <div class="golden" contenteditable="true"><strong>堂弟的触发器是"补考通知"。</strong></div>
+  <p>系统不能靠"想起来就做"。</p>
 
-  <p contenteditable="true">他一收到补考通知，就知道：两周倒计时开始。</p>
+  <p>"想起来就做"的结果是永远想不起来。</p>
 
-  <p contenteditable="true">你不需要跟他一样。你的触发器可以是任何东西：</p>
+  <p>你需要一个触发器。一个固定的信号，一出现你就开始执行。</p>
+
+  <div class="golden"><strong>堂弟的触发器是"补考通知"。</strong></div>
+
+  <p>他一收到补考通知，就知道：两周倒计时开始。</p>
+
+  <p>你不需要跟他一样。你的触发器可以是任何东西：</p>
 
   <ul class="story-list">
-    <li contenteditable="true">每周一早上闹钟响了 → 打开教务系统看看这周有什么课</li>
-    <li contenteditable="true">每天晚上8点 → 打开AI写一份作业</li>
-    <li contenteditable="true">补考通知发下来 → 找往年试卷，开始刷题</li>
+    <li>每周一早上闹钟响了 → 打开教务系统看看这周有什么课</li>
+    <li>每天晚上8点 → 打开AI写一份作业</li>
+    <li>补考通知发下来 → 找往年试卷，开始刷题</li>
   </ul>
 
-  <p contenteditable="true">触发器越具体越好。不要"我有空了就学"。要"每周一早上8点"。</p>
+  <p>触发器越具体越好。不要"我有空了就学"。要"每周一早上8点"。</p>
 
-  <p contenteditable="true">因为"有空了"这个条件永远不会成立。你永远都有别的事可以做。</p>
+  <p>因为"有空了"这个条件永远不会成立。你永远都有别的事可以做。</p>
 
   <div class="divider-line"></div>
 
-  <h3 class="section-title" contenteditable="true">最小动作：做什么</h3>
+  <h3 class="section-title">最小动作：做什么</h3>
 
-  <p contenteditable="true">这是最关键的部分。</p>
+  <p>这是最关键的部分。</p>
 
-  <p contenteditable="true">大部分人失败不是因为方向错了，是因为步子太大了。</p>
+  <p>大部分人失败不是因为方向错了，是因为步子太大了。</p>
 
-  <p contenteditable="true">"每天学8小时"——你坚持得了3天。<br>
+  <p>"每天学8小时"——你坚持得了3天。<br>
 "每天刷100道题"——你坚持得了1天。<br>
 "每天去图书馆"——你坚持得了半天。</p>
 
-  <p contenteditable="true">然后你崩了。</p>
+  <p>然后你崩了。</p>
 
-  <div class="golden" contenteditable="true"><strong>正确的做法是把步子缩到你闭着眼睛都能做到。</strong></div>
+  <div class="golden"><strong>正确的做法是把步子缩到你闭着眼睛都能做到。</strong></div>
 
-  <p contenteditable="true">我给你几个例子：</p>
+  <p>我给你几个例子：</p>
 
-  <p contenteditable="true"><strong>社交型的最小动作</strong>：</p>
-
-  <ul class="story-list">
-    <li contenteditable="true">每周找1个同学要1份笔记</li>
-    <li contenteditable="true">每两周找老师问1个问题</li>
-    <li contenteditable="true">补考前组个学习群，蹭别人的资料</li>
-  </ul>
-
-  <p contenteditable="true"><strong>刷题型的最小动作</strong>：</p>
+  <p><strong>社交型的最小动作</strong>：</p>
 
   <ul class="story-list">
-    <li contenteditable="true">每天做5道课后习题。不是50道，是5道。</li>
-    <li contenteditable="true">每周看1次往年试卷，标出重复考的题</li>
-    <li contenteditable="true">补考前一周做一套完整试卷</li>
+    <li>每周找1个同学要1份笔记</li>
+    <li>每两周找老师问1个问题</li>
+    <li>补考前组个学习群，蹭别人的资料</li>
   </ul>
 
-  <p contenteditable="true"><strong>系统型的最小动作</strong>（堂弟模式）：</p>
+  <p><strong>刷题型的最小动作</strong>：</p>
 
   <ul class="story-list">
-    <li contenteditable="true">所有考试都去，哪怕交白卷</li>
-    <li contenteditable="true">补考前两周集中冲刺</li>
-    <li contenteditable="true">每学期只重修2-3门，不贪多</li>
+    <li>每天做5道课后习题。不是50道，是5道。</li>
+    <li>每周看1次往年试卷，标出重复考的题</li>
+    <li>补考前一周做一套完整试卷</li>
   </ul>
 
-  <p contenteditable="true">你可能觉得"每天5道题"太少了。</p>
+  <p><strong>系统型的最小动作</strong>（堂弟模式）：</p>
 
-  <p contenteditable="true">但每天5道题，坚持两周，就是70道。</p>
+  <ul class="story-list">
+    <li>所有考试都去，哪怕交白卷</li>
+    <li>补考前两周集中冲刺</li>
+    <li>每学期只重修2-3门，不贪多</li>
+  </ul>
 
-  <p contenteditable="true">70道课后习题覆盖了大部分考试重点。</p>
+  <p>你可能觉得"每天5道题"太少了。</p>
 
-  <div class="golden" contenteditable="true"><strong>系统不追求一次性做到位。系统追求能持续执行。</strong></div>
+  <p>但每天5道题，坚持两周，就是70道。</p>
 
-  <p contenteditable="true">越简单的系统，越容易执行。越容易执行，越容易坚持。越容易坚持，越容易拿到结果。</p>
+  <p>70道课后习题覆盖了大部分考试重点。</p>
+
+  <div class="golden"><strong>系统不追求一次性做到位。系统追求能持续执行。</strong></div>
+
+  <p>越简单的系统，越容易执行。越容易执行，越容易坚持。越容易坚持，越容易拿到结果。</p>
 
   <div class="divider-line"></div>
 
-  <h3 class="section-title" contenteditable="true">熔断机制：崩了怎么办</h3>
+  <h3 class="section-title">熔断机制：崩了怎么办</h3>
 
-  <p contenteditable="true">任何系统都会崩。</p>
+  <p>任何系统都会崩。</p>
 
-  <p contenteditable="true">你会有某一周什么都不想做。你会有某一天打了一整天游戏。你会有某个时刻觉得"算了，不搞了"。</p>
+  <p>你会有某一周什么都不想做。你会有某一天打了一整天游戏。你会有某个时刻觉得"算了，不搞了"。</p>
 
-  <p contenteditable="true">这很正常。</p>
+  <p>这很正常。</p>
 
-  <div class="golden" contenteditable="true"><strong>系统崩了不等于失败。系统崩了只等于暂停。</strong></div>
+  <div class="golden"><strong>系统崩了不等于失败。系统崩了只等于暂停。</strong></div>
 
-  <p contenteditable="true">堂弟的系统崩过至少5次。每次崩完，他停两周，什么都不做，等情绪缓过来了，再重新开始。</p>
+  <p>堂弟的系统崩过至少5次。每次崩完，他停两周，什么都不做，等情绪缓过来了，再重新开始。</p>
 
-  <p contenteditable="true">你的熔断机制可以是这样的：</p>
+  <p>你的熔断机制可以是这样的：</p>
 
   <ul class="story-list">
-    <li contenteditable="true">连续1周没执行 → 降低难度。"每天5道题"改成"每天2道题"。</li>
-    <li contenteditable="true">连续2周没执行 → 换个方式。刷题不行就去找同学要笔记。</li>
-    <li contenteditable="true">连续1个月没执行 → 停下来，回去重读第13章，问自己"我到底想不想拿毕业证"。</li>
+    <li>连续1周没执行 → 降低难度。"每天5道题"改成"每天2道题"。</li>
+    <li>连续2周没执行 → 换个方式。刷题不行就去找同学要笔记。</li>
+    <li>连续1个月没执行 → 停下来，回去重读第13章，问自己"我到底想不想拿毕业证"。</li>
   </ul>
 
-  <div class="golden" contenteditable="true"><strong>重启比完美更重要。</strong></div>
+  <div class="golden"><strong>重启比完美更重要。</strong></div>
 
-  <p contenteditable="true">你不需要一次都不崩。你只需要崩了之后能重新开始。</p>
+  <p>你不需要一次都不崩。你只需要崩了之后能重新开始。</p>
 
-  <p contenteditable="true">堂弟崩了5次，重启了5次。最后他拿到了双证。</p>
+  <p>堂弟崩了5次，重启了5次。最后他拿到了双证。</p>
 
-  <p contenteditable="true">你崩1次2次3次，没关系。只要你还会重启，你就没输。</p>
+  <p>你崩1次2次3次，没关系。只要你还会重启，你就没输。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">我再说一件事。</p>
+  <p>我再说一件事。</p>
 
-  <div class="golden" contenteditable="true"><strong>系统是试出来的，不是想出来的。</strong></div>
+  <div class="golden"><strong>系统是试出来的，不是想出来的。</strong></div>
 
-  <p contenteditable="true">堂弟试过每天学8小时——坚持了3天就放弃了。<br>
+  <p>堂弟试过每天学8小时——坚持了3天就放弃了。<br>
 堂弟试过找学霸辅导——学霸嫌他基础太差，不愿意教了。<br>
 堂弟试过报网课——看了2节就不看了。</p>
 
-  <p contenteditable="true">这些系统全失败了。</p>
+  <p>这些系统全失败了。</p>
 
-  <p contenteditable="true">最后他找到了"所有考试都去+补考前两周冲刺"这套系统。为什么这套成功了？因为这套他能执行。</p>
+  <p>最后他找到了"所有考试都去+补考前两周冲刺"这套系统。为什么这套成功了？因为这套他能执行。</p>
 
-  <div class="golden" contenteditable="true"><strong>好的系统不是最完美的系统。好的系统是你能执行的系统。</strong></div>
+  <div class="golden"><strong>好的系统不是最完美的系统。好的系统是你能执行的系统。</strong></div>
 
-  <p contenteditable="true">你第一次建的系统大概率不行。没关系。换一个。第二次不行。再换一个。</p>
+  <p>你第一次建的系统大概率不行。没关系。换一个。第二次不行。再换一个。</p>
 
-  <p contenteditable="true">第三次、第四次、第五次……总有一个适合你的。</p>
+  <p>第三次、第四次、第五次……总有一个适合你的。</p>
 
-  <p contenteditable="true">你不是在失败。你是在迭代。</p>
+  <p>你不是在失败。你是在迭代。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">好。到这里，你手里有了三样东西：</p>
+  <p>好。到这里，你手里有了三样东西：</p>
 
-  <p contenteditable="true">1. 规则（第11章）——大学过科到底靠什么。<br>
+  <p>1. 规则（第11章）——大学过科到底靠什么。<br>
 2. 身份（第12章）——你不是学渣，你是系统玩家。<br>
 3. 系统（这一章）——每天做什么，崩了怎么办。</p>
 
-  <p contenteditable="true">这三样东西加在一起，就是你走出陷阱的全部装备。</p>
+  <p>这三样东西加在一起，就是你走出陷阱的全部装备。</p>
 
-  <p contenteditable="true">不需要意志力。不需要下定决心。不需要"好好学习"。</p>
+  <p>不需要意志力。不需要下定决心。不需要"好好学习"。</p>
 
-  <p contenteditable="true">你只需要：选一门最简单的课，建一个最小的系统，然后执行它。</p>
+  <p>你只需要：选一门最简单的课，建一个最小的系统，然后执行它。</p>
 
-  <p contenteditable="true">崩了就重启。</p>
+  <p>崩了就重启。</p>
 
-  <p contenteditable="true">重启了就继续。</p>
+  <p>重启了就继续。</p>
 
-  <div class="golden" contenteditable="true"><strong>你不需要跑得快。你只需要不停下来。</strong></div>
+  <div class="golden"><strong>你不需要跑得快。你只需要不停下来。</strong></div>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">但我知道还有一个问题在你脑子里。</p>
+  <p>但我知道还有一个问题在你脑子里。</p>
 
-  <p contenteditable="true">"林哥，我自己的事我可以搞。但我爸妈那关怎么过？他们天天追问我、催我、管我。我一跟他们说话就吵架。"</p>
+  <p>"林哥，我自己的事我可以搞。但我爸妈那关怎么过？他们天天追问我、催我、管我。我一跟他们说话就吵架。"</p>
 
-  <p contenteditable="true">下一章，我们专门聊这个。</p>
+  <p>下一章，我们专门聊这个。</p>
 </article>
 
 <!-- ===== 第十五章: 家长那关怎么过 ===== -->
 <article class="chapter" id="ch-16" data-filename="第15章_家长那关怎么过.md">
   <div class="chapter-label">Part 5 · 从今天开始 · 第十五章</div>
-  <h2 class="chapter-title" contenteditable="true">家长那关怎么过</h2>
-  <p contenteditable="true">你自己的事你可以搞。</p>
+  <h2 class="chapter-title">家长那关怎么过</h2>
+  <p>你自己的事你可以搞。</p>
 
-  <p contenteditable="true">规则你看了。系统你建了。身份你选了。</p>
+  <p>规则你看了。系统你建了。身份你选了。</p>
 
-  <p contenteditable="true">但还有一关。</p>
+  <p>但还有一关。</p>
 
-  <div class="golden" contenteditable="true"><strong>爸妈。</strong></div>
+  <div class="golden"><strong>爸妈。</strong></div>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">你现在跟爸妈的关系是什么样的？</p>
+  <p>你现在跟爸妈的关系是什么样的？</p>
 
-  <p contenteditable="true">他们给你打电话，你不接。<br>
+  <p>他们给你打电话，你不接。<br>
 他们问你成绩，你撒谎。<br>
 他们催你学习，你说"知道了"然后挂掉。</p>
 
-  <p contenteditable="true">或者你们已经不说话了。冷战。已经很久了。</p>
+  <p>或者你们已经不说话了。冷战。已经很久了。</p>
 
-  <p contenteditable="true">你不是不想跟他们说实话。</p>
+  <p>你不是不想跟他们说实话。</p>
 
-  <p contenteditable="true">你是怕。</p>
+  <p>你是怕。</p>
 
-  <p contenteditable="true">怕说了之后，他们骂你。<br>
+  <p>怕说了之后，他们骂你。<br>
 怕说了之后，他们哭。<br>
 怕说了之后，他们说那句话——"我们这么辛苦还不是为了你"。</p>
 
-  <p contenteditable="true">所以你选择骗。</p>
+  <p>所以你选择骗。</p>
 
-  <p contenteditable="true">一门说成没挂。四门说成一门。十门说成"还好"。</p>
+  <p>一门说成没挂。四门说成一门。十门说成"还好"。</p>
 
-  <p contenteditable="true">谎越撒越大。直到有一天，辅导员打电话给家长，真相大白。</p>
+  <p>谎越撒越大。直到有一天，辅导员打电话给家长，真相大白。</p>
 
-  <p contenteditable="true">两边都崩溃。</p>
+  <p>两边都崩溃。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">我见过太多这样的场景了。</p>
+  <p>我见过太多这样的场景了。</p>
 
-  <div class="case-card" contenteditable="true">
+  <div class="case-card">
     <p>有个男孩，挂了十几门，家长一门都不知道。瞒了两年。最后学校发了退学预警通知，家长才知道。<br>
 <br>
 妈妈接到电话的时候在上班。她在工位上哭了半个小时。<br>
@@ -3756,256 +3738,256 @@
 </p>
   </div>
 
-  <p contenteditable="true">你知道为什么家长被骗之后会那么崩溃吗？</p>
+  <p>你知道为什么家长被骗之后会那么崩溃吗？</p>
 
-  <p contenteditable="true">不是因为成绩。</p>
+  <p>不是因为成绩。</p>
 
-  <p contenteditable="true">是因为信任。</p>
+  <p>是因为信任。</p>
 
-  <div class="golden" contenteditable="true"><strong>他们可以接受你挂科。他们接受不了你骗他们。</strong></div>
-
-  <div class="divider-line"></div>
-
-  <p contenteditable="true">那你为什么骗？</p>
-
-  <p contenteditable="true">因为你家里的规矩是：说实话=挨骂。</p>
-
-  <p contenteditable="true">你从小就知道，成绩不好的时候说实话，换来的是追问、唠叨、争吵。</p>
-
-  <p contenteditable="true">所以你学会了不说。</p>
-
-  <p contenteditable="true">第3章我讲过：在那个家里，真话=惩罚。</p>
-
-  <p contenteditable="true">这不全是你的错。你是被训练出来的。</p>
-
-  <p contenteditable="true">但现在，如果你想走出陷阱，你得做一件你一直害怕的事：</p>
-
-  <div class="golden" contenteditable="true"><strong>跟爸妈说实话。</strong></div>
+  <div class="golden"><strong>他们可以接受你挂科。他们接受不了你骗他们。</strong></div>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">先别慌。我不是让你今天就打电话说"爸妈我挂了15门"。</p>
+  <p>那你为什么骗？</p>
 
-  <p contenteditable="true">我给你一个方法。三步。</p>
+  <p>因为你家里的规矩是：说实话=挨骂。</p>
+
+  <p>你从小就知道，成绩不好的时候说实话，换来的是追问、唠叨、争吵。</p>
+
+  <p>所以你学会了不说。</p>
+
+  <p>第3章我讲过：在那个家里，真话=惩罚。</p>
+
+  <p>这不全是你的错。你是被训练出来的。</p>
+
+  <p>但现在，如果你想走出陷阱，你得做一件你一直害怕的事：</p>
+
+  <div class="golden"><strong>跟爸妈说实话。</strong></div>
 
   <div class="divider-line"></div>
 
-  <h3 class="section-title" contenteditable="true">第一步：先承认责任，再说困境</h3>
+  <p>先别慌。我不是让你今天就打电话说"爸妈我挂了15门"。</p>
 
-  <p contenteditable="true">错误的做法：</p>
+  <p>我给你一个方法。三步。</p>
 
-  <p contenteditable="true">"爸妈，我挂科了，因为老师太严了。"<br>
+  <div class="divider-line"></div>
+
+  <h3 class="section-title">第一步：先承认责任，再说困境</h3>
+
+  <p>错误的做法：</p>
+
+  <p>"爸妈，我挂科了，因为老师太严了。"<br>
 "爸妈，我挂科了，因为室友太吵了。"<br>
 "爸妈，我挂科了，因为专业太难了。"</p>
 
-  <p contenteditable="true">这叫推卸责任。家长不傻。你一推，他们更生气。</p>
+  <p>这叫推卸责任。家长不傻。你一推，他们更生气。</p>
 
-  <p contenteditable="true">正确的做法：</p>
+  <p>正确的做法：</p>
 
-  <p contenteditable="true">"爸妈，我挂了X门课。这是我的责任，我没学好。之前没跟你们说实话，是因为我怕你们失望。"</p>
+  <p>"爸妈，我挂了X门课。这是我的责任，我没学好。之前没跟你们说实话，是因为我怕你们失望。"</p>
 
-  <p contenteditable="true">你看区别了吗？</p>
+  <p>你看区别了吗？</p>
 
-  <p contenteditable="true">前者是"不是我的错"。后者是"是我的责任"。</p>
+  <p>前者是"不是我的错"。后者是"是我的责任"。</p>
 
-  <div class="golden" contenteditable="true"><strong>当你承认责任的时候，家长反而不太会骂你了。</strong></div>
+  <div class="golden"><strong>当你承认责任的时候，家长反而不太会骂你了。</strong></div>
 
-  <p contenteditable="true">因为他们准备骂你的那些话——"你怎么不认真学""你怎么这么不争气"——全是在指责你不负责任。</p>
+  <p>因为他们准备骂你的那些话——"你怎么不认真学""你怎么这么不争气"——全是在指责你不负责任。</p>
 
-  <p contenteditable="true">但你已经先认了。他们骂不出来了。</p>
-
-  <div class="divider-line"></div>
-
-  <h3 class="section-title" contenteditable="true">第二步：分步说，不要一次性托底</h3>
-
-  <p contenteditable="true">错误的做法：</p>
-
-  <p contenteditable="true">"爸妈，我挂了15门，可能要被退学了。"</p>
-
-  <p contenteditable="true">这叫一次性托底。家长当场崩溃。</p>
-
-  <p contenteditable="true">正确的做法：</p>
-
-  <p contenteditable="true">先说一部分。等家长消化了，再说剩下的。</p>
-
-  <p contenteditable="true">"爸妈，我这学期有几门课挂了。我知道你们会担心，我现在在想办法补回来。"</p>
-
-  <p contenteditable="true">等家长问"几门"的时候，你再说具体的数字。</p>
-
-  <p contenteditable="true">等家长问"怎么补"的时候，你再说你的计划。</p>
-
-  <div class="golden" contenteditable="true"><strong>信息要一点一点给。家长的情绪也需要一步一步消化。</strong></div>
-
-  <p contenteditable="true">你一次性把最坏的结果砸过去，家长不是在听你说话，是在被你吓。</p>
+  <p>但你已经先认了。他们骂不出来了。</p>
 
   <div class="divider-line"></div>
 
-  <h3 class="section-title" contenteditable="true">第三步：给选择题，别给填空题</h3>
+  <h3 class="section-title">第二步：分步说，不要一次性托底</h3>
 
-  <p contenteditable="true">错误的做法：</p>
+  <p>错误的做法：</p>
 
-  <p contenteditable="true">"爸妈，我挂科了，你们说我该怎么办？"</p>
+  <p>"爸妈，我挂了15门，可能要被退学了。"</p>
 
-  <p contenteditable="true">这叫甩锅。你把问题丢给家长，家长也不知道怎么办，两个人一起焦虑。</p>
+  <p>这叫一次性托底。家长当场崩溃。</p>
 
-  <p contenteditable="true">正确的做法：</p>
+  <p>正确的做法：</p>
 
-  <p contenteditable="true">"爸妈，我的情况是这样的。我想了三个方案：第一，继续上学，这学期补考过X门；第二，休学一年调整状态；第三，直接退学去工作。我倾向于选第一个，因为……你们觉得呢？"</p>
+  <p>先说一部分。等家长消化了，再说剩下的。</p>
 
-  <p contenteditable="true">你看，<strong>你给了家长三个选项，而且你已经想好了倾向哪个。</strong></p>
+  <p>"爸妈，我这学期有几门课挂了。我知道你们会担心，我现在在想办法补回来。"</p>
 
-  <p contenteditable="true">这传递了一个信号：你在为自己负责。你在规划。你不是在求救，你是在征求意见。</p>
+  <p>等家长问"几门"的时候，你再说具体的数字。</p>
 
-  <div class="golden" contenteditable="true"><strong>家长看到你在想办法，他们的焦虑会减少一半。</strong></div>
+  <p>等家长问"怎么补"的时候，你再说你的计划。</p>
+
+  <div class="golden"><strong>信息要一点一点给。家长的情绪也需要一步一步消化。</strong></div>
+
+  <p>你一次性把最坏的结果砸过去，家长不是在听你说话，是在被你吓。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">把三步连起来，就是一段完整的话术：</p>
+  <h3 class="section-title">第三步：给选择题，别给填空题</h3>
 
-  <p contenteditable="true">"爸妈，我想跟你们说件事。我这学期挂了X门课。</p>
+  <p>错误的做法：</p>
 
-  <p contenteditable="true">我知道这是我的责任。之前没跟你们说实话，是因为我怕你们失望。但我不想再瞒着了。</p>
+  <p>"爸妈，我挂科了，你们说我该怎么办？"</p>
 
-  <p contenteditable="true">现在的情况是这样的：我总共挂了X门课。学校的规定是XX。我现在的状态是XX。</p>
+  <p>这叫甩锅。你把问题丢给家长，家长也不知道怎么办，两个人一起焦虑。</p>
 
-  <p contenteditable="true">我想了一下，我有三个选择：<br>
+  <p>正确的做法：</p>
+
+  <p>"爸妈，我的情况是这样的。我想了三个方案：第一，继续上学，这学期补考过X门；第二，休学一年调整状态；第三，直接退学去工作。我倾向于选第一个，因为……你们觉得呢？"</p>
+
+  <p>你看，<strong>你给了家长三个选项，而且你已经想好了倾向哪个。</strong></p>
+
+  <p>这传递了一个信号：你在为自己负责。你在规划。你不是在求救，你是在征求意见。</p>
+
+  <div class="golden"><strong>家长看到你在想办法，他们的焦虑会减少一半。</strong></div>
+
+  <div class="divider-line"></div>
+
+  <p>把三步连起来，就是一段完整的话术：</p>
+
+  <p>"爸妈，我想跟你们说件事。我这学期挂了X门课。</p>
+
+  <p>我知道这是我的责任。之前没跟你们说实话，是因为我怕你们失望。但我不想再瞒着了。</p>
+
+  <p>现在的情况是这样的：我总共挂了X门课。学校的规定是XX。我现在的状态是XX。</p>
+
+  <p>我想了一下，我有三个选择：<br>
 1. 继续上学，这学期补考X门，慢慢把其他课补上<br>
 2. 休学一年，调整状态<br>
 3. 直接退学，去工作</p>
 
-  <p contenteditable="true">我倾向于选第一个，因为我还是想拿毕业证。</p>
+  <p>我倾向于选第一个，因为我还是想拿毕业证。</p>
 
-  <p contenteditable="true">你们觉得怎么样？"</p>
+  <p>你们觉得怎么样？"</p>
 
-  <p contenteditable="true">你可以把这段话复制到备忘录里，改成你自己的情况。然后找一个合适的时间，说出来。</p>
-
-  <div class="divider-line"></div>
-
-  <p contenteditable="true">但我必须告诉你：<strong>有些家长就是会骂。</strong></p>
-
-  <p contenteditable="true">你说完之后，他们可能会哭。可能会骂。可能会说"我们这么辛苦还不是为了你"。</p>
-
-  <p contenteditable="true">遇到这种情况怎么办？</p>
-
-  <div class="golden" contenteditable="true"><strong>不辩解。不争吵。等他们发泄完。</strong></div>
-
-  <p contenteditable="true">家长发泄情绪需要时间。你越辩解，他们越生气。</p>
-
-  <p contenteditable="true">但你不辩解，只是听，等他们骂累了，他们会冷静下来。</p>
-
-  <p contenteditable="true">冷静下来之后，他们会开始问："那你打算怎么办？"</p>
-
-  <p contenteditable="true">这时候你再把你的计划说出来。</p>
+  <p>你可以把这段话复制到备忘录里，改成你自己的情况。然后找一个合适的时间，说出来。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">还有一件事你要知道。</p>
+  <p>但我必须告诉你：<strong>有些家长就是会骂。</strong></p>
 
-  <div class="golden" contenteditable="true"><strong>说实话的时机很重要。</strong></div>
+  <p>你说完之后，他们可能会哭。可能会骂。可能会说"我们这么辛苦还不是为了你"。</p>
 
-  <p contenteditable="true">什么时候说最好？</p>
+  <p>遇到这种情况怎么办？</p>
 
-  <p contenteditable="true">不是你最崩溃的时候。不是被逼到绝路的时候。不是辅导员打完电话之后。</p>
+  <div class="golden"><strong>不辩解。不争吵。等他们发泄完。</strong></div>
 
-  <p contenteditable="true">是<strong>你决定改变的时候</strong>。</p>
+  <p>家长发泄情绪需要时间。你越辩解，他们越生气。</p>
 
-  <p contenteditable="true">因为家长最怕的不是你挂科。家长最怕的是你不在乎。</p>
+  <p>但你不辩解，只是听，等他们骂累了，他们会冷静下来。</p>
 
-  <p contenteditable="true">如果你告诉家长"我挂科了"，他们会焦虑。<br>
+  <p>冷静下来之后，他们会开始问："那你打算怎么办？"</p>
+
+  <p>这时候你再把你的计划说出来。</p>
+
+  <div class="divider-line"></div>
+
+  <p>还有一件事你要知道。</p>
+
+  <div class="golden"><strong>说实话的时机很重要。</strong></div>
+
+  <p>什么时候说最好？</p>
+
+  <p>不是你最崩溃的时候。不是被逼到绝路的时候。不是辅导员打完电话之后。</p>
+
+  <p>是<strong>你决定改变的时候</strong>。</p>
+
+  <p>因为家长最怕的不是你挂科。家长最怕的是你不在乎。</p>
+
+  <p>如果你告诉家长"我挂科了"，他们会焦虑。<br>
 但如果你告诉家长"我挂科了，但我已经有计划了"，他们会放心。</p>
 
-  <div class="golden" contenteditable="true"><strong>堂弟什么时候跟他妈说实话的？是他决定拿双证的时候。</strong></div>
+  <div class="golden"><strong>堂弟什么时候跟他妈说实话的？是他决定拿双证的时候。</strong></div>
 
-  <p contenteditable="true">那时候他妈还是会担心。但她知道：儿子想改变了。</p>
+  <p>那时候他妈还是会担心。但她知道：儿子想改变了。</p>
 
-  <p contenteditable="true">这就够了。</p>
-
-  <div class="divider-line"></div>
-
-  <p contenteditable="true">最后说一句。</p>
-
-  <p contenteditable="true">你可能觉得家长不理解你。他们只关心成绩，不关心你开不开心。</p>
-
-  <p contenteditable="true">你说得对。很多家长确实是这样的。</p>
-
-  <p contenteditable="true">但你有没有想过：<strong>他们也不知道该怎么关心你。</strong></p>
-
-  <p contenteditable="true">他们也是第一次当爸妈。没有人教过他们"孩子挂科了该怎么办"。</p>
-
-  <p contenteditable="true">他们唯一会的就是追问、催促、焦虑。因为除了这些，他们不知道还能做什么。</p>
-
-  <p contenteditable="true">这不是为他们开脱。这是让你理解他们。</p>
-
-  <div class="golden" contenteditable="true"><strong>当你理解了他们的无力，你就不会那么恨他们了。</strong></div>
-
-  <p contenteditable="true">当你不恨了，你才能心平气和地跟他们说话。</p>
-
-  <p contenteditable="true">当你心平气和了，他们才能听进去你说的话。</p>
+  <p>这就够了。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">家长那关，过得了。</p>
+  <p>最后说一句。</p>
 
-  <p contenteditable="true">你只需要做三件事：</p>
+  <p>你可能觉得家长不理解你。他们只关心成绩，不关心你开不开心。</p>
 
-  <p contenteditable="true">1. 承认责任，不推卸。<br>
+  <p>你说得对。很多家长确实是这样的。</p>
+
+  <p>但你有没有想过：<strong>他们也不知道该怎么关心你。</strong></p>
+
+  <p>他们也是第一次当爸妈。没有人教过他们"孩子挂科了该怎么办"。</p>
+
+  <p>他们唯一会的就是追问、催促、焦虑。因为除了这些，他们不知道还能做什么。</p>
+
+  <p>这不是为他们开脱。这是让你理解他们。</p>
+
+  <div class="golden"><strong>当你理解了他们的无力，你就不会那么恨他们了。</strong></div>
+
+  <p>当你不恨了，你才能心平气和地跟他们说话。</p>
+
+  <p>当你心平气和了，他们才能听进去你说的话。</p>
+
+  <div class="divider-line"></div>
+
+  <p>家长那关，过得了。</p>
+
+  <p>你只需要做三件事：</p>
+
+  <p>1. 承认责任，不推卸。<br>
 2. 分步说，不一次性托底。<br>
 3. 给选择题，不甩锅。</p>
 
-  <p contenteditable="true">然后找一个你准备好了的时间，说出来。</p>
+  <p>然后找一个你准备好了的时间，说出来。</p>
 
-  <p contenteditable="true">你能扛住的。</p>
+  <p>你能扛住的。</p>
 </article>
 
 <!-- ===== 第十六章: 当你真的毕不了业 ===== -->
 <article class="chapter" id="ch-17" data-filename="第16章_当你真的毕不了业.md">
   <div class="chapter-label">Part 5 · 从今天开始 · 第十六章</div>
-  <h2 class="chapter-title" contenteditable="true">当你真的毕不了业</h2>
-  <p contenteditable="true">这一章，我要跟你聊一个你一直不敢想的问题。</p>
+  <h2 class="chapter-title">当你真的毕不了业</h2>
+  <p>这一章，我要跟你聊一个你一直不敢想的问题。</p>
 
-  <div class="golden" contenteditable="true"><strong>如果我真的毕不了业怎么办？</strong></div>
+  <div class="golden"><strong>如果我真的毕不了业怎么办？</strong></div>
 
-  <p contenteditable="true">被降级了怎么办？<br>
+  <p>被降级了怎么办？<br>
 被退学了怎么办？<br>
 拿不到毕业证怎么办？</p>
 
-  <p contenteditable="true">我的人生是不是完了？</p>
+  <p>我的人生是不是完了？</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">先回答你：<strong>没完。</strong></p>
+  <p>先回答你：<strong>没完。</strong></p>
 
-  <p contenteditable="true">我见过被降级的。我见过被退学的。我见过30岁还在读大学的。</p>
+  <p>我见过被降级的。我见过被退学的。我见过30岁还在读大学的。</p>
 
-  <p contenteditable="true">他们现在怎么样了？</p>
+  <p>他们现在怎么样了？</p>
 
-  <p contenteditable="true">有的人去了工厂打工，几年后自己开了厂。<br>
+  <p>有的人去了工厂打工，几年后自己开了厂。<br>
 有的人去送外卖，后来转行做销售，现在一个月赚3万。<br>
 有的人自学编程，做了远程工作，赚得比很多大学生多。</p>
 
-  <p contenteditable="true">他们的人生完了吗？</p>
+  <p>他们的人生完了吗？</p>
 
-  <p contenteditable="true">没有。他们只是走了一条不一样的路。</p>
-
-  <div class="divider-line"></div>
-
-  <p contenteditable="true">但我不是来给你灌鸡汤的。</p>
-
-  <p contenteditable="true">我是来给你讲清楚：降级、延毕、退学，每一条路到底是什么样的，你该怎么走。</p>
+  <p>没有。他们只是走了一条不一样的路。</p>
 
   <div class="divider-line"></div>
 
-  <h3 class="section-title" contenteditable="true">降级</h3>
+  <p>但我不是来给你灌鸡汤的。</p>
 
-  <p contenteditable="true">降级就是你从大三降到大二，或者从大二降到大一。因为你挂科太多，学分不够。</p>
+  <p>我是来给你讲清楚：降级、延毕、退学，每一条路到底是什么样的，你该怎么走。</p>
 
-  <p contenteditable="true">降级之后会怎样？</p>
+  <div class="divider-line"></div>
 
-  <p contenteditable="true">你的同学都升上去了，你还在原地。新班级的人你都不认识。你的学费要多交一年。你爸妈会很难受。</p>
+  <h3 class="section-title">降级</h3>
 
-  <div class="golden" contenteditable="true"><strong>但降级不是死刑。降级是第二次机会。</strong></div>
+  <p>降级就是你从大三降到大二，或者从大二降到大一。因为你挂科太多，学分不够。</p>
 
-  <div class="case-card" contenteditable="true">
+  <p>降级之后会怎样？</p>
+
+  <p>你的同学都升上去了，你还在原地。新班级的人你都不认识。你的学费要多交一年。你爸妈会很难受。</p>
+
+  <div class="golden"><strong>但降级不是死刑。降级是第二次机会。</strong></div>
+
+  <div class="case-card">
     <p>我见过一个男孩，大二降到大一。他觉得天塌了，不敢见人。<br>
 <br>
 但降级之后，他重新学了一遍大一的课。这次他听懂了。<br>
@@ -4016,286 +3998,286 @@
 </p>
   </div>
 
-  <div class="golden" contenteditable="true"><strong>降级了怎么办？</strong></div>
+  <div class="golden"><strong>降级了怎么办？</strong></div>
 
-  <p contenteditable="true">接受它。不要觉得丢人。</p>
+  <p>接受它。不要觉得丢人。</p>
 
-  <p contenteditable="true">用第14章的系统，每学期补2-3门。慢慢来。</p>
+  <p>用第14章的系统，每学期补2-3门。慢慢来。</p>
 
-  <p contenteditable="true">你用5年毕业还是6年毕业，出了学校没人问你。</p>
-
-  <div class="divider-line"></div>
-
-  <h3 class="section-title" contenteditable="true">延毕</h3>
-
-  <p contenteditable="true">延毕就是你大四没毕业，需要多读一年或两年。</p>
-
-  <p contenteditable="true">堂弟就是延毕的。他从大四读到大七。延了3年。</p>
-
-  <p contenteditable="true">延毕之后会怎样？</p>
-
-  <p contenteditable="true">你的同学都毕业了，你还在学校。你的宿舍可能没了。你的学费要继续交。你爸妈会更焦虑。</p>
-
-  <div class="golden" contenteditable="true"><strong>但延毕不丢人。</strong></div>
-
-  <p contenteditable="true">堂弟丢人吗？他用了7年，拿到了双证。</p>
-
-  <p contenteditable="true">而且延毕有个好处：<strong>你可以慢慢补，不用着急。</strong></p>
-
-  <p contenteditable="true">堂弟大五大六的时候，每学期只盯着几门课。压力没那么大，反而过得更顺。</p>
-
-  <div class="golden" contenteditable="true"><strong>延毕了怎么办？</strong></div>
-
-  <p contenteditable="true">第一，列出所有没过的课。按难度排序。先补简单的，再补难的。</p>
-
-  <p contenteditable="true">第二，每学期只选2-3门重修。不要贪多。</p>
-
-  <p contenteditable="true">第三，如果有时间，去实习。延毕期间学校压力没那么大，你可以出去看看社会是什么样的。实习不光是为了赚钱，是为了让你想清楚：<strong>你到底要什么。</strong></p>
-
-  <p contenteditable="true">第四，接受"我需要更多时间"这个事实。</p>
-
-  <p contenteditable="true">你用5年、6年、7年毕业，都不丢人。慢慢来，比放弃强。</p>
-
-  <p contenteditable="true">而且记住：毕业两年以内都算应届毕业生。企业不管你读了几年，只管你有没有毕业证。</p>
+  <p>你用5年毕业还是6年毕业，出了学校没人问你。</p>
 
   <div class="divider-line"></div>
 
-  <h3 class="section-title" contenteditable="true">退学</h3>
+  <h3 class="section-title">延毕</h3>
 
-  <p contenteditable="true">退学分两种。</p>
+  <p>延毕就是你大四没毕业，需要多读一年或两年。</p>
 
-  <p contenteditable="true">一种是你主动退学：你想清楚了，大学不适合你，你要去做别的。</p>
+  <p>堂弟就是延毕的。他从大四读到大七。延了3年。</p>
 
-  <p contenteditable="true">一种是被动退学：你挂科太多，学校劝退你。</p>
+  <p>延毕之后会怎样？</p>
 
-  <p contenteditable="true">不管哪种，退学之后的事实是：</p>
+  <p>你的同学都毕业了，你还在学校。你的宿舍可能没了。你的学费要继续交。你爸妈会更焦虑。</p>
 
-  <p contenteditable="true">你没有毕业证。<br>
+  <div class="golden"><strong>但延毕不丢人。</strong></div>
+
+  <p>堂弟丢人吗？他用了7年，拿到了双证。</p>
+
+  <p>而且延毕有个好处：<strong>你可以慢慢补，不用着急。</strong></p>
+
+  <p>堂弟大五大六的时候，每学期只盯着几门课。压力没那么大，反而过得更顺。</p>
+
+  <div class="golden"><strong>延毕了怎么办？</strong></div>
+
+  <p>第一，列出所有没过的课。按难度排序。先补简单的，再补难的。</p>
+
+  <p>第二，每学期只选2-3门重修。不要贪多。</p>
+
+  <p>第三，如果有时间，去实习。延毕期间学校压力没那么大，你可以出去看看社会是什么样的。实习不光是为了赚钱，是为了让你想清楚：<strong>你到底要什么。</strong></p>
+
+  <p>第四，接受"我需要更多时间"这个事实。</p>
+
+  <p>你用5年、6年、7年毕业，都不丢人。慢慢来，比放弃强。</p>
+
+  <p>而且记住：毕业两年以内都算应届毕业生。企业不管你读了几年，只管你有没有毕业证。</p>
+
+  <div class="divider-line"></div>
+
+  <h3 class="section-title">退学</h3>
+
+  <p>退学分两种。</p>
+
+  <p>一种是你主动退学：你想清楚了，大学不适合你，你要去做别的。</p>
+
+  <p>一种是被动退学：你挂科太多，学校劝退你。</p>
+
+  <p>不管哪种，退学之后的事实是：</p>
+
+  <p>你没有毕业证。<br>
 找工作会受限。<br>
 爸妈会很难受。</p>
 
-  <div class="golden" contenteditable="true"><strong>但退学也不等于人生完了。</strong></div>
+  <div class="golden"><strong>但退学也不等于人生完了。</strong></div>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">不过我必须告诉你一个真相：</p>
+  <p>不过我必须告诉你一个真相：</p>
 
-  <div class="golden" contenteditable="true"><strong>大部分人退学后会后悔。</strong></div>
+  <div class="golden"><strong>大部分人退学后会后悔。</strong></div>
 
-  <p contenteditable="true">为什么？</p>
+  <p>为什么？</p>
 
-  <p contenteditable="true">因为大部分人退学不是因为"想清楚了"。是因为"逃避"。</p>
+  <p>因为大部分人退学不是因为"想清楚了"。是因为"逃避"。</p>
 
-  <p contenteditable="true">"我不想面对挂科了，我走。"<br>
+  <p>"我不想面对挂科了，我走。"<br>
 "我不想在这里待了，我走。"<br>
 "反正也毕不了业了，我走。"</p>
 
-  <p contenteditable="true">这不是选择。这是逃避。</p>
+  <p>这不是选择。这是逃避。</p>
 
-  <p contenteditable="true">逃避出去之后你会发现：<strong>社会比大学难十倍。</strong></p>
+  <p>逃避出去之后你会发现：<strong>社会比大学难十倍。</strong></p>
 
-  <p contenteditable="true">大学里，你不去上课最多挂科。<br>
+  <p>大学里，你不去上课最多挂科。<br>
 社会里，你不去上班直接没饭吃。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">所以，如果你在考虑退学，先问自己三个问题：</p>
+  <p>所以，如果你在考虑退学，先问自己三个问题：</p>
 
-  <div class="golden" contenteditable="true"><strong>第一：我退学是因为"想清楚了"还是"逃避"？</strong></div>
+  <div class="golden"><strong>第一：我退学是因为"想清楚了"还是"逃避"？</strong></div>
 
-  <p contenteditable="true">如果你想清楚了——你知道自己要什么，你有计划，退学是你的选择——那可以。</p>
+  <p>如果你想清楚了——你知道自己要什么，你有计划，退学是你的选择——那可以。</p>
 
-  <p contenteditable="true">如果你只是在逃避——你不知道自己要什么，你没有计划，你只是想"先离开这里"——那别退。</p>
+  <p>如果你只是在逃避——你不知道自己要什么，你没有计划，你只是想"先离开这里"——那别退。</p>
 
-  <p contenteditable="true">因为逃避出去之后，你还是会逃避。只是逃避的地方变了。</p>
+  <p>因为逃避出去之后，你还是会逃避。只是逃避的地方变了。</p>
 
-  <div class="golden" contenteditable="true"><strong>第二：我退学后有计划吗？</strong></div>
+  <div class="golden"><strong>第二：我退学后有计划吗？</strong></div>
 
-  <p contenteditable="true">去工作？工作在哪里？<br>
+  <p>去工作？工作在哪里？<br>
 学技术？学什么技术？<br>
 创业？做什么项目？</p>
 
-  <p contenteditable="true">如果你说不出来，那你还没准备好退学。</p>
+  <p>如果你说不出来，那你还没准备好退学。</p>
 
-  <div class="golden" contenteditable="true"><strong>第三：如果退学后失败了，我能接受吗？</strong></div>
+  <div class="golden"><strong>第三：如果退学后失败了，我能接受吗？</strong></div>
 
-  <p contenteditable="true">20岁试错，比30岁试错好。失败了不可怕。</p>
+  <p>20岁试错，比30岁试错好。失败了不可怕。</p>
 
-  <p contenteditable="true">但你要有心理准备：退学之后的路不会比大学里更轻松。</p>
-
-  <div class="divider-line"></div>
-
-  <p contenteditable="true">我建议你：<strong>如果你不确定，先别退学。先休学。</strong></p>
-
-  <p contenteditable="true">休学就是暂时离开学校，给自己一年时间想清楚。</p>
-
-  <p contenteditable="true">休学的好处是：你走了，但学籍还在。如果你出去打工一年，发现"我还是想拿毕业证"，你可以回来继续读。</p>
-
-  <p contenteditable="true">但如果你退学了，你后悔了，你没有机会回来。</p>
-
-  <div class="golden" contenteditable="true"><strong>休学给你一条退路。退学把退路断了。</strong></div>
-
-  <p contenteditable="true">还是那句话：<strong>拿毕业证不是为了证明大学有用，是为了给自己多一个选项。未来你可以选择不用它，但当你想用的时候，你有。</strong></p>
+  <p>但你要有心理准备：退学之后的路不会比大学里更轻松。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">最后说一段话。</p>
+  <p>我建议你：<strong>如果你不确定，先别退学。先休学。</strong></p>
 
-  <p contenteditable="true">不管你现在是降级、延毕、还是在考虑退学——</p>
+  <p>休学就是暂时离开学校，给自己一年时间想清楚。</p>
 
-  <p contenteditable="true">你要知道一件事：</p>
+  <p>休学的好处是：你走了，但学籍还在。如果你出去打工一年，发现"我还是想拿毕业证"，你可以回来继续读。</p>
 
-  <div class="golden" contenteditable="true"><strong>最坏的结果没有你想象的那么糟。</strong></div>
+  <p>但如果你退学了，你后悔了，你没有机会回来。</p>
 
-  <p contenteditable="true">你以为降级就完了。没完。<br>
+  <div class="golden"><strong>休学给你一条退路。退学把退路断了。</strong></div>
+
+  <p>还是那句话：<strong>拿毕业证不是为了证明大学有用，是为了给自己多一个选项。未来你可以选择不用它，但当你想用的时候，你有。</strong></p>
+
+  <div class="divider-line"></div>
+
+  <p>最后说一段话。</p>
+
+  <p>不管你现在是降级、延毕、还是在考虑退学——</p>
+
+  <p>你要知道一件事：</p>
+
+  <div class="golden"><strong>最坏的结果没有你想象的那么糟。</strong></div>
+
+  <p>你以为降级就完了。没完。<br>
 你以为延毕就丢人。不丢人。<br>
 你以为退学就废了。没废。</p>
 
-  <p contenteditable="true">堂弟挂了38门，用了7年毕业。</p>
+  <p>堂弟挂了38门，用了7年毕业。</p>
 
-  <p contenteditable="true">他没废。他拿到了双证，去了四川，过上了自己的日子。</p>
+  <p>他没废。他拿到了双证，去了四川，过上了自己的日子。</p>
 
-  <p contenteditable="true">你比他强。你挂的没他多，你看这本书比他早。</p>
+  <p>你比他强。你挂的没他多，你看这本书比他早。</p>
 
-  <div class="golden" contenteditable="true"><strong>你还有时间。</strong></div>
+  <div class="golden"><strong>你还有时间。</strong></div>
 
-  <p contenteditable="true">把这句话记住。下一页，是这本书的最后一章。</p>
+  <p>把这句话记住。下一页，是这本书的最后一章。</p>
 </article>
 
 <!-- ===== 结 语: 你不是在越狱，你是在醒来 ===== -->
 <article class="chapter" id="epilogue" data-filename="结语_你不是在越狱你是在醒来.md">
   <div class="chapter-label">结 语</div>
-  <h2 class="chapter-title" contenteditable="true">你不是在越狱，你是在醒来</h2>
-  <p contenteditable="true">你看到这里了。</p>
+  <h2 class="chapter-title">你不是在越狱，你是在醒来</h2>
+  <p>你看到这里了。</p>
 
-  <p contenteditable="true">整本书。从前言到第16章。</p>
+  <p>整本书。从前言到第16章。</p>
 
-  <p contenteditable="true">如果你真的一字一句读到了这里，我想跟你说一件事：</p>
+  <p>如果你真的一字一句读到了这里，我想跟你说一件事：</p>
 
-  <div class="golden" contenteditable="true"><strong>你已经不一样了。</strong></div>
+  <div class="golden"><strong>你已经不一样了。</strong></div>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">你还记得你翻开这本书的时候在想什么吗？</p>
+  <p>你还记得你翻开这本书的时候在想什么吗？</p>
 
-  <p contenteditable="true">也许你在想："又是一本教我好好学习的破书。"<br>
+  <p>也许你在想："又是一本教我好好学习的破书。"<br>
 也许你在想："看看有没有什么速成的办法。"<br>
 也许你在想："反正也没用，随便翻翻。"</p>
 
-  <p contenteditable="true">但你没有合上。</p>
+  <p>但你没有合上。</p>
 
-  <p contenteditable="true">你继续翻了。</p>
+  <p>你继续翻了。</p>
 
-  <p contenteditable="true">你看到了陷阱是怎么运作的。<br>
+  <p>你看到了陷阱是怎么运作的。<br>
 你看到了那些"假的好处"。<br>
 你看到了过去的方法为什么不管用。<br>
 你看到了规则、身份、系统。</p>
 
-  <div class="golden" contenteditable="true"><strong>你看到了。</strong></div>
+  <div class="golden"><strong>你看到了。</strong></div>
 
-  <p contenteditable="true">这就是改变的起点。</p>
+  <p>这就是改变的起点。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">我在这本书里反复说一个词：<strong>看清。</strong></p>
+  <p>我在这本书里反复说一个词：<strong>看清。</strong></p>
 
-  <p contenteditable="true">不是"下定决心"。<br>
+  <p>不是"下定决心"。<br>
 不是"好好学习"。<br>
 不是"我改"。</p>
 
-  <p contenteditable="true">是看清。</p>
+  <p>是看清。</p>
 
-  <p contenteditable="true">因为当你看清了一个东西是假的，你自然就不会再被它骗了。</p>
+  <p>因为当你看清了一个东西是假的，你自然就不会再被它骗了。</p>
 
-  <p contenteditable="true">你看清了"打游戏能缓解压力"是假的。你下次打开游戏的时候，感觉会不一样。</p>
+  <p>你看清了"打游戏能缓解压力"是假的。你下次打开游戏的时候，感觉会不一样。</p>
 
-  <p contenteditable="true">你看清了"无所谓"是保护壳不是真心话。你下次说"无所谓"的时候，你会听到自己心里那个真实的声音。</p>
+  <p>你看清了"无所谓"是保护壳不是真心话。你下次说"无所谓"的时候，你会听到自己心里那个真实的声音。</p>
 
-  <p contenteditable="true">你看清了"好好学习"靠不住，规则和系统才靠得住。你下次面对挂科的时候，你不会再跟自己死磕，你会去找那条阻力最小的路。</p>
+  <p>你看清了"好好学习"靠不住，规则和系统才靠得住。你下次面对挂科的时候，你不会再跟自己死磕，你会去找那条阻力最小的路。</p>
 
-  <div class="golden" contenteditable="true"><strong>你不需要变成另一个人。你只需要看清了。</strong></div>
+  <div class="golden"><strong>你不需要变成另一个人。你只需要看清了。</strong></div>
 
-  <p contenteditable="true">看清了，行动自然就会跟着来。</p>
+  <p>看清了，行动自然就会跟着来。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">但我不想骗你。</p>
+  <p>但我不想骗你。</p>
 
-  <p contenteditable="true">看清不等于问题消失。</p>
+  <p>看清不等于问题消失。</p>
 
-  <p contenteditable="true">你看完这本书，明天起来，你还是那个挂了很多科的你。你的成绩单还在那里。你爸妈的电话还会打来。辅导员还会找你谈话。</p>
+  <p>你看完这本书，明天起来，你还是那个挂了很多科的你。你的成绩单还在那里。你爸妈的电话还会打来。辅导员还会找你谈话。</p>
 
-  <p contenteditable="true">这些都不会因为你看了一本书就消失。</p>
+  <p>这些都不会因为你看了一本书就消失。</p>
 
-  <p contenteditable="true">但有一个东西变了。</p>
+  <p>但有一个东西变了。</p>
 
-  <div class="golden" contenteditable="true"><strong>你看问题的方式变了。</strong></div>
+  <div class="golden"><strong>你看问题的方式变了。</strong></div>
 
-  <p contenteditable="true">以前你看到挂科，你想的是"我完了"。<br>
+  <p>以前你看到挂科，你想的是"我完了"。<br>
 现在你看到挂科，你想的是"我还差几门，用什么策略补"。</p>
 
-  <p contenteditable="true">以前你听到爸妈追问，你想的是"他们不理解我"。<br>
+  <p>以前你听到爸妈追问，你想的是"他们不理解我"。<br>
 现在你听到爸妈追问，你想的是"他们也不知道怎么帮我，我该怎么跟他们说"。</p>
 
-  <p contenteditable="true">以前你面对考试，你想的是"我肯定过不了"。<br>
+  <p>以前你面对考试，你想的是"我肯定过不了"。<br>
 现在你面对考试，你想的是"平时分拿了多少，补考规则是什么，我该怎么冲"。</p>
 
-  <div class="golden" contenteditable="true"><strong>同一个世界。不同的眼睛。</strong></div>
+  <div class="golden"><strong>同一个世界。不同的眼睛。</strong></div>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">最后，我想跟你说一段话。</p>
+  <p>最后，我想跟你说一段话。</p>
 
-  <p contenteditable="true">你不是废物。你从来都不是。</p>
+  <p>你不是废物。你从来都不是。</p>
 
-  <p contenteditable="true">你只是被困住了。</p>
+  <p>你只是被困住了。</p>
 
-  <p contenteditable="true">被那个"成绩=价值"的系统困住了。<br>
+  <p>被那个"成绩=价值"的系统困住了。<br>
 被那个"说实话就要挨骂"的家庭模式困住了。<br>
 被那个"我果然不行"的自我否定困住了。</p>
 
-  <p contenteditable="true">你掉进了一个陷阱。</p>
+  <p>你掉进了一个陷阱。</p>
 
-  <p contenteditable="true">但现在你看到了这个陷阱的样子。</p>
+  <p>但现在你看到了这个陷阱的样子。</p>
 
-  <p contenteditable="true">看到了，你就不会再掉进去了。</p>
-
-  <div class="divider-line"></div>
-
-  <p contenteditable="true">堂弟走之前跟我说的那句话，你还记得吗？</p>
-
-  <div class="golden" contenteditable="true"><strong>"林哥，我以前一直觉得自己是个废物，是个在这个世界上多余的人。但你让我明白了，我不是废物，我只是被困住了。"</strong></div>
-
-  <p contenteditable="true">他看到了。然后他走出来了。</p>
-
-  <p contenteditable="true">现在，你也看到了。</p>
+  <p>看到了，你就不会再掉进去了。</p>
 
   <div class="divider-line"></div>
 
-  <p contenteditable="true">从今天开始，你不需要"好好学习"。</p>
+  <p>堂弟走之前跟我说的那句话，你还记得吗？</p>
 
-  <p contenteditable="true">你需要做的，就是上一章结尾说的那件事：</p>
+  <div class="golden"><strong>"林哥，我以前一直觉得自己是个废物，是个在这个世界上多余的人。但你让我明白了，我不是废物，我只是被困住了。"</strong></div>
 
-  <p contenteditable="true">选一门最简单的课。<br>
+  <p>他看到了。然后他走出来了。</p>
+
+  <p>现在，你也看到了。</p>
+
+  <div class="divider-line"></div>
+
+  <p>从今天开始，你不需要"好好学习"。</p>
+
+  <p>你需要做的，就是上一章结尾说的那件事：</p>
+
+  <p>选一门最简单的课。<br>
 建一个最小的系统。<br>
 执行它。<br>
 崩了就重启。</p>
 
-  <p contenteditable="true">就这样。</p>
+  <p>就这样。</p>
 
-  <p contenteditable="true">不需要下定决心。不需要发誓。不需要跟任何人保证。</p>
+  <p>不需要下定决心。不需要发誓。不需要跟任何人保证。</p>
 
-  <p contenteditable="true">你只需要做一件事。</p>
+  <p>你只需要做一件事。</p>
 
-  <p contenteditable="true">然后做第二件。</p>
+  <p>然后做第二件。</p>
 
-  <p contenteditable="true">然后做第三件。</p>
+  <p>然后做第三件。</p>
 
-  <div class="golden" contenteditable="true"><strong>你不是在越狱。你是在醒来。</strong></div>
+  <div class="golden"><strong>你不是在越狱。你是在醒来。</strong></div>
 
-  <p contenteditable="true">醒来之后，路就在你脚下。</p>
+  <p>醒来之后，路就在你脚下。</p>
 
-  <p contenteditable="true">一步一步走就好。</p>
+  <p>一步一步走就好。</p>
 </article>
 
 <!-- ===== 脚本 ===== -->
@@ -4346,73 +4328,7 @@ window.addEventListener('scroll', () => {
   lastY = y;
 });
 
-// ===== 编辑模式 =====
-let editMode = false;
-const editables = document.querySelectorAll('[contenteditable]');
-const banner = document.getElementById('editBanner');
 
-// 初始状态：禁止编辑
-editables.forEach(el => el.setAttribute('contenteditable', 'false'));
-
-document.getElementById('btnEdit').addEventListener('click', () => {
-  editMode = !editMode;
-  editables.forEach(el => el.setAttribute('contenteditable', editMode ? 'true' : 'false'));
-  banner.classList.toggle('show', editMode);
-  document.getElementById('btnEdit').textContent = editMode ? '编辑中' : '编辑';
-  document.getElementById('btnEdit').style.background = editMode ? 'var(--accent)' : '';
-  document.getElementById('btnEdit').style.color = editMode ? '#fff' : '';
-});
-
-// 标记已编辑的元素
-editables.forEach(el => {
-  el.addEventListener('input', () => el.classList.add('edited'));
-});
-
-// 保存到localStorage
-document.getElementById('btnSaveEdit').addEventListener('click', () => {
-  const edits = {};
-  document.querySelectorAll('.edited').forEach(el => {
-    const chapter = el.closest('.chapter');
-    if (chapter) {
-      const key = chapter.id + '_' + Array.from(chapter.children).indexOf(el);
-      edits[key] = el.innerHTML;
-    }
-  });
-  localStorage.setItem('book_edits', JSON.stringify(edits));
-  alert('修改已保存！（保存在浏览器本地，刷新不会丢失）');
-});
-
-// 加载保存的编辑
-try {
-  const saved = JSON.parse(localStorage.getItem('book_edits') || '{}');
-  Object.entries(saved).forEach(([key, html]) => {
-    const [chId, idx] = key.split('_');
-    const ch = document.getElementById(chId);
-    if (ch && ch.children[parseInt(idx)]) {
-      ch.children[parseInt(idx)].innerHTML = html;
-      ch.children[parseInt(idx)].classList.add('edited');
-    }
-  });
-} catch(e) {}
-
-// 退出编辑
-document.getElementById('btnExitEdit').addEventListener('click', () => {
-  editMode = false;
-  editables.forEach(el => el.setAttribute('contenteditable', 'false'));
-  banner.classList.remove('show');
-  document.getElementById('btnEdit').textContent = '编辑';
-  document.getElementById('btnEdit').style.background = '';
-  document.getElementById('btnEdit').style.color = '';
-});
-
-// ===== PDF导出 =====
-document.getElementById('btnPdf').addEventListener('click', () => {
-  // 退出编辑模式
-  if (editMode) document.getElementById('btnExitEdit').click();
-  // 提示
-  alert('即将打开打印对话框。\\n\\n请在打印设置中：\\n1. 目标打印机选「另存为PDF」\\n2. 页面大小选 A4\\n3. 边距选「最小」\\n4. 勾选「背景图形」\\n\\n然后点击保存即可。');
-  window.print();
-});
 </script>
 
 </body>
